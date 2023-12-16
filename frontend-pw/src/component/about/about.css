@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+/* #about{
+    color: black;
+}
+
+.title{
+    margin-top: 7vw;
+    width: 100%;
+    z-index: 20;
+    position: absolute;
+    font-size: 2.5vw;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+}
+
+.about-description {
+    margin-top: 12vw; 
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5vw;
+    color: black;
+} */
+
+#about {
+    color: black;
+    text-align: center; /* 中心对齐标题 */
+    padding-top: 7vw; /* 用padding代替top来定位标题 */
+}
+
+.title {
+    font-size: 2.5vw;
+    text-transform: uppercase;
+}
+
+/* 新的about-description样式 */
+.about-description {
+    display: flex; /* 使用flexbox */
+    justify-content: center; /* 中心对齐flex项 */
+    align-items: center; /* 垂直对齐 */
+    margin-top: 3vw; /* 与标题的间距 */
+}
+
+.about-description .photo {
+    flex-basis: 30%; /* 照片占据的空间百分比 */
+    margin-left: 20%;
+    background: url("./images/aboutphoto.jpg") no-repeat center center;
+    background-size: cover; /* 覆盖整个区域，但保持图片比例 */
+}
+
+.about-description .text {
+    justify-self: flex-start;
+    flex-basis: 45%; /* 文字占据的空间百分比 */
+    margin-right: 20%;
+    margin-left: 5%; /* 图片和文字之间的间距 */
+    font-size: 1.5vw;
+}
+
+p {
+    margin: 1vw; /* 去除默认的段落上下间距 */
+    /* justify to the left */
+    justify-self: flex-start; 
+}
+
+
+

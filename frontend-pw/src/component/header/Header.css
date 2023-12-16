@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 .header {
     
     margin-top: 0.3vw;
@@ -32,6 +33,7 @@
 
 
     .header-logo {
+        font-family: 'Dancing Script', cursive;
         color: inherit;
         text-decoration: inherit;
         font-size: 5vw;
@@ -40,7 +42,7 @@
         align-items: center;
         margin-right: 2vw;
         margin-left: 2vw;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
       }
       
     .header-top__navbar {

@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import "./cover.css";
-import Astronaut from "./images/astronot.json";
-import Lottie from "lottie-react";
 import Bg1 from "./bgvideo/bgvideo1.mp4";
 import Bg2 from './bgvideo/bgvideo2.mp4';
 import Bg3 from './bgvideo/bgvideo3.mp4';
@@ -38,7 +36,6 @@ function Cover () {
                 <h1>"In matters of principle, stand like a rock."</h1>
                 <p>- Thomas Jefferson</p>
             </div>
-            <Lottie animationData={Astronaut} />
         </section>
     );
 

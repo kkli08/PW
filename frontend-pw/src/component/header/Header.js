@@ -20,11 +20,17 @@ function Header () {
         };
     }, []);
 
+    // handle click on LOGO and go back to the top smoothly
+    const scrollToTop = (event) => {
+        event.preventDefault(); // Prevent default anchor behavior
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to top
+    };
+
   return (
     <div className={`App-header ${scrolled ? 'scrolled' : ''}`}>
     <section className="header">
         <section className="header-top__logo">
-            <a href="/" className="header-logo">Ke Li</a>
+            <a href="/" onClick={scrollToTop} className="header-logo">Ke Li</a>
         </section>
         <section className="header-top__navbar">
             <Navbar /> 
