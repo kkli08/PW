@@ -53,13 +53,19 @@
       }
 
 /* 在屏幕尺寸较小时设置最小字体大小 */
-@media (max-width: 700px) {
+@media (max-width: 450px) {
+    .App-header.scrolled{
+        height: 9vw;
+    }
     .header {
-        height: 60px; /* 固定高度 */
+        height: auto; /* 固定高度 */
         /* 其他样式保持不变 */
     }
     .header-logo {
         font-size: 30px;
+    }
+    .header-top__navbar {
+        display: none;
     }
 }
 
