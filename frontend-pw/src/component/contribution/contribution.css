@@ -1,0 +1,22 @@
+#contribution{
+    width: 100%;        /* Full width */
+    background-color: darkgrey; /* Light grey background */
+    color: black; 
+    margin-bottom: 0;
+    padding-bottom: 3vw;
+}
+
+#contribution .title {
+    text-transform: none;
+    font-size: 1.2vw;
+    color: white;
+    text-align: center; /* 中心对齐标题 */
+    padding-top: 1.3vw; /* 用padding代替top来定位标题 */
+    
+}
+
+#contribution .title p {
+    margin-top: 0vw;    /* 减少顶部外边距 */
+    margin-bottom: 0vw; /* 减少底部外边距 */
+    font-weight: bold;
+}

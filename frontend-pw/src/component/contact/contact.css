@@ -1,0 +1,13 @@
+#contact{
+    width: 100%;        /* Full width */
+    background-color: white; /* Light grey background */
+    color: black; 
+    margin-bottom: 10vw;
+}
+
+#contact .title {
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    text-align: center; /* 中心对齐标题 */
+    padding-top: 4vw; /* 用padding代替top来定位标题 */
+}
