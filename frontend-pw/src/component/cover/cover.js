@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import "./cover.css";
 import Bg1 from "./bgvideo/bgvideo1.mp4";
 import Bg2 from './bgvideo/bgvideo2.mp4';
@@ -11,14 +11,16 @@ import Bg8 from './bgvideo/bgvideo8.mp4';
 import Bg9 from './bgvideo/bgvideo9.mp4';
 
 
+
 function Cover () {
     // 视频数组
     const videos = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6, Bg7, Bg8, Bg9];
 
+
+    // 按顺序播放
     // 当前视频的索引状态
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
-    // 处理视频播放结束的事件
     const handleVideoEnd = () => {
         const nextVideoIndex = (currentVideoIndex + 1) % videos.length;
         setCurrentVideoIndex(nextVideoIndex);

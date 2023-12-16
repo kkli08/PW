@@ -1,6 +1,4 @@
 import React from "react";
-import Astronaut from "./images/astronot.json";
-import Lottie from "lottie-react";
 import aboutPhoto from "./images/aboutphoto.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPassport, faDumbbell, faHeadphonesSimple, faBasketball, faPersonSwimming, faCamera } from '@fortawesome/free-solid-svg-icons'
@@ -62,11 +60,10 @@ function About () {
                     description={"1) Dealing with school projects\n2) Leetcoding for interview\n3) Making this homepage more accessible"}                
                 />
             </div>
-            <Lottie animationData={Astronaut} />
+            
         </div>
     );
 }
 
 export default About;
 
-// <Lottie animationData={Astronaut} />

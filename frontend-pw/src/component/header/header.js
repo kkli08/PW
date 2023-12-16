@@ -53,7 +53,8 @@ function Header () {
             {/* 移动菜单内容 */}
             <a href="#about" className="navbar-item">About Me</a>
             <a href="#projects" className="navbar-item">Projects</a>
-            <a href="/blog" className="navbar-item">Blog</a>
+            <a href="/resume.pdf" className="navbar-item" target="_blank" rel="noopener noreferrer">Resume</a>
+            {/* <a href="/blog" className="navbar-item">Blog</a> */}
           </div>
         )}
 
