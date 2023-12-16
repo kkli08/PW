@@ -1,0 +1,48 @@
+.header {
+    margin-top: 0.3vw;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 6vw;
+    }
+      
+    .header-logo {
+        color: inherit;
+        text-decoration: inherit;
+        /* font-family: RobotoThin; */
+        font-size: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2vw;
+        margin-left: 2vw;
+        color: inherit;
+        text-transform: uppercase;
+      }
+      
+    .header-top__navbar {
+        display: flex;
+        margin-left: auto; /* This pushes the navbar to the right */
+        align-items: center; /* Aligns navbar items vertically in the center */
+        margin-right: 2.5vw;
+      }
+
+/* 在屏幕尺寸较小时设置最小字体大小 */
+@media (max-width: 650px) {
+    .header-logo {
+        font-size: 40px;
+    }
+}
+
+/* 在屏幕尺寸较大时设置最大字体大小 */
+/* @media (min-width: 1000px) {
+    .header-logo {
+        font-size: 80px;
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+
+    .header-top__navbar {
+        margin-right: 10px;
+    }
+} */
