@@ -33,7 +33,12 @@ function Cover () {
                 muted 
                 onEnded={handleVideoEnd}
             />
-            {/* <Lottie animationData={Astronaut} /> */}
+            <div className='overlay'></div>
+            <div className="cover-text">
+                <h1>"In matters of principle, stand like a rock."</h1>
+                <p>- Thomas Jefferson</p>
+            </div>
+            <Lottie animationData={Astronaut} />
         </section>
     );
 

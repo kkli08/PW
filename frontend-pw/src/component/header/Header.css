@@ -34,7 +34,15 @@
 }
 
 /* 在屏幕尺寸较大时设置最大字体大小 */
-/* @media (min-width: 1000px) {
+@media (min-width: 1500px) {
+    .header {
+        margin-top: 0px;
+        margin-left: 5px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 85px;
+        }
     .header-logo {
         font-size: 80px;
         margin-right: 20px;
@@ -44,4 +52,4 @@
     .header-top__navbar {
         margin-right: 10px;
     }
-} */
+}
