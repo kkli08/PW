@@ -1,0 +1,43 @@
+import React, { useState, useEffect, useRef } from 'react';
+import "./cover.css";
+import Astronaut from "./images/astronot.json";
+import Lottie from "lottie-react";
+import Bg1 from "./bgvideo/bgvideo1.mp4";
+import Bg2 from './bgvideo/bgvideo2.mp4';
+import Bg3 from './bgvideo/bgvideo3.mp4';
+import Bg4 from './bgvideo/bgvideo4.mp4';
+import Bg5 from './bgvideo/bgvideo5.mp4';
+import Bg6 from './bgvideo/bgvideo6.mp4';
+import Bg7 from './bgvideo/bgvideo7.mp4';
+
+
+function Cover () {
+    // 视频数组
+    const videos = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6, Bg7];
+
+    // 当前视频的索引状态
+    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+
+    // 处理视频播放结束的事件
+    const handleVideoEnd = () => {
+        const nextVideoIndex = (currentVideoIndex + 1) % videos.length;
+        setCurrentVideoIndex(nextVideoIndex);
+    };
+
+    return (
+        <section>
+            <video 
+                src={videos[currentVideoIndex]} 
+                autoPlay 
+                loop={false} 
+                muted 
+                onEnded={handleVideoEnd}
+            />
+            {/* <Lottie animationData={Astronaut} /> */}
+        </section>
+    );
+
+
+}
+
+export default Cover;
