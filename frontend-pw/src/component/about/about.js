@@ -4,8 +4,8 @@ import Lottie from "lottie-react";
 import aboutPhoto from "./images/aboutphoto.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPassport, faDumbbell, faHeadphonesSimple, faBasketball, faPersonSwimming, faCamera } from '@fortawesome/free-solid-svg-icons'
+import { Card } from "../card/card";
 import "./about.css";
-
 
 function About () {
     // 通过style属性动态设置背景图片
@@ -46,6 +46,21 @@ function About () {
                     <FontAwesomeIcon icon={faPersonSwimming} /> Swimming | <FontAwesomeIcon icon={faCamera} /> Photographing | 
                     </p>
                 </div>
+            </div>
+            <div className="boxcol">
+                <Card
+                    title={"Toolbox"}
+                    description={"Languages: C++, C, Python, Java, JavaScript, RISC-V\nFramework: Django, React.js, D3.js, Spring\nDeployment Tools: Docker, AWS, Nginx, Gunicorn, Git\nOS: Linux, Bash\nOther: Experienced with TCP, Ethernet Protocol"}
+                    
+                />
+                <Card
+                    title={"Learning"}
+                    description={"WINTER 2024:\nECE1755H S (Winter) Parallel Computer Architecture and Programming\nECE1776H S (Winter) Computer Security, Cryptography and Privacy\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\n"}                
+                />
+                <Card
+                    title={"Hacking On"}
+                    description={"1) Dealing with school projects\n2) Leetcoding for interview\n3) Making this homepage more accessible"}                
+                />
             </div>
             <Lottie animationData={Astronaut} />
         </div>
