@@ -62,4 +62,12 @@ h1 {
     justify-self: flex-start; 
 }
 
+.boxcol{
+    height: 100%;
+    display: flex;
+    justify-content: center; /* 中心对齐flex项 */
+    align-items: flex-start; /* 向上对齐 */
+    margin-top: 3vw; /* 与标题的间距 */
+    gap: 1.5vw; 
+}
 
