@@ -1,28 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-/* #about{
-    color: black;
-}
-
-.title{
-    margin-top: 7vw;
-    width: 100%;
-    z-index: 20;
-    position: absolute;
-    font-size: 2.5vw;
-    text-align: center;
-    color: black;
-    text-transform: uppercase;
-}
-
-.about-description {
-    margin-top: 12vw; 
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5vw;
-    color: black;
-} */
 
 #about {
     color: black;
@@ -31,7 +8,7 @@
 }
 
 .title {
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     text-transform: uppercase;
 }
 
@@ -44,25 +21,45 @@
 }
 
 .about-description .photo {
-    flex-basis: 30%; /* 照片占据的空间百分比 */
-    margin-left: 20%;
-    background: url("./images/aboutphoto.jpg") no-repeat center center;
-    background-size: cover; /* 覆盖整个区域，但保持图片比例 */
+    flex: 0 0 35%; /* flex-grow flex-shrink flex-basis */
+    margin-left: 15%;
+    /* 不再需要background样式，因为我们使用<img>标签 */
+}
+
+.about-description .photo img {
+    width: 100%; /* 图片宽度占据.photo类的全部宽度 */
+    height: auto; /* 高度自动调整以保持图片比例 */
+    display: block; /* 避免默认的inline属性造成的任何额外空间 */
 }
 
 .about-description .text {
-    justify-self: flex-start;
-    flex-basis: 45%; /* 文字占据的空间百分比 */
-    margin-right: 20%;
+    flex: 0 0 45%; /* 根据需要调整flex-basis的百分比 */
+    margin-right: 20%; /* 调整右边距 */
     margin-left: 5%; /* 图片和文字之间的间距 */
-    font-size: 1.5vw;
+    font-size: 1vw;
+    text-align: left; /* 如果您希望文本左对齐 */
 }
+
+.text h1, .text p {
+    margin-left: 0;  /* 移除左边距 */
+    padding-left: 0; /* 移除左内边距 */
+    /* 如果需要可以在这里指定字体大小等其他样式 */
+}
+
+
 
 p {
     margin: 1vw; /* 去除默认的段落上下间距 */
+    font-size: 1.5vw;
+    /* justify to the left */
+    justify-self: flex-start; 
+    line-height: 2;
+}
+
+h1 {
+    margin: 2vw; /* 去除默认的标题上下间距 */
     /* justify to the left */
     justify-self: flex-start; 
 }
-
 
 

@@ -23,6 +23,9 @@ video {
     color: white;
 }
 
+.cover-text p {
+    font-size: 3vw;
+}
 /* .overlay {
     position: absolute;
     top: 0;
