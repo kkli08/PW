@@ -7,11 +7,13 @@ import Bg4 from './bgvideo/bgvideo4.mp4';
 import Bg5 from './bgvideo/bgvideo5.mp4';
 import Bg6 from './bgvideo/bgvideo6.mp4';
 import Bg7 from './bgvideo/bgvideo7.mp4';
+import Bg8 from './bgvideo/bgvideo8.mp4';
+import Bg9 from './bgvideo/bgvideo9.mp4';
 
 
 function Cover () {
     // 视频数组
-    const videos = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6, Bg7];
+    const videos = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6, Bg7, Bg8, Bg9];
 
     // 当前视频的索引状态
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
