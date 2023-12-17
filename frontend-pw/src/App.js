@@ -13,13 +13,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Header />
+      </header>
+      <body>
         <Cover />
         <About />
         <Project />
         <Contact />
 
         <Contribution />
-      </header>
+      </body>
     </div>
   );
 }
