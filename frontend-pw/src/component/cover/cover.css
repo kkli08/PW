@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,7 @@ video {
 }
 
 .cover-text {
+    font-family: 'Dancing Script', cursive;
     position: absolute;
     top: 50%;
     left: 50%;
