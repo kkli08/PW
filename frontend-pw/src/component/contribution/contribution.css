@@ -20,3 +20,11 @@
     margin-bottom: 0vw; /* 减少底部外边距 */
     font-weight: bold;
 }
+
+@media (max-width: 780px){
+    #contribution .title {
+        /* font-family: 'Dancing Script', cursive; */
+        font-size: 4vw;
+        text-transform: uppercase;
+    }
+}

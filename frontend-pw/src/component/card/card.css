@@ -39,3 +39,17 @@
     text-decoration: none;
     margin: 0.5rem 0.5rem;
   }
+
+  @media (max-width: 780px){
+    .card-container{
+      width: 43vw;
+    }
+
+    .card-title{
+      font-size: 3vw;
+    }
+
+    .card-description{
+      font-size: 2vw;
+    }
+  }
