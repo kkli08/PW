@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from "../navbar/navbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCompass} from '@fortawesome/free-solid-svg-icons'
+import {faCompass, faList, faSnowflake} from '@fortawesome/free-solid-svg-icons'
 import "./header.css";
 
 function Header () {
@@ -44,10 +44,7 @@ function Header () {
         <section className="header-top__navbar">
             <Navbar /> 
         </section>
-        <section className="mobile-navbar" onClick={toggleMenu}>
-          {/* 菜单图标或者文字 */}
-          <FontAwesomeIcon icon={faCompass} />
-        </section>
+        
         {isMenuOpen && (
           <div className={`mobile-menu ${isMenuOpen ? 'mobile-menu-open' : ''}`}>
             {/* 移动菜单内容 */}
@@ -57,6 +54,12 @@ function Header () {
             {/* <a href="/blog" className="navbar-item">Blog</a> */}
           </div>
         )}
+        <section className="mobile-navbar" onClick={toggleMenu}>
+          {/* 菜单图标或者文字 */}
+          <FontAwesomeIcon icon={faSnowflake} />
+          {/* <FontAwesomeIcon icon={faList} /> */}
+          {/* <FontAwesomeIcon icon={faCompass} /> */}
+        </section>
 
     </section>
     </div>

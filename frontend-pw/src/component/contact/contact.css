@@ -21,3 +21,12 @@
     margin-top: 4.5vw; /* 与标题的间距 */
     gap: 5.5vw; 
 }
+
+
+@media (max-width: 780px){
+    #contact .title {
+        /* font-family: 'Dancing Script', cursive; */
+        font-size: 3vw;
+        text-transform: uppercase;
+    }
+}

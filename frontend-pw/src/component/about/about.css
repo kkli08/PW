@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
 
 #about {
@@ -72,3 +73,40 @@ h1 {
     gap: 1.5vw; 
 }
 
+
+/* 在屏幕尺寸较大时设置最大字体大小 */
+@media (max-width: 780px){
+    .title {
+        /* font-family: 'Dancing Script', cursive; */
+        font-size: 4vw;
+        text-transform: uppercase;
+    }
+    .about-description{
+        margin-top: 6vh;
+        flex-direction: column;
+    }
+    
+    .about-description .photo {
+        flex: 0 20% 35%; /* flex-grow flex-shrink flex-basis */
+        margin-left: 6%;
+        margin-right: 6%;
+        /* 不再需要background样式，因为我们使用<img>标签 */
+    }
+    .about-description .text{
+        font-size: 2.2vw;
+    }
+
+    .about-description p{
+        font-size: 2.5vw;
+    }
+
+    .boxcol{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr)); /* 使用vw单位 */
+        grid-gap: 0vw; /* 使用vw单位 */
+        justify-items: center; /* 横向居中对齐单元格内容 */
+        align-items: start; /* 纵向居中对齐单元格内容 */
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+}

@@ -12,3 +12,11 @@
     text-align: center; /* 中心对齐标题 */
     padding-top: 7vw; /* 用padding代替top来定位标题 */
 }
+
+@media (max-width: 780px){
+    #projects .title {
+        /* font-family: 'Dancing Script', cursive; */
+        font-size: 4vw;
+        text-transform: uppercase;
+    }
+}
