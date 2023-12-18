@@ -35,11 +35,13 @@ function Cover() {
 
     return (
         <section>
+            
             <video 
                 src={videos[currentVideoIndex]} 
                 // src={Christmas}
                 autoPlay 
                 loop 
+                playsInline
                 muted 
             />
             <div className='overlay'></div>
