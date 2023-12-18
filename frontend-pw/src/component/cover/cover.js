@@ -8,7 +8,7 @@ import Bg5 from './bgvideo/bgvideo5.mp4';
 import Bg6 from './bgvideo/bgvideo6.mp4';
 import Bg7 from './bgvideo/bgvideo7.mp4';
 import Bg8 from './bgvideo/bgvideo8.mp4';
-
+import Christmas from './bgvideo/Christmas.mp4';
 
 function Cover() {
     const videos = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6, Bg7, Bg8];
@@ -37,6 +37,7 @@ function Cover() {
         <section>
             <video 
                 src={videos[currentVideoIndex]} 
+                // src={Christmas}
                 autoPlay 
                 loop 
                 muted 
