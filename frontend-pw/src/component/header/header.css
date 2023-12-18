@@ -140,7 +140,7 @@
             align-items: center;
             margin-right: 5px;
             margin-left: 10px;
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
           }
           
         .header-top__navbar {
