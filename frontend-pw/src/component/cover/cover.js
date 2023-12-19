@@ -9,6 +9,7 @@ import Bg6 from './bgvideo/bgvideo6.mp4';
 import Bg7 from './bgvideo/bgvideo7.mp4';
 import Bg8 from './bgvideo/bgvideo8.mp4';
 import Christmas from './bgvideo/Christmas.mp4';
+import ScrollReveal from 'scrollreveal';
 
 function Cover() {
     const videos = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6, Bg7, Bg8];
@@ -31,6 +32,20 @@ function Cover() {
 
         // 清除定时器
         return () => clearInterval(interval);
+    }, []);
+
+    useEffect(() => {
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 200
+        });
+        ScrollReveal().reveal('.cover-text', { delay: 250, origin: 'right' });
+        // Add more ScrollReveal configurations here as needed
+        // You can target elements across different components
+
+        return () => ScrollReveal().destroy(); // Clean up
     }, []);
 
     return (
