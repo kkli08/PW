@@ -1,11 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import aboutPhoto from "./images/aboutphoto.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPassport, faDumbbell, faHeadphonesSimple, faBasketball, faPersonSwimming, faCamera, faFilePdf } from '@fortawesome/free-solid-svg-icons'
 import { Card } from "../card/card";
 import "./about.css";
+import ScrollReveal from 'scrollreveal';
 
 function About () {
+    useEffect(() => {
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 200
+        });
+        ScrollReveal().reveal('.title', { delay: 250, origin: 'left' });
+        ScrollReveal().reveal('.photo', { delay: 350, origin: 'bottom' });
+        ScrollReveal().reveal('.text ', { delay: 450, origin: 'right' });
+        ScrollReveal().reveal('.boxcol', { delay: 450, origin: 'bottom' });
+        // Add more ScrollReveal configurations here as needed
+        // You can target elements across different components
+
+        return () => ScrollReveal().destroy(); // Clean up
+    }, []);
     // 通过style属性动态设置背景图片
 
     return (
