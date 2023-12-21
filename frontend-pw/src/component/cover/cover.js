@@ -41,7 +41,7 @@ function Cover() {
             duration: 2500,
             delay: 200
         });
-        ScrollReveal().reveal('.cover-text', { delay: 250, origin: 'right' });
+        ScrollReveal().reveal('.cover-text', { delay: 250, origin: 'bottom' });
         // Add more ScrollReveal configurations here as needed
         // You can target elements across different components
 

@@ -19,14 +19,14 @@
     padding-bottom: 0.1vw;
     text-align: left;
     margin: 0.5rem 5%;
-    font-size: 1.7vw;
+    font-size: 2vw;
   }
   
   .card-description {
     white-space: pre-wrap; /* 保留空白符和换行 */
     text-align: left; /* 如果您希望文本左对齐 */
     margin: 0.5rem 5%;
-    font-size: 1.3vw;
+    font-size: 1.4vw;
   }
   
   .card-btn {

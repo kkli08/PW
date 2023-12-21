@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 #about {
     color: black;
     text-align: center; /* 中心对齐标题 */
     padding-top: 7vw; /* 用padding代替top来定位标题 */
     margin-bottom: 10vw;
+    font-family: 'EB Garamond', serif;
 }
 
 .title {
-    font-size: 1.5vw;
+    font-size: 2vw;
     text-transform: uppercase;
 }
 
@@ -52,7 +53,7 @@
 
 p {
     margin: 1vw; /* 去除默认的段落上下间距 */
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     /* justify to the left */
     justify-self: flex-start; 
     line-height: 2;

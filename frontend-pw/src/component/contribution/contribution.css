@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
 #contribution{
     width: 100%;        /* Full width */
     background-color: darkgrey; /* Light grey background */
     color: black; 
     margin-bottom: 0;
     padding-bottom: 3vw;
+    font-family: 'EB Garamond', serif;
 }
 
 #contribution .contributiontitle {
