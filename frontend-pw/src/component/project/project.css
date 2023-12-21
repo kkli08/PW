@@ -1,5 +1,6 @@
 
 #projects{
+    position: relative;
     width: 100%;        /* Full width */
     background-color: #f5f5f5; /* Light grey background */
     color: black; 
@@ -14,10 +15,34 @@
     padding-top: 7vw; /* 用padding代替top来定位标题 */
 }
 
+.lottie-animation-left {
+    position: absolute; 
+    top: 0;          
+    left: 0;         
+    width: 20vw;     
+    height: auto;    
+    z-index: 10;
+    transform: scaleX(-1); /* 水平翻转 */
+}
+
+.lottie-animation-right {
+    position: absolute; 
+    top: 0;          
+    right: 0;        
+    width: 20vw;     
+    height: auto;    
+    z-index: 10;
+}
+
 @media (max-width: 780px){
     #projects .title {
         /* font-family: 'Dancing Script', cursive; */
         font-size: 4vw;
         text-transform: uppercase;
+    }
+
+    .lottie-animation-left,
+    .lottie-animation-right {
+        width: 30vw;
     }
 }

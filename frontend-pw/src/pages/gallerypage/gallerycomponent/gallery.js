@@ -1,15 +1,14 @@
 import React from "react";
-import "./blogdetail.css";
+import "./gallery.css";
 import tree1 from "./tree.json";
 import Lottie from "lottie-react";
-
-function Blogdetail() {
+function Gallery() {
 
     return(
-        <div id="blogdetail">
-            <div className="blogdetailtitle">
+        <div id="gallery">
+            <div className="gallerytitle">
                 <h1>
-                Welcome to My Blog
+                Welcome to My Gallery
                 </h1>
                 <p>(Under Construction)</p>
                 <p> : ) </p>
@@ -19,4 +18,4 @@ function Blogdetail() {
     );
 }
 
-export default Blogdetail;
+export default Gallery;

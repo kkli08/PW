@@ -5,21 +5,34 @@ html {
   }
 
 body {
-    cursor: default;
   font-family: 'EB Garamond', serif;
 }
-  
+
 .lottie-animation {
   position: fixed; /* 固定定位 */
-  top: 0;          /* 屏幕顶部对齐 */
+  top: 0vw;          /* 屏幕顶部对齐 */
   right: 0;        /* 屏幕右侧对齐 */
   width: 20vw;     /* 视口宽度的百分比作为宽度，根据需要调整 */
   height: auto;    /* 高度自动，保持原始比例 */
-  z-index: 10;     /* 确保在其他元素之上 */
+  z-index: 9;     /* 确保在其他元素之上 */
 }
+.lottie-animation-flipped {
+  position: fixed; 
+  top: 0;          
+  left: 0;         
+  width: 20vw;     
+  height: auto;    
+  z-index: 9;     
+  transform: scaleX(-1); /* 水平翻转 */
+}
+
 
 @media (max-width: 780px) {
   .lottie-animation {
     width: 30vw; /* 小屏幕上使用更大的百分比 */
   }
+  .lottie-animation-flipped {
+    width: 30vw;
+  }
 }
+

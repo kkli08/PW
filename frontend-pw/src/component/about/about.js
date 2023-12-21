@@ -5,6 +5,9 @@ import { faPassport, faDumbbell, faHeadphonesSimple, faBasketball, faPersonSwimm
 import { Card } from "../card/card";
 import "./about.css";
 import ScrollReveal from 'scrollreveal';
+import Lottie from "lottie-react";
+import decorations from './decorations.json';
+import santa from './santa.json';
 
 function About () {
     useEffect(() => {
@@ -27,6 +30,19 @@ function About () {
 
     return (
         <div id="about">
+
+            <div className="lottie-animation-left">
+                <Lottie animationData={decorations} />
+            </div>
+
+            <div className="lottie-animation-right">
+                <Lottie animationData={santa} />
+            </div>
+
+            <div className="lottie-animation-right">
+                <Lottie animationData={decorations} />
+            </div>
+
             <div className="title">
                 <h1>About Me</h1>
             </div>

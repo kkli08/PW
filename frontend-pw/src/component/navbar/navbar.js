@@ -20,7 +20,7 @@ function Navbar () {
         <a href="/resume.pdf" className="navbar-item" target="_blank" rel="noopener noreferrer">Resume</a>
         <Link to="/blog" className="navbar-item">Blog</Link>
         <a href="#contact" className="navbar-item">Contact</a>
-        <a href="/gallery" className="navbar-item">Gallery</a>
+        <Link to="/gallery" className="navbar-item">Gallery</Link>
     </section>
     );
 }

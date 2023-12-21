@@ -7,6 +7,9 @@ import Project from '../../component/project/project';
 import Contact from '../../component/contact/contact';
 import Blog from '../../component/blog/blog';
 import Contribution from '../../component/contribution/contribution';
+import Lottie from "lottie-react";
+import decorations from '../components/decorations.json';
+
 
 function Home() {
   return (
@@ -14,6 +17,9 @@ function Home() {
       <header className="Home-header">
         <Header />
       </header>
+      {/* <div className="lottie-animation">
+      <Lottie animationData={decorations} />
+      </div> */}
       <body>
         <Cover />
         <About />

@@ -8,6 +8,7 @@ import {
   Link,
 } from "react-router-dom";
 import Blogpage from './pages/blogpage/blogpage';
+import Gallerypage from './pages/gallerypage/gallerypage';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
       <Routes>
         <Route path="/" Component={Home}/>
         <Route path="/blog" Component={Blogpage}/>
+        <Route path="/gallery" Component={Gallerypage}/>
+        
       </Routes> 
         
     </Router>
