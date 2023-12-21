@@ -40,7 +40,7 @@ function About () {
                     
                     <p className="about-text">I aspire to become a distributed system engineer 
                     / software development engineer, driven by my passion for creating innovative 
-                    solutions in the tech industry.
+                    solutions.
                     </p>
 
                     <h1>What I'm doing </h1>
@@ -70,11 +70,11 @@ function About () {
                 />
                 <Card
                     title={"Learning"}
-                    description={"WINTER 2024:\nECE1755H S (Winter) Parallel Computer Architecture and Programming\nECE1776H S (Winter) Computer Security, Cryptography and Privacy\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\n"}                
+                    description={"System Design\nDesign Patterns\n\nWINTER 2024:\nECE1755H S (Winter) Parallel Computer Architecture and Programming\nECE1776H S (Winter) Computer Security, Cryptography and Privacy\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\n"}                
                 />
                 <Card
                     title={"Hacking On"}
-                    description={"1) Dealing with school projects\n2) Leetcoding for interview\n3) Making this homepage more accessible"}                
+                    description={"1) School projects\n2) Leetcoding for interview\n3) Making this homepage more accessible"}                
                 />
             </div>
             

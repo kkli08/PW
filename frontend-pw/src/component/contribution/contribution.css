@@ -6,7 +6,7 @@
     padding-bottom: 3vw;
 }
 
-#contribution .title {
+#contribution .contributiontitle {
     text-transform: none;
     font-size: 1.2vw;
     color: white;
@@ -15,14 +15,14 @@
     
 }
 
-#contribution .title p {
+#contribution .contributiontitle p {
     margin-top: 0vw;    /* 减少顶部外边距 */
     margin-bottom: 0vw; /* 减少底部外边距 */
     font-weight: bold;
 }
 
 @media (max-width: 780px){
-    #contribution .title {
+    #contribution .contributiontitle {
         /* font-family: 'Dancing Script', cursive; */
         font-size: 4vw;
         text-transform: uppercase;
