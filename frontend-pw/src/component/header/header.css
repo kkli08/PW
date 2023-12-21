@@ -59,7 +59,7 @@
         /* 添加必要的样式，比如光标、大小、颜色等 */
         cursor: pointer;
         margin-right: 2.5vw;
-        margin-top: 1.5vw;
+        margin-top: 1vw;
         font-size: 5vw;
         transition: color 1s ease; /* 平滑过渡效果 */
     }
@@ -76,8 +76,9 @@
         max-height: 20vw;
         display: flex;
         margin-right: 2.5vw;
-        margin-top: 2.7vw;
+        margin-top: 2.4vw;
         transition: height 1s ease; /* 平滑过渡效果 */
+        padding-bottom: 0.5vw;
     }
 
 /* 在屏幕尺寸较小时设置最小字体大小 */
