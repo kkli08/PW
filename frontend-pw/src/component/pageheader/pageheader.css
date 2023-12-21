@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-.header {
-    
+.pageheader {
     margin-top: 0.3vw;
     display: flex;
     justify-content: space-between;
@@ -14,14 +13,14 @@
     font-family: 'EB Garamond', serif;
     }
 
-.App-header {
+.App-pageheader {
     /* 其他样式保持不变 */
     z-index: 100;
-    color: white; /* 初始文字颜色为白色 */
+    color: black; /* 初始文字颜色为白色 */
     transition: color 1s ease; /* 平滑过渡效果 */
 }
 
-.App-header.scrolled {
+.App-pageheader.scrolled {
     color: black;
     background-color: white;
     position: fixed;
@@ -34,7 +33,7 @@
 }
 
 
-    .header-logo {
+    .pageheader-logo {
         font-family: 'Dancing Script', cursive;
         color: inherit;
         text-decoration: inherit;
@@ -47,14 +46,14 @@
         /* text-transform: uppercase; */
       }
       
-    .header-top__navbar {
+    .pageheader-top__navbar {
         display: flex;
         margin-left: auto; /* This pushes the navbar to the right */
         align-items: center; /* Aligns navbar items vertically in the center */
         margin-right: 2.5vw;
       }
 
-    .mobile-navbar {
+    .pagemobile-navbar {
         display: none; /* 默认隐藏，在媒体查询中显示 */
         /* 添加必要的样式，比如光标、大小、颜色等 */
         cursor: pointer;
@@ -63,7 +62,7 @@
         font-size: 5vw;
         transition: color 1s ease; /* 平滑过渡效果 */
     }
-    .mobile-menu{
+    .pagemobile-menu{
         max-height: 0;
         overflow: hidden;
         display: flex;
@@ -72,7 +71,7 @@
         transition: height 1s ease; /* 平滑过渡效果 */
     }
 
-    .mobile-menu-open {
+    .pagemobile-menu-open {
         max-height: 20vw;
         display: flex;
         margin-right: 2.5vw;
@@ -83,17 +82,17 @@
 
 /* 在屏幕尺寸较小时设置最小字体大小 */
 @media (max-width: 650px) {
-    .App-header.scrolled{
+    .App-pageheader.scrolled{
         height: 9vw;
     }
     
-    .header-logo {
+    .pageheader-logo {
         font-size: 30px;
     }
-    .header-top__navbar {
+    .pageheader-top__navbar {
         display: none; /* 隐藏PC端导航栏 */
     }
-    .mobile-navbar {
+    .pagemobile-navbar {
         display: block; /* 显示移动端导航栏 */
     }    
     
@@ -101,7 +100,7 @@
 
 /* 在屏幕尺寸较大时设置最大字体大小 */
 @media (min-width: 800px) {
-    .header {
+    .pageheader {
         margin-top: 0;
         display: flex;
         justify-content: space-between;
@@ -114,14 +113,14 @@
         z-index: 10; /* 确保Header在Cover之上 */
         }
     
-    .App-header {
+    .App-pageheader {
         /* 其他样式保持不变 */
         z-index: 100;
-        color: white; /* 初始文字颜色为白色 */
+        color: black; /* 初始文字颜色为白色 */
         transition: color 1s ease; /* 平滑过渡效果 */
     }
     
-    .App-header.scrolled {
+    .App-pageheader.scrolled {
         color: black;
         background-color: white;
         position: fixed;
@@ -133,7 +132,7 @@
     }
     
     
-        .header-logo {
+        .pageheader-logo {
             color: inherit;
             text-decoration: inherit;
             font-size: 50px;
@@ -145,7 +144,7 @@
             /* text-transform: uppercase; */
           }
           
-        .header-top__navbar {
+        .pageheader-top__navbar {
             display: flex;
             margin-left: auto; /* This pushes the navbar to the right */
             align-items: center; /* Aligns navbar items vertically in the center */
