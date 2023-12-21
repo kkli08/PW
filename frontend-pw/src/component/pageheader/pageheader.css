@@ -9,7 +9,7 @@
     position: absolute;
     background-color: transparent;
     transition: background-color 3s ease;
-    z-index: 10; /* 确保Header在Cover之上 */
+    z-index: 11; /* 确保Header在Cover之上 */
     font-family: 'EB Garamond', serif;
     }
 

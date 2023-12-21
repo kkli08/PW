@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+#gallery{
+    width: 100%;        /* Full width */
+    background-color: white; /* Light grey background */
+    color: black; 
+    padding-bottom: 10vw;
+    font-family: 'EB Garamond', serif;
+}
+
+#gallery .gallerytitle {
+    font-size: 2vw;
+    text-transform: uppercase;
+    text-align: center; /* 中心对齐标题 */
+    padding-top: 9vw; /* 用padding代替top来定位标题 */
+}
+
+
+
+@media (max-width: 780px){
+    #gallery .gallerytitle {
+        /* font-family: 'Dancing Script', cursive; */
+        font-size: 3vw;
+        text-transform: uppercase;
+    }
+}

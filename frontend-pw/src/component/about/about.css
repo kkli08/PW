@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 #about {
+    position: relative;
     color: black;
     text-align: center; /* 中心对齐标题 */
     padding-top: 7vw; /* 用padding代替top来定位标题 */
@@ -74,6 +75,24 @@ h1 {
     gap: 1.5vw; 
 }
 
+.lottie-animation-left {
+    position: absolute; 
+    top: 0;          
+    left: 0;         
+    width: 20vw;     
+    height: auto;    
+    z-index: 10;
+    transform: scaleX(-1); /* 水平翻转 */
+}
+
+.lottie-animation-right {
+    position: absolute; 
+    top: 0;          
+    right: 0;        
+    width: 20vw;     
+    height: auto;    
+    z-index: 10;
+}
 
 /* 在屏幕尺寸较大时设置最大字体大小 */
 @media (max-width: 780px){
@@ -109,5 +128,10 @@ h1 {
         align-items: start; /* 纵向居中对齐单元格内容 */
         margin-left: 2%;
         margin-right: 2%;
+    }
+
+    .lottie-animation-left,
+    .lottie-animation-right {
+        width: 30vw;
     }
 }
