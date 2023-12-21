@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+.pageheader {
+    margin-top: 0.3vw;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 6vw;
+
+    position: absolute;
+    background-color: transparent;
+    transition: background-color 3s ease;
+    z-index: 10; /* 确保Header在Cover之上 */
+    font-family: 'EB Garamond', serif;
+    }
+
+.App-pageheader {
+    /* 其他样式保持不变 */
+    z-index: 100;
+    color: black; /* 初始文字颜色为白色 */
+    transition: color 1s ease; /* 平滑过渡效果 */
+}
+
+.App-pageheader.scrolled {
+    color: black;
+    background-color: white;
+    position: fixed;
+    /* margin-top: 0; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 6vw;
+    transition: height 1s ease, background-color 1s ease; /* 过渡效果 */
+}
+
+
+    .pageheader-logo {
+        font-family: 'Dancing Script', cursive;
+        color: inherit;
+        text-decoration: inherit;
+        font-size: 5vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2vw;
+        margin-left: 2vw;
+        /* text-transform: uppercase; */
+      }
+      
+    .pageheader-top__navbar {
+        display: flex;
+        margin-left: auto; /* This pushes the navbar to the right */
+        align-items: center; /* Aligns navbar items vertically in the center */
+        margin-right: 2.5vw;
+      }
+
+    .pagemobile-navbar {
+        display: none; /* 默认隐藏，在媒体查询中显示 */
+        /* 添加必要的样式，比如光标、大小、颜色等 */
+        cursor: pointer;
+        margin-right: 2.5vw;
+        margin-top: 1vw;
+        font-size: 5vw;
+        transition: color 1s ease; /* 平滑过渡效果 */
+    }
+    .pagemobile-menu{
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        margin-right: 2.5vw;
+        margin-top: 1.7vw;
+        transition: height 1s ease; /* 平滑过渡效果 */
+    }
+
+    .pagemobile-menu-open {
+        max-height: 20vw;
+        display: flex;
+        margin-right: 2.5vw;
+        margin-top: 2.4vw;
+        transition: height 1s ease; /* 平滑过渡效果 */
+        padding-bottom: 0.5vw;
+    }
+
+/* 在屏幕尺寸较小时设置最小字体大小 */
+@media (max-width: 650px) {
+    .App-pageheader.scrolled{
+        height: 9vw;
+    }
+    
+    .pageheader-logo {
+        font-size: 30px;
+    }
+    .pageheader-top__navbar {
+        display: none; /* 隐藏PC端导航栏 */
+    }
+    .pagemobile-navbar {
+        display: block; /* 显示移动端导航栏 */
+    }    
+    
+}
+
+/* 在屏幕尺寸较大时设置最大字体大小 */
+@media (min-width: 800px) {
+    .pageheader {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+        
+        position: absolute;
+        background-color: transparent;
+        transition: background-color 3s ease;
+        z-index: 10; /* 确保Header在Cover之上 */
+        }
+    
+    .App-pageheader {
+        /* 其他样式保持不变 */
+        z-index: 100;
+        color: black; /* 初始文字颜色为白色 */
+        transition: color 1s ease; /* 平滑过渡效果 */
+    }
+    
+    .App-pageheader.scrolled {
+        color: black;
+        background-color: white;
+        position: fixed;
+        /* margin-top: 0; */
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 60px;
+    }
+    
+    
+        .pageheader-logo {
+            color: inherit;
+            text-decoration: inherit;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+            margin-left: 10px;
+            /* text-transform: uppercase; */
+          }
+          
+        .pageheader-top__navbar {
+            display: flex;
+            margin-left: auto; /* This pushes the navbar to the right */
+            align-items: center; /* Aligns navbar items vertically in the center */
+            margin-right: 7px;
+          }
+}

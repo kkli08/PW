@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from "../navbar/navbar";
+import Pagenavbar from "./pagenavbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCompass, faList, faSnowflake} from '@fortawesome/free-solid-svg-icons'
 import {
@@ -7,9 +7,9 @@ import {
   Link,
   useNavigate,
 } from "react-router-dom";
-import "./header.css";
+import "./pageheader.css";
 
-function Header () {
+function Pageheader () {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -40,27 +40,47 @@ function Header () {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const navigate = useNavigate();
+
+    const scrollToAbout = () => {
+        navigate('/');
+        setTimeout(() => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 1);
+    };
+    const scrollToProject = () => {
+        navigate('/');
+        setTimeout(() => {
+            const aboutSection = document.getElementById('projects');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 1);
+    };
+
   return (
-    <div className={`App-header ${scrolled ? 'scrolled' : ''}`}>
-    <section className="header">
-        <section className="header-top__logo">
-            <a href="/" onClick={scrollToTop} className="header-logo">Ke Li</a>
+    <div className={`App-pageheader ${scrolled ? 'scrolled' : ''}`}>
+    <section className="pageheader">
+        <section className="pageheader-top__logo">
+            <a href="/" onClick={scrollToTop} className="pageheader-logo">Ke Li</a>
         </section>
-        <section className="header-top__navbar">
-            <Navbar /> 
+        <section className="pageheader-top__navbar">
+            <Pagenavbar /> 
         </section>
         
         {isMenuOpen && (
-          <div className={`mobile-menu ${isMenuOpen ? 'mobile-menu-open' : ''}`}>
+          <div className={`pagemobile-menu ${isMenuOpen ? 'pagemobile-menu-open' : ''}`}>
             {/* 移动菜单内容 */}
-            {/* <a href="#about" className="navbar-item">About Me</a> */}
-            <a href="#projects" className="navbar-item">Projects</a>
-            <Link to="/blog" className="navbar-item">Blog</Link>
+            <a onClick={scrollToAbout} className="navbar-item">About Me</a>
+            <a onClick={scrollToProject} className="navbar-item">Projects</a>
             <a href="/resume.pdf" className="navbar-item" target="_blank" rel="noopener noreferrer">Resume</a>
             {/* <a href="/blog" className="navbar-item">Blog</a> */}
           </div>
         )}
-        <section className="mobile-navbar" onClick={toggleMenu}>
+        <section className="pagemobile-navbar" onClick={toggleMenu}>
           {/* 菜单图标或者文字 */}
           <FontAwesomeIcon icon={faSnowflake} />
           {/* <FontAwesomeIcon icon={faList} /> */}
@@ -72,4 +92,4 @@ function Header () {
   );
 }
 
-export default Header;
+export default Pageheader;

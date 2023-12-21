@@ -1,0 +1,16 @@
+.pagenavbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.pagenavbar-item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3vw;
+    color: inherit;
+    text-decoration: inherit;
+    text-transform: uppercase;
+    outline: none;
+}
