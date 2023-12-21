@@ -40,7 +40,7 @@ function About () {
                     
                     <p className="about-text">I aspire to become a distributed system engineer 
                     / software development engineer, driven by my passion for creating innovative 
-                    solutions in the tech industry.
+                    solutions.
                     </p>
 
                     <h1>What I'm doing </h1>
@@ -74,7 +74,7 @@ function About () {
                 />
                 <Card
                     title={"Hacking On"}
-                    description={"1) Dealing with school projects\n2) Leetcoding for interview\n3) Making this homepage more accessible"}                
+                    description={"1) System Design\n2) Design Patterns\n3) School projects\n4) Leetcoding for interview\n5) Making this homepage more accessible"}                
                 />
             </div>
             

@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
 #contact{
     width: 100%;        /* Full width */
-    background-color: white; /* Light grey background */
+    background-color: #f5f5f5; /* Light grey background */
     color: black; 
-    margin-bottom: 10vw;
+    padding-bottom: 7vw;
+    font-family: 'EB Garamond', serif;
 }
 
 #contact .title {
-    font-size: 1.5vw;
+    font-size: 2vw;
     text-transform: uppercase;
     text-align: center; /* 中心对齐标题 */
     padding-top: 3vw; /* 用padding代替top来定位标题 */

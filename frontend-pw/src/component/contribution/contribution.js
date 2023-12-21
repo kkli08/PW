@@ -7,7 +7,7 @@ function Contribution() {
 
     return(
         <div id="contribution">
-            <div className="title">
+            <div className="contributiontitle">
                 <p>Inspired by many <FontAwesomeIcon icon={faHeart} /> Powered by React, AWS</p>
                 <p>Coded by Damian Li</p>
             </div>

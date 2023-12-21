@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
 #contribution{
     width: 100%;        /* Full width */
     background-color: darkgrey; /* Light grey background */
     color: black; 
     margin-bottom: 0;
     padding-bottom: 3vw;
+    font-family: 'EB Garamond', serif;
 }
 
-#contribution .title {
+#contribution .contributiontitle {
     text-transform: none;
     font-size: 1.2vw;
     color: white;
@@ -15,14 +18,14 @@
     
 }
 
-#contribution .title p {
+#contribution .contributiontitle p {
     margin-top: 0vw;    /* 减少顶部外边距 */
     margin-bottom: 0vw; /* 减少底部外边距 */
     font-weight: bold;
 }
 
 @media (max-width: 780px){
-    #contribution .title {
+    #contribution .contributiontitle {
         /* font-family: 'Dancing Script', cursive; */
         font-size: 4vw;
         text-transform: uppercase;
