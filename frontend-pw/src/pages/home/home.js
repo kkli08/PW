@@ -7,6 +7,7 @@ import Project from '../../component/project/project';
 import Contact from '../../component/contact/contact';
 import Blog from '../../component/blog/blog';
 import Contribution from '../../component/contribution/contribution';
+import Experience from '../../component/experience/experience';
 import Lottie from "lottie-react";
 import decorations from '../components/decorations.json';
 
@@ -23,6 +24,7 @@ function Home() {
       <body>
         <Cover />
         <About />
+        <Experience />
         <Project />
         <Blog />
         <Contact />
