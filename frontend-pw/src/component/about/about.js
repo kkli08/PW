@@ -22,6 +22,7 @@ function About () {
         ScrollReveal().reveal('.text ', { delay: 450, origin: 'right' });
         ScrollReveal().reveal('.boxcol', { delay: 450, origin: 'bottom' });
         ScrollReveal().reveal('.select-width', { delay: 250, origin: 'left' });
+        ScrollReveal().reveal('.timeline-width', { delay: 250, origin: 'left' });
         // Add more ScrollReveal configurations here as needed
         // You can target elements across different components
 

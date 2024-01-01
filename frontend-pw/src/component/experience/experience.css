@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+#experience{
+    width: 100%;        /* Full width */
+    background-color: white; /* Light grey background */
+    color: black; 
+    padding-bottom: 10vw;
+    font-family: 'EB Garamond', serif;
+}
+
+
+.timeline{
+    padding-top: 3vw;
+}
+.timeline-width{
+    font-family: 'EB Garamond', serif;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.timeline-item-content {
+    font-size: 1.6vw; /* 设置你希望的字体大小 */
+}
+.timeline-item-content h1{
+    font-size: 1.8vw;
+    margin-bottom: 0.3vw;
+}
+.timeline-item-content p{
+    margin-top: 0vw;
+    margin-bottom: 0vw;
+    font-size: 1.6vw;
+}
+
+.timeline-item-content h1,
+.timeline-item-content p,
+.timeline-item-content ul{
+  margin-left: 0;     /* 确保左对齐 */
+  text-align: left;   /* 文本左对齐 */
+}
+.timeline-item-content li{
+    list-style-position: inside;
+    font-size: 1.3vw;
+}
+  
+
+@media (max-width: 780px){
+    .timeline-width{
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+    .timeline-item-content {
+        font-size: 5vw; /* 设置你希望的字体大小 */
+    }
+    .timeline-item-content h1{
+        font-size: 4vw;
+    }
+    .timeline-item-content p{
+        font-size: 3.5vw;
+    }
+    .timeline-item-content li{
+        font-size: 3vw;
+    }
+}

@@ -37,3 +37,13 @@ video {
     height: 100%;
     background-color: rgba(0,0,0, 0.25);
 } */
+@media (max-width: 780px){
+    .cover-text {
+        font-size: 6vw;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .cover-text p {
+        font-size: 6vw;
+    }
+}
