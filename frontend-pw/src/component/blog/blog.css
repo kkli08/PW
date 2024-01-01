@@ -15,6 +15,9 @@
     padding-top: 3vw; /* 用padding代替top来定位标题 */
 }
 
+.select-width {
+    width: 200px;
+}
 
 
 @media (max-width: 780px){
@@ -22,5 +25,8 @@
         /* font-family: 'Dancing Script', cursive; */
         font-size: 3vw;
         text-transform: uppercase;
+    }
+    .select-width {
+        width: 150px;
     }
 }

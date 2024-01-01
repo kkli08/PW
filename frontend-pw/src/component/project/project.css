@@ -34,6 +34,11 @@
     z-index: 10;
 }
 
+.select-width {
+    width: 200px;
+}
+
+
 @media (max-width: 780px){
     #projects .title {
         /* font-family: 'Dancing Script', cursive; */
@@ -44,5 +49,9 @@
     .lottie-animation-left,
     .lottie-animation-right {
         width: 30vw;
+    }
+
+    .select-width {
+        width: 150px;
     }
 }
