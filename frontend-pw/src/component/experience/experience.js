@@ -76,7 +76,7 @@ function Experience() {
                     position: 'right',
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
-                    children: <div className="timeline-item-content"><h1>Full Stack Engineer Intern</h1>
+                    children: <div className="timeline-item-content"><h1>Software Engineer Intern (Part-Time)</h1>
                                                                     <p>Jan - Apr 2023</p>
                                                                     <p>Alberta Language Technology Lab (ALT Lab)</p>
                                                                     
