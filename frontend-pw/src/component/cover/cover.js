@@ -20,7 +20,7 @@ function Cover() {
         const calculateCurrentVideoIndex = () => {
             const date = new Date();
             const currentHour = date.getHours();
-            const index = Math.floor(currentHour / 3) % videos.length;
+            const index = Math.floor(currentHour / 6) % videos.length;
             setCurrentVideoIndex(index);
         };
 
