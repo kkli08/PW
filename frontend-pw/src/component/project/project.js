@@ -7,43 +7,39 @@ import { Card } from "../card/card";
 
 import "./project.css";
 import habotImage from './project_cover/habot.png';
-import veImage from './project_cover/ve.png';
+import veImage from './project_cover/ve.jpg';
+import sdImage from './project_cover/sd.jpg';
+import hpImage from './project_cover/hp.jpg';
 
 // Define the card data
 const webApplicationCards = [
     { 
-        title: 'Web Application - Vocabulary Explorer', 
+        title: 'Vocabulary Explorer', 
         description: 'An online visualization dictionary that allows users to expand or collapse different semantic classes through the form of a tree in order to see which word(s) fall under that category, and the relationships between categories.\n\nTool Use: React, D3.js, JavaScript, AWS, Docker, Github, MKDoc, Figma', 
         imgSrc: veImage, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
         link: 'https://www.youtube.com/watch?v=0xyK7al-No4',
     },
     { 
-        title: 'Web Application - ', 
-        description: '\n\nTool Use: ', 
-        imgSrc: habotImage, // 图片的路径
+        title: 'Social Distribution', 
+        description: 'An web application, enable user engagement and social sharing, including the ability to share posts, comment and like posts, and follow preferred users.\n\nTool Use: Django, React, PostgreSQL, Django REST Framework', 
+        imgSrc: sdImage, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
-        link: '',
+        link: 'https://github.com/CMPUT404F22ProjectTeam/WebApplicationProject/wiki',
     },
     { 
-        title: 'Web Application - ', 
-        description: '\n\nTool Use: ', 
-        imgSrc: habotImage, // 图片的路径
+        title: 'My Home Page', 
+        description: 'Tool Use: React, Ant Design, AWS, Github', 
+        imgSrc: hpImage, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
-        link: '',
+        link: 'https://www.damianli.com/',
     },
-    { 
-        title: 'Web Application - ', 
-        description: '\n\nTool Use: ', 
-        imgSrc: habotImage, // 图片的路径
-        imgAlt: 'Image',// 图片的替代文本
-        link: '',
-    },
+    // ... more cards
 ];
 
 const mobileApplicationCards = [
     { 
-        title: 'Android Application - Habot', 
+        title: 'Habot', 
         description: 'An android application that aims to help people record their daily habits, including adding, deleting, changing habits, and presenting the habits of the day separately.\n\nTool Use: Java, Android Studio, Github, Firebase, Figma', 
         imgSrc: habotImage, // 图片的路径
         imgAlt: 'Mobile App 1 Image',// 图片的替代文本

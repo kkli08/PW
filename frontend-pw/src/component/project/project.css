@@ -54,7 +54,7 @@
 #projects .card-img {
     max-height: 20vw;/* 最大高度 */
     width: 100%; /* 设置图片宽度占满容器宽度 */
-    height: auto; /* 设置高度自适应，保持图片比例 */
+    height: 18vw; /* 设置高度自适应，保持图片比例 */
     object-fit: cover; /* 保证图片内容完整显示，不被裁剪或拉伸 */
 }
 
@@ -97,7 +97,7 @@
 
     #projects .card-img {
         max-height: 40vw;/* 最大高度 */
-        
+        height: 30vw;
     }
     #projects .card-title {
         font-size: 1.3em; /* 或者使用像素值，如 '16px' */
