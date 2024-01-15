@@ -56,8 +56,8 @@ function About () {
                 <div className="text">
                     <h1>What I hope to do</h1>
                     
-                    <p className="about-text">I aspire to become a distributed system engineer 
-                    / software development engineer, driven by my passion for creating innovative 
+                    <p className="about-text">I aspire to become a  
+                    Cybersecurity engineer / distributed system engineer, driven by my passion for creating innovative 
                     solutions.
                     </p>
 
@@ -66,7 +66,7 @@ function About () {
                     <p className="about-text">
                     I'm currently pursuing my Master degree at University of Toronto, 
                     my major study areas are Computing Engineering and Cybersecurity.
-                    I'm seeking 4 or 8 months internships starting from Summer 2024. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
+                    I'm seeking 4 months internships starting from Summer 2024 & Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
                     </p>
 
                     <h1>When I'm not coding, you can find me</h1>
@@ -88,11 +88,11 @@ function About () {
                 />
                 <Card
                     title={"Learning"}
-                    description={"WINTER 2024:\nECE1755H S (Winter) Parallel Computer Architecture and Programming\nECE1776H S (Winter) Computer Security, Cryptography and Privacy\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\n"}                
+                    description={"WINTER 2024:\nECE1776H S (Winter) Computer Security, Cryptography and Privacy\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\n"}                
                 />
                 <Card
                     title={"Hacking On"}
-                    description={"1) System Design\n2) Design Patterns\n3) School projects\n4) Leetcoding for interview\n5) Making this homepage more accessible"}                
+                    description={"1) System Design\n2) Design Patterns\n3) Cybersecurity \n4) Cloud Computing\n5) Making this homepage more accessible"}                
                 />
             </div>
             

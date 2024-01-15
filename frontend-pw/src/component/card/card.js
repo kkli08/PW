@@ -11,9 +11,11 @@ export const Card = ({
   }) => {
     return (
       <div className="card-container">
-        {imgSrc && imgAlt && (
-          <img src={imgSrc} alt={imgAlt} className="card-img" />
-        )}
+        {imgSrc && imgAlt && link && (
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                    <img src={imgSrc} alt={imgAlt} className="card-img" />
+                </a>
+            )}
         {title && <h1 className="card-title">{title}</h1>}
         {description && <p className="card-description">{description}</p>}
         {buttonText && link && (

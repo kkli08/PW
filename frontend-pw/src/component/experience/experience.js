@@ -7,7 +7,7 @@ import {
     Link,
   } from "react-router-dom";
 import { Select } from 'antd';
-import { EnvironmentOutlined, TeamOutlined, TrophyOutlined } from '@ant-design/icons';
+import { EnvironmentOutlined, TeamOutlined, TrophyOutlined, GoogleOutlined } from '@ant-design/icons';
 import { Timeline } from 'antd';
 
 
@@ -100,6 +100,15 @@ function Experience() {
                                                                         <li>Major Area of Focus: Computing Engineering & Identity, Privacy and Security (IPS)</li> 
                                                                         <li>Coursework: Distributed System, Network Security, Parallel Computing</li>   
                                                                     </ul>    
+                                                                    </div>,
+                },
+                {
+                    position: 'left',
+                    color: 'green',
+                    dot: <GoogleOutlined  className="timeline-item-content"/>,
+                    children: <div className="timeline-item-content"><h1>Google Cybersecurity Professional Certificate</h1>
+                                                                    <p>Jan - Mar 2024</p>
+                                                                    
                                                                     </div>,
                 },
                 {

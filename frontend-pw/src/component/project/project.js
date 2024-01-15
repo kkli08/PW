@@ -1,15 +1,92 @@
-import React from "react";
+import React, { useState } from "react";
 import tree1 from "./tree.json";
 import Lottie from "lottie-react";
 import decorations from './decorations.json';
 import { Select } from 'antd';
+import { Card } from "../card/card";
 
 import "./project.css";
+import habotImage from './project_cover/habot.png';
+import veImage from './project_cover/ve.jpg';
+import sdImage from './project_cover/sd.jpg';
+import hpImage from './project_cover/hp.jpg';
+import cliImage from './project_cover/clishell.png';
+import ssImage from './project_cover/ss.png';
+// Define the card data
+const webApplicationCards = [
+    { 
+        title: 'Vocabulary Explorer', 
+        description: 'An online visualization dictionary that allows users to expand or collapse different semantic classes through the form of a tree in order to see which word(s) fall under that category, and the relationships between categories.\n\nTool Use: React, D3.js, JavaScript, AWS, Docker, Github, MKDoc, Figma', 
+        imgSrc: veImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://www.youtube.com/watch?v=0xyK7al-No4',
+    },
+    { 
+        title: 'Social Distribution', 
+        description: 'An web application, enable user engagement and social sharing, including the ability to share posts, comment and like posts, and follow preferred users.\n\nTool Use: Django, React, PostgreSQL, Django REST Framework', 
+        imgSrc: sdImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/CMPUT404F22ProjectTeam/WebApplicationProject/wiki',
+    },
+    { 
+        title: 'My Home Page', 
+        description: 'Tool Use: React, Ant Design, AWS, Github', 
+        imgSrc: hpImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://www.damianli.com/',
+    },
+    // ... more cards
+];
+
+const mobileApplicationCards = [
+    { 
+        title: 'Habot', 
+        description: 'An android application that aims to help people record their daily habits, including adding, deleting, changing habits, and presenting the habits of the day separately.\n\nTool Use: Java, Android Studio, Github, Firebase, Figma', 
+        imgSrc: habotImage, // 图片的路径
+        imgAlt: 'Mobile App 1 Image',// 图片的替代文本
+        link: 'https://github.com/CMPUT301F21T24/Habot/wiki/Part4-StoryBoard',
+    },
+    // ... more cards
+];
+
+const linuxSystemCards = [
+    { 
+        title: 'CLI Shell', 
+        description: 'Individual project. Designed and developed a custom command-line interface utilizing C programming language and Linux operating system to enhance user interaction and efficiency. Demonstrated mastery in software development by implementing functionalities such as process inspection, creation, termination and resume.\n\nTool Use: C, Bash', 
+        imgSrc: cliImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/CLI-Shell',
+    },
+    { 
+        title: 'Socket_Server', 
+        description: 'Individual project. Developed a cutting-edge client-server interaction simulation utilizing advanced C programming and socket API. Demonstrated exceptional software engineering skills by enabling the server to process and respond to multiple client requests and information concurrently with high efficiency through multi-threading.\n\nTool Use: C, Bash, Socket API', 
+        imgSrc: ssImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/Socket_Server',
+    },
+    // ... more cards
+];
 
 
 function Project() {
+    const [cards, setCards] = useState(webApplicationCards);
+
     const handleChange = (value) => {
         console.log(`selected ${value}`);
+        switch (value) {
+            case 'Web_Application':
+                setCards(webApplicationCards);
+                break;
+            case 'Mobile_Application':
+                setCards(mobileApplicationCards);
+                break;
+            case 'Linux_System':
+                setCards(linuxSystemCards);
+                break;
+            // ... handle other cases
+            default:
+                setCards([]);
+        }
         };
 
     return(
@@ -69,6 +146,20 @@ function Project() {
                 ]}
             />
             </div>
+
+            <div className="boxcol">
+                {cards.map((card, index) => (
+                    <Card 
+                        key={index} 
+                        title={card.title} 
+                        description={card.description} 
+                        imgSrc={card.imgSrc}
+                        imgAlt={card.imgAlt}
+                        link={card.link}
+                    />
+                ))}
+            </div>
+
             <Lottie animationData={tree1} />
         </div>
     );
