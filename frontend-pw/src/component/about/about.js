@@ -57,8 +57,11 @@ function About () {
                     <h1>What I hope to do</h1>
                     
                     <p className="about-text">I aspire to become a  
-                    Cybersecurity engineer / distributed system engineer, driven by my passion for creating innovative 
-                    solutions.
+                    Cybersecurity Engineer / Distributed System Engineer. 
+                    My commitment to integrity and protecting people's privacy and 
+                    virtual assets drives my passion for developing robust cybersecurity solutions.
+                    I am eager to apply my skills to safeguard information, 
+                    uphold ethical standards, and contribute effectively to the evolving field of cybersecurity.
                     </p>
 
                     <h1>What I'm doing </h1>
