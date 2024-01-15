@@ -10,7 +10,8 @@ import habotImage from './project_cover/habot.png';
 import veImage from './project_cover/ve.jpg';
 import sdImage from './project_cover/sd.jpg';
 import hpImage from './project_cover/hp.jpg';
-
+import cliImage from './project_cover/clishell.png';
+import ssImage from './project_cover/ss.png';
 // Define the card data
 const webApplicationCards = [
     { 
@@ -48,6 +49,24 @@ const mobileApplicationCards = [
     // ... more cards
 ];
 
+const linuxSystemCards = [
+    { 
+        title: 'CLI Shell', 
+        description: 'Individual project. Designed and developed a custom command-line interface utilizing C programming language and Linux operating system to enhance user interaction and efficiency. Demonstrated mastery in software development by implementing functionalities such as process inspection, creation, termination and resume.\n\nTool Use: C, Bash', 
+        imgSrc: cliImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/CLI-Shell',
+    },
+    { 
+        title: 'Socket_Server', 
+        description: 'Individual project. Developed a cutting-edge client-server interaction simulation utilizing advanced C programming and socket API. Demonstrated exceptional software engineering skills by enabling the server to process and respond to multiple client requests and information concurrently with high efficiency through multi-threading.\n\nTool Use: C, Bash, Socket API', 
+        imgSrc: ssImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/Socket_Server',
+    },
+    // ... more cards
+];
+
 
 function Project() {
     const [cards, setCards] = useState(webApplicationCards);
@@ -60,6 +79,9 @@ function Project() {
                 break;
             case 'Mobile_Application':
                 setCards(mobileApplicationCards);
+                break;
+            case 'Linux_System':
+                setCards(linuxSystemCards);
                 break;
             // ... handle other cases
             default:
