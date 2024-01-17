@@ -12,6 +12,8 @@ import sdImage from './project_cover/sd.jpg';
 import hpImage from './project_cover/hp.jpg';
 import cliImage from './project_cover/clishell.png';
 import ssImage from './project_cover/ss.png';
+import stopandwaitImage from './project_cover/stopandwait.jpeg';
+import wirelessNetworkImage from './project_cover/wirelessnetwork.png';
 // Define the card data
 const webApplicationCards = [
     { 
@@ -67,6 +69,24 @@ const linuxSystemCards = [
     // ... more cards
 ];
 
+const networkProtocols = [
+    { 
+        title: 'Enhanced Stop and Wait Protocol', 
+        description: 'This project involves enhancing the traditional stop-and-wait data link protocol for reliable communication in a simulated network environment using the CNET simulator. The primary objective is to ensure reliable transmission between two nodes in a network by handling data and acknowledgment frames effectively. The protocol is designed to work in a setting where piggybacking and negative acknowledgements are not utilized, focusing instead on the core functionality of stop-and-wait mechanisms.\n\nTool Use: C, Cnet, Makefile', 
+        imgSrc: stopandwaitImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/Enhanced-Stop-and-Wait-Protocol-for-Reliable-Data-Transmission-in-Network-Simulation',
+    },
+    { 
+        title: 'Wireless Network Communication', 
+        description: 'This project involves the development of a TCP-like protocol simulation using the CNET network simulator. The primary goal is to facilitate efficient and reliable message transmission in a simulated wireless network environment. This environment consists of mobile nodes and access points (anchors), where communication is based on transmitting, forwarding, and acknowledging messages.\n\nTool Use: C, Makefile, Cnet', 
+        imgSrc: wirelessNetworkImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/Wireless-Network-Communication-Simulation-using-CNET',
+    },
+    // ... more cards
+];
+
 
 function Project() {
     const [cards, setCards] = useState(webApplicationCards);
@@ -82,6 +102,9 @@ function Project() {
                 break;
             case 'Linux_System':
                 setCards(linuxSystemCards);
+                break;
+            case 'Network_Protocols':
+                setCards(networkProtocols);
                 break;
             // ... handle other cases
             default:
