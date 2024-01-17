@@ -61,10 +61,10 @@ function Cover() {
             />
             <div className='overlay'></div>
             <div className="cover-text">
-                {/* <h1>"In matters of principle, stand like a rock."</h1>
-                <p>- Thomas Jefferson</p> */}
-                <h1>"Don't pray for an easy path, But the strength to handle the difficulties."</h1>
-                <p>- Elon Musk</p>
+                <h1>"In matters of principle, stand like a rock."</h1>
+                <p>- Thomas Jefferson</p>
+                {/* <h1>"Don't pray for an easy path, But the strength to handle the difficulties."</h1>
+                <p>- Elon Musk</p> */}
             </div>
         </section>
     );
