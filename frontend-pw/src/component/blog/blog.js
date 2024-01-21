@@ -9,7 +9,7 @@ import {
 import { Select } from 'antd';
 import { Card } from "../card/card";
 import bufferoverflowImage from './blog_cover/buffer_overflow.png';
-
+import securityauditImage from './blog_cover/security_audit.png';
 const cybersecurityCards = [
     { 
         title: 'Buffer Overflow', 
@@ -17,6 +17,13 @@ const cybersecurityCards = [
         imgSrc: bufferoverflowImage, // 图片的路径
         imgAlt: 'buffer overflow Image',// 图片的替代文本
         link: 'https://github.com/kkli08/Buffer-Overflow/wiki#welcome-to-my-buffer-overflow-blog',
+    },
+    { 
+        title: 'Security Audit', 
+        description: 'Security audit is a process of analyzing the security of a system or software by performing a series of tests.', 
+        imgSrc: securityauditImage, // 图片的路径
+        imgAlt: 'security audit Image',// 图片的替代文本
+        link: 'https://drive.google.com/drive/folders/1ATDzG_buiJkn0oEsTJ37vbSzizCntiFq?usp=sharing',
     },
     // ... more cards
 ];
