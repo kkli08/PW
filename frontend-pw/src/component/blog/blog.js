@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState }  from "react";
 import "./blog.css";
 import {
     BrowserRouter as Router,
@@ -7,11 +7,33 @@ import {
     Link,
   } from "react-router-dom";
 import { Select } from 'antd';
+import { Card } from "../card/card";
+import bufferoverflowImage from './blog_cover/buffer_overflow.png';
 
+const cybersecurityCards = [
+    { 
+        title: 'Buffer Overflow', 
+        description: 'Buffer overflow is a vulnerability in low level programming languages such as C and C++. It is caused by writing data beyond the allocated memory. This can lead to a crash of the program or even worse, the attacker can execute arbitrary code.', 
+        imgSrc: bufferoverflowImage, // 图片的路径
+        imgAlt: 'buffer overflow Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/Buffer-Overflow/wiki#welcome-to-my-buffer-overflow-blog',
+    },
+    // ... more cards
+];
 
 function Blog() {
+    const [cards, setCards] = useState(cybersecurityCards);
+
     const handleChange = (value) => {
         console.log(`selected ${value}`);
+        switch (value) {
+            case 'Cybersecurity':
+                setCards(cybersecurityCards);
+                break;
+            // ... handle other cases
+            default:
+                setCards([]);
+        }
         };
 
     return(
@@ -24,13 +46,17 @@ function Blog() {
 
             <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Select
-                defaultValue="Happy New Year"
+                defaultValue="Cybersecurity"
                 className="select-width"
                 onChange={handleChange}
                 options={[
                 {
                     label: 'Technical Blogs',
                     options: [
+                    {
+                        label: 'Cybersecurity',
+                        value: 'Cybersecurity',
+                    },
                     {
                         label: 'Leetcode',
                         value: 'Leetcode',
@@ -64,6 +90,19 @@ function Blog() {
                 },
                 ]}
             />
+            </div>
+
+            <div className="boxcol">
+                {cards.map((card, index) => (
+                    <Card 
+                        key={index} 
+                        title={card.title} 
+                        description={card.description} 
+                        imgSrc={card.imgSrc}
+                        imgAlt={card.imgAlt}
+                        link={card.link}
+                    />
+                ))}
             </div>
         </div>
     );
