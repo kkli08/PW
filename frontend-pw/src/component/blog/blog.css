@@ -19,6 +19,32 @@
     width: 200px;
 }
 
+#blog .boxcol{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40vw, 1fr)); /* 使用vw单位 */
+    grid-row-gap: 2.5vw; /* 设置行间隔 */
+    grid-column-gap: 0; /* 设置列间隔为 0 */
+    justify-items: center; /* 横向居中对齐单元格内容 */
+    align-items: start; /* 纵向居中对齐单元格内容 */
+    margin-left: 2%;
+    margin-right: 2%;
+    
+}
+
+#blog .card-img {
+    max-height: 20vw;/* 最大高度 */
+    width: 100%; /* 设置图片宽度占满容器宽度 */
+    height: 18vw; /* 设置高度自适应，保持图片比例 */
+    object-fit: cover; /* 保证图片内容完整显示，不被裁剪或拉伸 */
+}
+
+#blog .card-container {
+    width: 42vw;
+  }
+
+#blog .card-description {
+    font-size: 1.1em; /* 或者使用像素值，如 '16px' */
+}
 
 @media (max-width: 780px){
     #blog .title {
@@ -28,5 +54,31 @@
     }
     .select-width {
         width: 150px;
+    }
+
+    #blog .boxcol{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(80vw, 1fr)); /* 使用vw单位 */
+        grid-row-gap: 2vw;
+        justify-items: center; /* 横向居中对齐单元格内容 */
+        align-items: start; /* 纵向居中对齐单元格内容 */
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #blog .card-container {
+        width: 75vw;
+      }
+
+    #blog .card-img {
+        max-height: 40vw;/* 最大高度 */
+        height: 30vw;
+    }
+    #blog .card-title {
+        font-size: 1.3em; /* 或者使用像素值，如 '16px' */
+    }
+
+    #blog .card-description {
+        font-size: 1em; /* 或者使用像素值，如 '16px' */
     }
 }
