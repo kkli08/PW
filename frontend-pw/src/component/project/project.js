@@ -14,6 +14,8 @@ import cliImage from './project_cover/clishell.png';
 import ssImage from './project_cover/ss.png';
 import stopandwaitImage from './project_cover/stopandwait.jpeg';
 import wirelessNetworkImage from './project_cover/wirelessnetwork.png';
+import pokergameImage from './project_cover/pokergame.png';
+
 // Define the card data
 const webApplicationCards = [
     { 
@@ -87,6 +89,15 @@ const networkProtocols = [
     // ... more cards
 ];
 
+const gameStrategy = [
+    { 
+        title: '2-Player Poker Games', 
+        description: 'Blackjack (GUI)\nWho Runs Fast \n\nTool Use: Python, PyQt5', 
+        imgSrc: pokergameImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/WhoRunsFast',
+    },
+];
 
 function Project() {
     const [cards, setCards] = useState(webApplicationCards);
@@ -105,6 +116,9 @@ function Project() {
                 break;
             case 'Network_Protocols':
                 setCards(networkProtocols);
+                break;
+            case 'Game_Strategy':
+                setCards(gameStrategy);
                 break;
             // ... handle other cases
             default:
@@ -146,6 +160,10 @@ function Project() {
                     {
                         label: 'CyberSecurity',
                         value: 'CyberSecurity',
+                    },
+                    {
+                        label: 'Game Strategy',
+                        value: 'Game_Strategy',
                     },
                     ],
                 },
