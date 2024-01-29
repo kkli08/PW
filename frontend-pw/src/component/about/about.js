@@ -1,5 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import aboutPhoto from "./images/aboutphoto.jpg";
+import aboutPhoto1 from "./images/aboutphoto1.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPassport, faDumbbell, faHeadphonesSimple, faBasketball, faPersonSwimming, faCamera, faFilePdf } from '@fortawesome/free-solid-svg-icons'
 import { Card } from "../card/card";
@@ -10,6 +11,19 @@ import decorations from './decorations.json';
 import santa from './santa.json';
 
 function About () {
+    // State to track the current image
+    const [currentImage, setCurrentImage] = useState(aboutPhoto1);
+
+    useEffect(() => {
+        // Set up an interval to switch the image every hour (3600000 milliseconds)
+        const interval = setInterval(() => {
+            setCurrentImage(current => (current === aboutPhoto1 ? aboutPhoto : aboutPhoto1));
+        }, 3600000); // 3600000 milliseconds = 1 hour
+
+        // Cleanup function to clear the interval
+        return () => clearInterval(interval);
+    }, []); // Empty dependency array means this effect runs once on mount
+
     useEffect(() => {
         ScrollReveal({
             reset: true,
@@ -51,7 +65,7 @@ function About () {
             <div className="about-description">
                 
                 <div className="photo">
-                    <img src={aboutPhoto} alt="aboutphoto" />
+                    <img src={currentImage} alt="aboutphoto" />
                 </div>
                 <div className="text">
                     <h1>What I hope to do</h1>
