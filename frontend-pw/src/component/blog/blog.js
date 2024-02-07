@@ -10,6 +10,9 @@ import { Select } from 'antd';
 import { Card } from "../card/card";
 import bufferoverflowImage from './blog_cover/buffer_overflow.png';
 import securityauditImage from './blog_cover/security_audit.png';
+import doublefreeImage from './blog_cover/double_free.jpg';
+import formatstringImage from './blog_cover/format_string.png';
+
 const cybersecurityCards = [
     { 
         title: 'Buffer Overflow', 
@@ -17,6 +20,20 @@ const cybersecurityCards = [
         imgSrc: bufferoverflowImage, // 图片的路径
         imgAlt: 'buffer overflow Image',// 图片的替代文本
         link: 'https://github.com/kkli08/Buffer-Overflow/wiki#welcome-to-my-buffer-overflow-blog',
+    },
+    { 
+        title: 'Format String Overflow', 
+        description: 'Format string vulnerability is a type of software vulnerability that can be used in security exploits. This can lead to a exploitation, the attacker can execute arbitrary code by overwriting the return address.', 
+        imgSrc: formatstringImage, // 图片的路径
+        imgAlt: 'format string Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/format-string/wiki#format-string',
+    },
+    { 
+        title: 'Double Free Exploitation', 
+        description: 'Double free is a memory corruption bug that occurs when free() is called on the same allocated memory address more than once. This can lead to a exploitation, the attacker can execute arbitrary code by assigning the shellcode address(in the heap) to the return address($rip).', 
+        imgSrc: doublefreeImage, // 图片的路径
+        imgAlt: 'double free Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/format-string/wiki#double-free',
     },
     { 
         title: 'Security Audit', 
