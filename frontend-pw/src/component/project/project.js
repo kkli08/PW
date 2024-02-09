@@ -15,6 +15,7 @@ import ssImage from './project_cover/ss.png';
 import stopandwaitImage from './project_cover/stopandwait.jpeg';
 import wirelessNetworkImage from './project_cover/wirelessnetwork.png';
 import pokergameImage from './project_cover/pokergame.png';
+import riscv_arm from './project_cover/RISCV_ARM_Architecture.jpeg';
 
 // Define the card data
 const webApplicationCards = [
@@ -99,6 +100,16 @@ const gameStrategy = [
     },
 ];
 
+const assembleLanguage = [
+    { 
+        title: 'RISC-V to ARM Instruction Set Translator', 
+        description: 'This project involves the development of an assembly language program that efficiently translates RISC-V instructions into equivalent ARM instructions. The primary objective is to create a software bridge enabling the execution of RISC-V code on ARM-based architectures, broadening the applicability of RISC-V programs.', 
+        imgSrc: riscv_arm, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/RISCV_ARM_Transition',
+    },
+];
+
 function Project() {
     const [cards, setCards] = useState(webApplicationCards);
 
@@ -119,6 +130,9 @@ function Project() {
                 break;
             case 'Game_Strategy':
                 setCards(gameStrategy);
+                break;
+            case 'Assemble_Language':
+                setCards(assembleLanguage);
                 break;
             // ... handle other cases
             default:
@@ -177,6 +191,10 @@ function Project() {
                     {
                         label: 'Network Protocols',
                         value: 'Network_Protocols',
+                    },
+                    {
+                        label: 'Assembly Language',
+                        value: 'Assemble_Language',
                     },
                     {
                         label: 'Distributed System',
