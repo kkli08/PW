@@ -16,7 +16,7 @@ import stopandwaitImage from './project_cover/stopandwait.jpeg';
 import wirelessNetworkImage from './project_cover/wirelessnetwork.png';
 import pokergameImage from './project_cover/pokergame.png';
 import riscv_arm from './project_cover/RISCV_ARM_Architecture.jpeg';
-
+import sdn from './project_cover/Traditional-networking-versus-SDN-networking.png';
 // Define the card data
 const webApplicationCards = [
     { 
@@ -74,6 +74,13 @@ const linuxSystemCards = [
 
 const networkProtocols = [
     { 
+        title: 'Software Defined Network Adoption Decision Analysis', 
+        description: 'This document is dedicated to a preliminary design process of a simulation tool performance compari- son of Software-Defined Networking (SDN) and traditional networks. The scope of our project would be identified and details would be provided on how SDN’s performance compares across various user specified scenarios against traditional networking solutions.', 
+        imgSrc: sdn, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: '/project_static/ECE1779_Term_Project.pdf',
+    },
+    { 
         title: 'Enhanced Stop and Wait Protocol', 
         description: 'This project involves enhancing the traditional stop-and-wait data link protocol for reliable communication in a simulated network environment using the CNET simulator. The primary objective is to ensure reliable transmission between two nodes in a network by handling data and acknowledgment frames effectively. The protocol is designed to work in a setting where piggybacking and negative acknowledgements are not utilized, focusing instead on the core functionality of stop-and-wait mechanisms.\n\nTool Use: C, Cnet, Makefile', 
         imgSrc: stopandwaitImage, // 图片的路径
@@ -111,7 +118,7 @@ const assembleLanguage = [
 ];
 
 function Project() {
-    const [cards, setCards] = useState(webApplicationCards);
+    const [cards, setCards] = useState(networkProtocols);
 
     const handleChange = (value) => {
         console.log(`selected ${value}`);
@@ -156,7 +163,7 @@ function Project() {
 
             <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Select
-                defaultValue="Web Application"
+                defaultValue="Network"
                 className="select-width"
                 onChange={handleChange}
                 options={[
@@ -189,7 +196,7 @@ function Project() {
                         value: 'Linux_System',
                     },
                     {
-                        label: 'Network Protocols',
+                        label: 'Network',
                         value: 'Network_Protocols',
                     },
                     {
