@@ -9,7 +9,7 @@ import {
 import { Select } from 'antd';
 import { EnvironmentOutlined, TeamOutlined, TrophyOutlined, GoogleOutlined } from '@ant-design/icons';
 import { Timeline } from 'antd';
-
+import dragonImage from './dragon_pic.jpg';
 
 function Experience() {
     
@@ -76,7 +76,7 @@ function Experience() {
                     position: 'right',
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
-                    children: <div className="timeline-item-content"><h1>Software Engineer Intern (Part-Time)</h1>
+                    children: <div className="timeline-item-content"><h1>Full Stack Student Developer</h1>
                                                                     <p>Jan - Apr 2023</p>
                                                                     <p>Alberta Language Technology Lab (ALT Lab)</p>
                                                                     
@@ -119,6 +119,10 @@ function Experience() {
                 },
                 ]}
             />
+            </div>
+
+            <div className="image-container">
+                {/* <img src={dragonImage} alt="Dragon" /> */}
             </div>
         </div>
     );

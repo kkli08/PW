@@ -133,7 +133,7 @@ function Blogdetail() {
                     />
                 ))}
             </div>
-            <Lottie animationData={tree1} />
+            {/* <Lottie animationData={tree1} /> */}
             
         </div>
     );

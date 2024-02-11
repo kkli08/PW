@@ -9,7 +9,7 @@ import ScrollReveal from 'scrollreveal';
 import Lottie from "lottie-react";
 import decorations from './decorations.json';
 import santa from './santa.json';
-
+import dragonImage from './images/dragon_pic.jpg';
 function About () {
     // State to track the current image
     const [currentImage, setCurrentImage] = useState(aboutPhoto1);
@@ -37,6 +37,9 @@ function About () {
         ScrollReveal().reveal('.boxcol', { delay: 450, origin: 'bottom' });
         ScrollReveal().reveal('.select-width', { delay: 250, origin: 'left' });
         ScrollReveal().reveal('.timeline-width', { delay: 250, origin: 'left' });
+        ScrollReveal().reveal('.lottie-animation-right-year ', { delay: 250, origin: 'right' });
+        ScrollReveal().reveal('.image-container', { delay: 250, origin: 'bottom' });
+        
         // Add more ScrollReveal configurations here as needed
         // You can target elements across different components
 
@@ -51,8 +54,8 @@ function About () {
                 <Lottie animationData={decorations} />
             </div>
 
-            <div className="lottie-animation-right">
-                <Lottie animationData={santa} />
+            <div className="lottie-animation-right-year">
+                <img src={dragonImage} alt="Dragon" />
             </div>
 
             <div className="lottie-animation-right">
