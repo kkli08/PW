@@ -37,7 +37,7 @@ function About () {
         ScrollReveal().reveal('.boxcol', { delay: 450, origin: 'bottom' });
         ScrollReveal().reveal('.select-width', { delay: 250, origin: 'left' });
         ScrollReveal().reveal('.timeline-width', { delay: 250, origin: 'left' });
-        ScrollReveal().reveal('.lottie-animation-right-year ', { delay: 250, origin: 'right' });
+        ScrollReveal().reveal('.lottie-animation-right-year ', { delay: 250, origin: 'left' });
         ScrollReveal().reveal('.image-container', { delay: 250, origin: 'bottom' });
         
         // Add more ScrollReveal configurations here as needed
