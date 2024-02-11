@@ -42,6 +42,18 @@
     font-size: 1.3vw;
 }
   
+#experience .image-container {
+    text-align: center;
+}
+
+#experience .image-container img {
+    width: 25%;
+    height: auto; /* maintains the aspect ratio */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 @media (max-width: 780px){
     .timeline-width{
@@ -60,5 +72,14 @@
     }
     .timeline-item-content li{
         font-size: 3vw;
+    }
+
+    
+    #experience .image-container img {
+        width: 50%;
+        height: auto; /* maintains the aspect ratio */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

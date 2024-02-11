@@ -94,6 +94,23 @@ h1 {
     z-index: 10;
 }
 
+.lottie-animation-right-year {
+    position: absolute;
+    top: 3vw;
+    right: 2vw;
+    z-index: 9;
+    width: 20vw; /* Adjust the width as needed */
+    height: auto; /* This will maintain the aspect ratio of the container */
+    max-width: 100%; /* Ensures the container doesn't exceed the viewport width */
+    max-height: 100%; /* Ensures the container doesn't exceed the viewport height */
+    overflow: hidden; /* Optional, to ensure no overflow if image is still too large */
+}
+
+.lottie-animation-right-year img {
+    width: 100%; /* Makes the image take full width of the container */
+    height: auto; /* Maintains the image's aspect ratio */
+}
+
 /* 在屏幕尺寸较大时设置最大字体大小 */
 @media (max-width: 780px){
     .title {
@@ -133,5 +150,13 @@ h1 {
     .lottie-animation-left,
     .lottie-animation-right {
         width: 30vw;
+    }
+
+    .lottie-animation-right-year {
+        
+        top: 0vw;
+        right: 2vw;
+        z-index: 9;
+        width: 15vw; /* Adjust the width as needed */
     }
 }

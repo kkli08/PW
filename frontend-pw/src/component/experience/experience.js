@@ -9,7 +9,7 @@ import {
 import { Select } from 'antd';
 import { EnvironmentOutlined, TeamOutlined, TrophyOutlined, GoogleOutlined } from '@ant-design/icons';
 import { Timeline } from 'antd';
-
+import dragonImage from './dragon_pic.jpg';
 
 function Experience() {
     
@@ -119,6 +119,10 @@ function Experience() {
                 },
                 ]}
             />
+            </div>
+
+            <div className="image-container">
+                {/* <img src={dragonImage} alt="Dragon" /> */}
             </div>
         </div>
     );
