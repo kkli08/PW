@@ -9,6 +9,8 @@ import securityauditImage from '../blog/blog_cover/security_audit.png';
 import doublefreeImage from '../blog/blog_cover/double_free.jpg';
 import formatstringImage from '../blog/blog_cover/format_string.png';
 import hmacImage from '../blog/blog_cover/hmac.png'; 
+import guitarsoloImage from '../blog/blog_cover/electricguitarcover.jpg';
+import classicalmusicImage from '../blog/blog_cover/classicmusic.jpg';
 
 const cybersecurityCards = [
     { 
@@ -49,14 +51,36 @@ const cybersecurityCards = [
     // ... more cards
 ];
 
+
+const musicCards = [
+    { 
+        title: 'My Favorite Electric Guitar SOLOs', 
+        description: '“I still believe in the need for guitars and drums and desperate poetry.” \n -- Frank Turner ', 
+        imgSrc: guitarsoloImage, // 图片的路径
+        imgAlt: 'electric guitar solos',// 图片的替代文本
+        link: 'https://open.spotify.com/playlist/10Gc1xdoVZ5HR57d09U6kp?si=9c2a1f2ece2446b1',
+    },
+    { 
+        title: 'My Favorite Classical Music', 
+        description: '"I am hitting my head against the walls, but the walls are giving way."\n -- Gustav Mahler', 
+        imgSrc: classicalmusicImage, // 图片的路径
+        imgAlt: 'classical music',// 图片的替代文本
+        link: 'https://open.spotify.com/playlist/4S2NresR0bc1D2YlNvlpeI?si=c11a76b33e9f4d44',
+    },
+];
+
+
 function Blogdetail() {
-    const [cards, setCards] = useState(cybersecurityCards);
+    const [cards, setCards] = useState(musicCards);
 
     const handleChange = (value) => {
         console.log(`selected ${value}`);
         switch (value) {
             case 'Cybersecurity':
                 setCards(cybersecurityCards);
+                break;
+            case 'Music':
+                setCards(musicCards);
                 break;
             // ... handle other cases
             default:
@@ -75,7 +99,7 @@ function Blogdetail() {
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Select
-                defaultValue="Cybersecurity"
+                defaultValue="Music"
                 className="select-width"
                 onChange={handleChange}
                 options={[
@@ -86,35 +110,35 @@ function Blogdetail() {
                         label: 'Cybersecurity',
                         value: 'Cybersecurity',
                     },
-                    {
-                        label: 'Leetcode',
-                        value: 'Leetcode',
-                    },
-                    {
-                        label: 'Distributed Systems',
-                        value: 'Distributed_System',
-                    },
-                    {
-                        label: 'Interview',
-                        value: 'Interview',
-                    },
+                    // {
+                    //     label: 'Leetcode',
+                    //     value: 'Leetcode',
+                    // },
+                    // {
+                    //     label: 'Distributed Systems',
+                    //     value: 'Distributed_System',
+                    // },
+                    // {
+                    //     label: 'Interview',
+                    //     value: 'Interview',
+                    // },
                     ],
                 },
                 {
                     label: 'Life Blogs',
                     options: [
+                    // {
+                    //     label: 'Travel',
+                    //     value: 'Travel',
+                    // },
                     {
-                        label: 'Travel',
-                        value: 'Travel',
+                        label: 'Music',
+                        value: 'Music',
                     },
-                    {
-                        label: 'Food',
-                        value: 'Food',
-                    },
-                    {
-                        label: 'Art',
-                        value: 'Art',
-                    },
+                    // {
+                    //     label: 'Art',
+                    //     value: 'Art',
+                    // },
                     ],
                 },
                 ]}

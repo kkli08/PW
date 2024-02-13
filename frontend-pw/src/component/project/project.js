@@ -178,10 +178,10 @@ function Project() {
                         label: 'Mobile Application',
                         value: 'Mobile_Application',
                     },
-                    {
-                        label: 'CyberSecurity',
-                        value: 'CyberSecurity',
-                    },
+                    // {
+                    //     label: 'CyberSecurity',
+                    //     value: 'CyberSecurity',
+                    // },
                     {
                         label: 'Game Strategy',
                         value: 'Game_Strategy',
@@ -203,10 +203,10 @@ function Project() {
                         label: 'Assembly Language',
                         value: 'Assemble_Language',
                     },
-                    {
-                        label: 'Distributed System',
-                        value: 'Distributed_System',
-                    },
+                    // {
+                    //     label: 'Distributed System',
+                    //     value: 'Distributed_System',
+                    // },
                     ],
                 },
                 ]}
