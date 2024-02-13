@@ -45,6 +45,11 @@
 #blog .card-description {
     font-size: 1.1em; /* 或者使用像素值，如 '16px' */
 }
+.iframe-style {
+    border-radius: 12px;
+    width: 88%;
+    height: 352px;
+}
 
 @media (max-width: 780px){
     #blog .title {
@@ -80,5 +85,9 @@
 
     #blog .card-description {
         font-size: 1em; /* 或者使用像素值，如 '16px' */
+    }
+
+    .iframe-style {
+        width: 78%;
     }
 }
