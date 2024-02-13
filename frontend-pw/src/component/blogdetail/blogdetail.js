@@ -72,9 +72,11 @@ const musicCards = [
 
 function Blogdetail() {
     const [cards, setCards] = useState(musicCards);
+    const [selectedCategory, setSelectedCategory] = useState('Music'); // New state to track selected category
 
     const handleChange = (value) => {
         console.log(`selected ${value}`);
+        setSelectedCategory(value); // Update the selected category
         switch (value) {
             case 'Cybersecurity':
                 setCards(cybersecurityCards);
@@ -157,6 +159,26 @@ function Blogdetail() {
                     />
                 ))}
             </div>
+            {selectedCategory === 'Music' && (
+                <div className="boxcol">
+                    <iframe 
+                        className="iframe-style"  
+                        src="https://open.spotify.com/embed/playlist/10Gc1xdoVZ5HR57d09U6kp?utm_source=generator" 
+                        frameBorder="0" 
+                        allowFullScreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                    <iframe 
+                        className="iframe-style" 
+                        src="https://open.spotify.com/embed/playlist/4S2NresR0bc1D2YlNvlpeI?utm_source=generator" 
+                        frameBorder="0" 
+                        allowFullScreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            )}
             {/* <Lottie animationData={tree1} /> */}
             
         </div>
