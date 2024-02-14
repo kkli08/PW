@@ -5,22 +5,21 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
   useLocation
 } from "react-router-dom";
 import Blogpage from './pages/blogpage/blogpage';
 import Gallerypage from './pages/gallerypage/gallerypage';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
-function GAListener() {
+function GoogleAnalytics() {
   const location = useLocation();
 
   useEffect(() => {
-    ReactGA.initialize('G-M4B3ZPELJN');
+    ReactGA.initialize('G-M4B3ZPELJN'); // Replace with GA4 tracking ID
   }, []);
 
   useEffect(() => {
-    ReactGA.pageview(location.pathname + location.search);
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search });
   }, [location]);
 
   return null; // This component does not render anything
@@ -29,7 +28,7 @@ function GAListener() {
 function App() {
   return (
     <Router>
-      <GAListener /> {/* This component will handle the GA tracking */}
+      <GoogleAnalytics />
       <Routes>
         <Route path="/" Component={Home}/>
         <Route path="/blog" Component={Blogpage}/>
