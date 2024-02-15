@@ -15,6 +15,7 @@ import formatstringImage from './blog_cover/format_string.png';
 import hmacImage from './blog_cover/hmac.png'; 
 import guitarsoloImage from './blog_cover/electricguitarcover.jpg';
 import classicalmusicImage from './blog_cover/classicmusic.jpg';
+import cloudImage from './blog_cover/cloud.png';
 
 const cybersecurityCards = [
     { 
@@ -72,6 +73,16 @@ const musicCards = [
     },
 ];
 
+const cloudComputingCards = [
+    { 
+        title: 'MindMap', 
+        description: '1779', 
+        imgSrc: cloudImage, // 图片的路径
+        imgAlt: 'electric guitar solos',// 图片的替代文本
+        link: 'https://github.com/kkli08/1779-Cloud-Computing/wiki',
+    },
+];
+
 function Blog() {
     const [cards, setCards] = useState(musicCards);
     const [selectedCategory, setSelectedCategory] = useState('Music'); // New state to track selected category
@@ -85,6 +96,9 @@ function Blog() {
                 break;
             case 'Music':
                 setCards(musicCards);
+                break;
+            case 'Cloud_Computing':
+                setCards(cloudComputingCards);
                 break;
             // ... handle other cases
             default:
@@ -113,10 +127,10 @@ function Blog() {
                         label: 'Cybersecurity',
                         value: 'Cybersecurity',
                     },
-                    // {
-                    //     label: 'Leetcode',
-                    //     value: 'Leetcode',
-                    // },
+                    {
+                        label: 'Cloud Computing',
+                        value: 'Cloud_Computing',
+                    },
                     // {
                     //     label: 'Distributed Systems',
                     //     value: 'Distributed_System',

@@ -11,6 +11,7 @@ import formatstringImage from '../blog/blog_cover/format_string.png';
 import hmacImage from '../blog/blog_cover/hmac.png'; 
 import guitarsoloImage from '../blog/blog_cover/electricguitarcover.jpg';
 import classicalmusicImage from '../blog/blog_cover/classicmusic.jpg';
+import cloudImage from '../blog/blog_cover/cloud.png';
 
 const cybersecurityCards = [
     { 
@@ -68,7 +69,15 @@ const musicCards = [
         link: 'https://open.spotify.com/playlist/4S2NresR0bc1D2YlNvlpeI?si=c11a76b33e9f4d44',
     },
 ];
-
+const cloudComputingCards = [
+    { 
+        title: 'MindMap', 
+        description: '1779', 
+        imgSrc: cloudImage, // 图片的路径
+        imgAlt: 'electric guitar solos',// 图片的替代文本
+        link: 'https://github.com/kkli08/1779-Cloud-Computing/wiki',
+    },
+];
 
 function Blogdetail() {
     const [cards, setCards] = useState(musicCards);
@@ -83,6 +92,9 @@ function Blogdetail() {
                 break;
             case 'Music':
                 setCards(musicCards);
+                break;
+            case 'Cloud_Computing':
+                setCards(cloudComputingCards);
                 break;
             // ... handle other cases
             default:
@@ -111,6 +123,10 @@ function Blogdetail() {
                     {
                         label: 'Cybersecurity',
                         value: 'Cybersecurity',
+                    },
+                    {
+                        label: 'Cloud Computing',
+                        value: 'Cloud_Computing',
                     },
                     // {
                     //     label: 'Leetcode',
