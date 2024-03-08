@@ -80,7 +80,7 @@ const cloudComputingCards = [
 ];
 
 function Blogdetail() {
-    const [cards, setCards] = useState(musicCards);
+    const [cards, setCards] = useState(cybersecurityCards);
     const [selectedCategory, setSelectedCategory] = useState('Music'); // New state to track selected category
 
     const handleChange = (value) => {
@@ -113,7 +113,7 @@ function Blogdetail() {
             </div>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Select
-                defaultValue="Music"
+                defaultValue="Cybersecurity"
                 className="select-width"
                 onChange={handleChange}
                 options={[
