@@ -16,8 +16,16 @@ import hmacImage from './blog_cover/hmac.png';
 import guitarsoloImage from './blog_cover/electricguitarcover.jpg';
 import classicalmusicImage from './blog_cover/classicmusic.jpg';
 import cloudImage from './blog_cover/cloud.png';
+import sql from './blog_cover/sql.png';
 
 const cybersecurityCards = [
+    { 
+        title: 'Network Attack', 
+        description: 'Blog for :\nCross-Site Scripting (XSS)\nCross-site request forgery (CSRF)\nSQL Injection\n\n[Network][SQL]', 
+        imgSrc: sql, // 图片的路径
+        imgAlt: 'SQL Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/OWASP-Network-Attack/wiki',
+    },
     { 
         title: 'HMAC Authentication', 
         description: 'HMAC is a type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. It is used to verify the data integrity and the authentication of a message.\n\n[Integrity][Authenticity]', 
@@ -84,8 +92,8 @@ const cloudComputingCards = [
 ];
 
 function Blog() {
-    const [cards, setCards] = useState(musicCards);
-    const [selectedCategory, setSelectedCategory] = useState('Music'); // New state to track selected category
+    const [cards, setCards] = useState(cybersecurityCards);
+    const [selectedCategory, setSelectedCategory] = useState('Cybersecurity'); // New state to track selected category
 
     const handleChange = (value) => {
         console.log(`selected ${value}`);
@@ -116,7 +124,7 @@ function Blog() {
 
             <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Select
-                defaultValue="Music"
+                defaultValue="Cybersecurity"
                 className="select-width"
                 onChange={handleChange}
                 options={[
@@ -194,6 +202,15 @@ function Blog() {
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
                         loading="lazy">
                     </iframe>
+                    <iframe 
+                        className="iframe-style" 
+                        src="https://open.spotify.com/embed/playlist/0lOCBrOeMJayCRU7psz0vz?utm_source=generator" 
+                        frameBorder="0" 
+                        allowFullScreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                    </iframe>
+                    
                 </div>
             )}
         </div>
