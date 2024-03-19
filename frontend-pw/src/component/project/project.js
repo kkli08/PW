@@ -20,6 +20,13 @@ import sdn from './project_cover/Traditional-networking-versus-SDN-networking.pn
 // Define the card data
 const webApplicationCards = [
     { 
+        title: 'Software Defined Network Performance Analysis', 
+        description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nClick the picture to visit the site\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
+        imgSrc: sdn, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
+    },
+    { 
         title: 'Vocabulary Explorer', 
         description: 'An online visualization dictionary that allows users to expand or collapse different semantic classes through the form of a tree in order to see which word(s) fall under that category, and the relationships between categories.\n\nTool Use: React, D3.js, JavaScript, AWS, Docker, Github, MKDoc, Figma', 
         imgSrc: veImage, // 图片的路径
@@ -74,18 +81,11 @@ const linuxSystemCards = [
 
 const networkProtocols = [
     { 
-        title: 'Software Defined Network Adoption Decision Analysis', 
-        description: 'This document is dedicated to a preliminary design process of a simulation tool performance compari- son of Software-Defined Networking (SDN) and traditional networks. The scope of our project would be identified and details would be provided on how SDN’s performance compares across various user specified scenarios against traditional networking solutions.', 
+        title: 'Software Defined Network Performance Analysis', 
+        description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nClick the picture to visit the site\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
         imgSrc: sdn, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
-        link: '/project_static/ECE1779_Term_Project.pdf',
-    },
-    { 
-        title: 'Enhanced Stop and Wait Protocol', 
-        description: 'This project involves enhancing the traditional stop-and-wait data link protocol for reliable communication in a simulated network environment using the CNET simulator. The primary objective is to ensure reliable transmission between two nodes in a network by handling data and acknowledgment frames effectively. The protocol is designed to work in a setting where piggybacking and negative acknowledgements are not utilized, focusing instead on the core functionality of stop-and-wait mechanisms.\n\nTool Use: C, Cnet, Makefile', 
-        imgSrc: stopandwaitImage, // 图片的路径
-        imgAlt: 'Image',// 图片的替代文本
-        link: 'https://github.com/kkli08/Enhanced-Stop-and-Wait-Protocol-for-Reliable-Data-Transmission-in-Network-Simulation',
+        link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
     },
     { 
         title: 'Wireless Network Communication', 
@@ -93,6 +93,13 @@ const networkProtocols = [
         imgSrc: wirelessNetworkImage, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
         link: 'https://github.com/kkli08/Wireless-Network-Communication-Simulation-using-CNET',
+    },
+    { 
+        title: 'Enhanced Stop and Wait Protocol', 
+        description: 'This project involves enhancing the traditional stop-and-wait data link protocol for reliable communication in a simulated network environment using the CNET simulator. The primary objective is to ensure reliable transmission between two nodes in a network by handling data and acknowledgment frames effectively. The protocol is designed to work in a setting where piggybacking and negative acknowledgements are not utilized, focusing instead on the core functionality of stop-and-wait mechanisms.\n\nTool Use: C, Cnet, Makefile', 
+        imgSrc: stopandwaitImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/Enhanced-Stop-and-Wait-Protocol-for-Reliable-Data-Transmission-in-Network-Simulation',
     },
     // ... more cards
 ];
