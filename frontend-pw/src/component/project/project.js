@@ -20,13 +20,6 @@ import sdn from './project_cover/Traditional-networking-versus-SDN-networking.pn
 // Define the card data
 const webApplicationCards = [
     { 
-        title: 'Software Defined Network Performance Analysis', 
-        description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nClick the picture to visit the site\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
-        imgSrc: sdn, // 图片的路径
-        imgAlt: 'Image',// 图片的替代文本
-        link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
-    },
-    { 
         title: 'Vocabulary Explorer', 
         description: 'An online visualization dictionary that allows users to expand or collapse different semantic classes through the form of a tree in order to see which word(s) fall under that category, and the relationships between categories.\n\nTool Use: React, D3.js, JavaScript, AWS, Docker, Github, MKDoc, Figma', 
         imgSrc: veImage, // 图片的路径
@@ -39,6 +32,13 @@ const webApplicationCards = [
         imgSrc: sdImage, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
         link: 'https://github.com/CMPUT404F22ProjectTeam/WebApplicationProject/wiki',
+    },
+    { 
+        title: 'Software Defined Network Performance Analysis', 
+        description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nClick the picture to visit the site\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
+        imgSrc: sdn, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
     },
     { 
         title: 'My Home Page', 
@@ -81,13 +81,6 @@ const linuxSystemCards = [
 
 const networkProtocols = [
     { 
-        title: 'Software Defined Network Performance Analysis', 
-        description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nClick the picture to visit the site\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
-        imgSrc: sdn, // 图片的路径
-        imgAlt: 'Image',// 图片的替代文本
-        link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
-    },
-    { 
         title: 'Wireless Network Communication', 
         description: 'This project involves the development of a TCP-like protocol simulation using the CNET network simulator. The primary goal is to facilitate efficient and reliable message transmission in a simulated wireless network environment. This environment consists of mobile nodes and access points (anchors), where communication is based on transmitting, forwarding, and acknowledging messages.\n\nTool Use: C, Makefile, Cnet', 
         imgSrc: wirelessNetworkImage, // 图片的路径
@@ -100,6 +93,13 @@ const networkProtocols = [
         imgSrc: stopandwaitImage, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
         link: 'https://github.com/kkli08/Enhanced-Stop-and-Wait-Protocol-for-Reliable-Data-Transmission-in-Network-Simulation',
+    },
+    { 
+        title: 'Software Defined Network Performance Analysis', 
+        description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nClick the picture to visit the site\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
+        imgSrc: sdn, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
     },
     // ... more cards
 ];
