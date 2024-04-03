@@ -104,12 +104,12 @@ function About () {
             <div className="boxcol">
                 <Card
                     title={"Toolbox"}
-                    description={"Languages: C++, C, Python, Java, JavaScript, RISC-V\nFramework: Django, React.js, D3.js, Spring\nDeployment Tools: Docker, AWS, Nginx, Gunicorn, Git\nOS: Linux, Bash\nOther: Experienced with TCP, Ethernet Protocol"}
+                    description={"Languages: C++, C, Python, Java, JavaScript, RISC-V\nFramework: Django, React, React Flow, D3.js, Spring\nDeployment/Cloud Tools: Docker, K8s, AWS, Nginx, Gunicorn, Git\nOS: Linux, Bash\nOther: Experienced with SDN, TCP, Ethernet Protocol"}
                     
                 />
                 <Card
                     title={"Learning"}
-                    description={"WINTER 2024:\nECE1776H S (Winter) Computer Security, Cryptography and Privacy\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\n"}                
+                    description={"WINTER 2024:\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\nSUMMER 2024:\nAPS1080H Y (Full Session) Introduction to Reinforcement Learning\nAPS1050H Y (Full Session) Blockchain Technologies and Cryptocurrencies\n"}                
                 />
                 <Card
                     title={"Hacking On"}

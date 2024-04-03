@@ -98,7 +98,7 @@ function Experience() {
                                                                     
                                                                     <ul>
                                                                         <li>Major Area of Focus: Computing Engineering & Identity, Privacy and Security (IPS)</li> 
-                                                                        <li>Coursework: Distributed System, Network Security, Parallel Computing</li>   
+                                                                        <li>Coursework: Computer Security, Network Security, Cloud Computing</li>   
                                                                     </ul>    
                                                                     </div>,
                 },
@@ -107,7 +107,7 @@ function Experience() {
                     color: 'green',
                     dot: <GoogleOutlined  className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>Google Cybersecurity Professional Certificate</h1>
-                                                                    <p>Jan - Mar 2024</p>
+                                                                    <p>May 2024</p>
                                                                     
                                                                     </div>,
                 },

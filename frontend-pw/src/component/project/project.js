@@ -88,19 +88,20 @@ const networkProtocols = [
         link: 'https://github.com/kkli08/Wireless-Network-Communication-Simulation-using-CNET',
     },
     { 
-        title: 'Enhanced Stop and Wait Protocol', 
-        description: 'This project involves enhancing the traditional stop-and-wait data link protocol for reliable communication in a simulated network environment using the CNET simulator. The primary objective is to ensure reliable transmission between two nodes in a network by handling data and acknowledgment frames effectively. The protocol is designed to work in a setting where piggybacking and negative acknowledgements are not utilized, focusing instead on the core functionality of stop-and-wait mechanisms.\n\nTool Use: C, Cnet, Makefile', 
-        imgSrc: stopandwaitImage, // 图片的路径
-        imgAlt: 'Image',// 图片的替代文本
-        link: 'https://github.com/kkli08/Enhanced-Stop-and-Wait-Protocol-for-Reliable-Data-Transmission-in-Network-Simulation',
-    },
-    { 
         title: 'Software Defined Network Performance Analysis', 
         description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nClick the picture to visit the site\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
         imgSrc: sdn, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
         link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
     },
+    { 
+        title: 'Enhanced Stop and Wait Protocol', 
+        description: 'This project involves enhancing the traditional stop-and-wait data link protocol for reliable communication in a simulated network environment using the CNET simulator. The primary objective is to ensure reliable transmission between two nodes in a network by handling data and acknowledgment frames effectively. The protocol is designed to work in a setting where piggybacking and negative acknowledgements are not utilized, focusing instead on the core functionality of stop-and-wait mechanisms.\n\nTool Use: C, Cnet, Makefile', 
+        imgSrc: stopandwaitImage, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/Enhanced-Stop-and-Wait-Protocol-for-Reliable-Data-Transmission-in-Network-Simulation',
+    },
+    
     // ... more cards
 ];
 
