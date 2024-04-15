@@ -98,19 +98,19 @@ function Experience() {
                                                                     
                                                                     <ul>
                                                                         <li>Major Area of Focus: Computing Engineering & Identity, Privacy and Security (IPS)</li> 
-                                                                        <li>Coursework: Computer Security, Network Security, Cloud Computing</li>   
+                                                                        <li>Coursework: Computer Security, Cloud Computing</li>   
                                                                     </ul>    
                                                                     </div>,
                 },
-                {
-                    position: 'left',
-                    color: 'green',
-                    dot: <GoogleOutlined  className="timeline-item-content"/>,
-                    children: <div className="timeline-item-content"><h1>Google Cybersecurity Professional Certificate</h1>
-                                                                    <p>May 2024</p>
+                // {
+                //     position: 'left',
+                //     color: 'green',
+                //     dot: <GoogleOutlined  className="timeline-item-content"/>,
+                //     children: <div className="timeline-item-content"><h1>Google Cybersecurity Professional Certificate</h1>
+                //                                                     <p>May 2024</p>
                                                                     
-                                                                    </div>,
-                },
+                //                                                     </div>,
+                // },
                 {
                     position: 'left',
                     color: 'gold',

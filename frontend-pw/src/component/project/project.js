@@ -200,6 +200,10 @@ function Project() {
                     label: 'Individual Projects',
                     options: [
                     {
+                        label: 'Compiler',
+                        value: 'Compiler',
+                    },
+                    {
                         label: 'Linux System',
                         value: 'Linux_System',
                     },
