@@ -75,11 +75,8 @@ function About () {
                     <h1>What I hope to do</h1>
                     
                     <p className="about-text">I aspire to become a  
-                    Software Engineer / Cybersecurity Engineer. 
-                    My commitment to integrity and protecting people's privacy and 
-                    virtual assets drives my passion for developing robust cybersecurity/software solutions.
-                    I am eager to apply my skills to safeguard information, 
-                    uphold ethical standards, and contribute effectively to the evolving field of cybersecurity.
+                    Compiler Engineer / Software Engineer. 
+                    
                     </p>
 
                     <h1>What I'm doing </h1>
@@ -87,7 +84,7 @@ function About () {
                     <p className="about-text">
                     I'm currently pursuing my Master degree at University of Toronto, 
                     my major study areas are Computing Engineering and Cybersecurity.
-                    I'm seeking 4 months internships starting from Summer 2024 & Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
+                    I'm seeking 4 months internships starting from Fall 2024 & Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
                     </p>
 
                     <h1>When I'm not coding, you can find me</h1>
