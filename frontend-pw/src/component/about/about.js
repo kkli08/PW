@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import aboutPhoto from "./images/aboutphoto.jpg";
+import aboutPhoto2 from "./images/aboutphoto2.jpg";
 import aboutPhoto1 from "./images/aboutphoto1.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPassport, faDumbbell, faHeadphonesSimple, faBasketball, faPersonSwimming, faCamera, faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import { faPassport, faDumbbell, faHeadphonesSimple, faBasketball, faPersonSwimming, faCamera, faFilePdf, faPersonHiking } from '@fortawesome/free-solid-svg-icons'
 import { Card } from "../card/card";
 import "./about.css";
 import ScrollReveal from 'scrollreveal';
@@ -17,7 +17,7 @@ function About () {
     useEffect(() => {
         // Set up an interval to switch the image every hour (3600000 milliseconds)
         const interval = setInterval(() => {
-            setCurrentImage(current => (current === aboutPhoto1 ? aboutPhoto : aboutPhoto1));
+            setCurrentImage(current => (current === aboutPhoto1 ? aboutPhoto2 : aboutPhoto1));
         }, 3600000); // 3600000 milliseconds = 1 hour
 
         // Cleanup function to clear the interval
@@ -84,33 +84,33 @@ function About () {
                     <p className="about-text">
                     I'm currently pursuing my Master degree at University of Toronto, 
                     my major study areas are Computing Engineering and Cybersecurity.
-                    I'm seeking 4 months internships starting from Fall 2024 & Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
+                    I'm seeking 4 months internships starting from Winter 2025 & Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
                     </p>
 
                     <h1>When I'm not coding, you can find me</h1>
 
                     <p className="about-text">
-                    <FontAwesomeIcon icon={faPassport} /> Travelling | <FontAwesomeIcon icon={faBasketball} /> Basketball | <FontAwesomeIcon icon={faDumbbell} /> Working out | <FontAwesomeIcon icon={faHeadphonesSimple} /> Sportifying |
+                    <FontAwesomeIcon icon={faPassport} /> Travelling | <FontAwesomeIcon icon={faBasketball} /> Basketball | <FontAwesomeIcon icon={faDumbbell} /> Lifting | <FontAwesomeIcon icon={faHeadphonesSimple} /> Sportifying |
 
                     </p>
                     <p className="about-text">
-                    <FontAwesomeIcon icon={faPersonSwimming} /> Swimming | <FontAwesomeIcon icon={faCamera} /> Photographing | 
+                    <FontAwesomeIcon icon={faPersonSwimming} /> Swimming | <FontAwesomeIcon icon={faCamera} /> Photographing | <FontAwesomeIcon icon={faPersonHiking} /> Hiking |
                     </p>
                 </div>
             </div>
             <div className="boxcol">
                 <Card
                     title={"Toolbox"}
-                    description={"Languages: C++, C, Python, Java, JavaScript, RISC-V\nFramework: Django, React, React Flow, D3.js, Spring\nDeployment/Cloud Tools: Docker, K8s, AWS, Nginx, Gunicorn, Git\nOS: Linux, Bash\nOther: Experienced with SDN, TCP, Ethernet Protocol"}
+                    description={"Programming Languages: C++, C, Python, Java, JavaScript\nWeb Framework: Django, React, React Flow, D3.js\nDeployment/Cloud Tools: Docker, K8s, AWS, Nginx, Gunicorn, Git\nOther: Experienced with SDN, TCP, Ethernet Protocol"}
                     
                 />
                 <Card
                     title={"Learning"}
-                    description={"WINTER 2024:\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\nSUMMER 2024:\nAPS1080H Y (Full Session) Introduction to Reinforcement Learning\nAPS1050H Y (Full Session) Blockchain Technologies and Cryptocurrencies\n"}                
+                    description={"WINTER 2024:\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\nSUMMER 2024:\nAPS1080H Y (Full Session) Introduction to Reinforcement Learning\n"}                
                 />
                 <Card
-                    title={"Hacking On"}
-                    description={"1) System Design\n2) Design Patterns\n3) Cybersecurity \n4) Cloud Computing\n5) Making this homepage more accessible"}                
+                    title={"Interests"}
+                    description={"1) Compiler Optimization\n2) System Engineering\n3) Cybersecurity \n4) Making this homepage more accessible"}                
                 />
             </div>
             
