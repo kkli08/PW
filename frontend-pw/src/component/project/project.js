@@ -89,7 +89,7 @@ const networkProtocols = [
     },
     { 
         title: 'Software Defined Network Performance Analysis', 
-        description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nClick the picture to visit the site\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
+        description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
         imgSrc: sdn, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
         link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
@@ -105,15 +105,15 @@ const networkProtocols = [
     // ... more cards
 ];
 
-const gameStrategy = [
-    { 
-        title: '2-Player Poker Games', 
-        description: 'Blackjack (GUI)\nWho Runs Fast \n\nTool Use: Python, PyQt5', 
-        imgSrc: pokergameImage, // 图片的路径
-        imgAlt: 'Image',// 图片的替代文本
-        link: 'https://github.com/kkli08/WhoRunsFast',
-    },
-];
+// const gameStrategy = [
+//     { 
+//         title: '2-Player Poker Games', 
+//         description: 'Blackjack (GUI)\nWho Runs Fast \n\nTool Use: Python, PyQt5', 
+//         imgSrc: pokergameImage, // 图片的路径
+//         imgAlt: 'Image',// 图片的替代文本
+//         link: 'https://github.com/kkli08/WhoRunsFast',
+//     },
+// ];
 
 const assembleLanguage = [
     { 
@@ -143,9 +143,9 @@ function Project() {
             case 'Network_Protocols':
                 setCards(networkProtocols);
                 break;
-            case 'Game_Strategy':
-                setCards(gameStrategy);
-                break;
+            // case 'Game_Strategy':
+            //     setCards(gameStrategy);
+            //     break;
             case 'Assemble_Language':
                 setCards(assembleLanguage);
                 break;
@@ -190,10 +190,10 @@ function Project() {
                     //     label: 'CyberSecurity',
                     //     value: 'CyberSecurity',
                     // },
-                    {
-                        label: 'Game Strategy',
-                        value: 'Game_Strategy',
-                    },
+                    // {
+                    //     label: 'Game Strategy',
+                    //     value: 'Game_Strategy',
+                    // },
                     ],
                 },
                 {

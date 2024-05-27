@@ -21,7 +21,7 @@ import sql from './blog_cover/sql.png';
 const cybersecurityCards = [
     { 
         title: 'Network Attack', 
-        description: 'Blog for :\nCross-Site Scripting (XSS)\nCross-site request forgery (CSRF)\nSQL Injection\n\n[Network][SQL]', 
+        description: 'Cross-Site Scripting (XSS)\nCross-site request forgery (CSRF)\nSQL Injection\n\n[Network][SQL]', 
         imgSrc: sql, // 图片的路径
         imgAlt: 'SQL Image',// 图片的替代文本
         link: 'https://github.com/kkli08/OWASP-Network-Attack/wiki',
@@ -54,13 +54,6 @@ const cybersecurityCards = [
         imgAlt: 'format string Image',// 图片的替代文本
         link: 'https://github.com/kkli08/format-string/wiki#format-string',
     },
-    { 
-        title: 'Security Audit', 
-        description: 'Security audit is a process of analyzing the security of a system or software by performing a series of tests.', 
-        imgSrc: securityauditImage, // 图片的路径
-        imgAlt: 'security audit Image',// 图片的替代文本
-        link: 'https://drive.google.com/drive/folders/1ATDzG_buiJkn0oEsTJ37vbSzizCntiFq?usp=sharing',
-    },
     // ... more cards
 ];
 
@@ -81,14 +74,8 @@ const musicCards = [
     },
 ];
 
-const cloudComputingCards = [
-    { 
-        title: 'MindMap', 
-        description: '1779', 
-        imgSrc: cloudImage, // 图片的路径
-        imgAlt: 'electric guitar solos',// 图片的替代文本
-        link: 'https://github.com/kkli08/1779-Cloud-Computing/wiki',
-    },
+const compiler = [
+    
 ];
 
 function Blog() {
@@ -105,8 +92,8 @@ function Blog() {
             case 'Music':
                 setCards(musicCards);
                 break;
-            case 'Cloud_Computing':
-                setCards(cloudComputingCards);
+            case 'Compiler':
+                setCards(compiler);
                 break;
             // ... handle other cases
             default:
@@ -136,8 +123,8 @@ function Blog() {
                         value: 'Cybersecurity',
                     },
                     {
-                        label: 'Cloud Computing',
-                        value: 'Cloud_Computing',
+                        label: 'Compiler',
+                        value: 'Compiler',
                     },
                     // {
                     //     label: 'Distributed Systems',
@@ -150,7 +137,7 @@ function Blog() {
                     ],
                 },
                 {
-                    label: 'Life Blogs',
+                    label: 'Interests',
                     options: [
                     // {
                     //     label: 'Travel',
