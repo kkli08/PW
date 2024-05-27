@@ -55,9 +55,9 @@ function About () {
                 <Lottie animationData={decorations} />
             </div>
 
-            <div className="lottie-animation-right-year">
+            {/* <div className="lottie-animation-right-year">
                 <img src={dragonImage} alt="Dragon" />
-            </div>
+            </div> */}
 
             <div className="lottie-animation-right">
                 <Lottie animationData={decorations} />
@@ -106,7 +106,7 @@ function About () {
                 />
                 <Card
                     title={"Learning"}
-                    description={"WINTER 2024:\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\nSUMMER 2024:\nAPS1080H Y (Full Session) Introduction to Reinforcement Learning\n"}                
+                    description={"WINTER 2024:\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\nSUMMER 2024:\nAPS1052H Y (Full Session) Neural Network & Deep Learning\n"}                
                 />
                 <Card
                     title={"Interests"}

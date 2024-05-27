@@ -50,13 +50,6 @@ const cybersecurityCards = [
         imgAlt: 'format string Image',// 图片的替代文本
         link: 'https://github.com/kkli08/format-string/wiki#format-string',
     },
-    { 
-        title: 'Security Audit', 
-        description: 'Security audit is a process of analyzing the security of a system or software by performing a series of tests.', 
-        imgSrc: securityauditImage, // 图片的路径
-        imgAlt: 'security audit Image',// 图片的替代文本
-        link: 'https://drive.google.com/drive/folders/1ATDzG_buiJkn0oEsTJ37vbSzizCntiFq?usp=sharing',
-    },
     // ... more cards
 ];
 
