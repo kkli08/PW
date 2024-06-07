@@ -61,14 +61,14 @@ function Experience() {
                     position: 'right',
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
-                    children: <div className="timeline-item-content"><h1>Backend Engineer Intern</h1>
+                    children: <div className="timeline-item-content"><h1>Back-End Engineer Intern</h1>
                                                                     <p>May - Aug 2021</p>
                                                                     <p>Nandou Six Star System integration Co., LTD </p>
                                                                     
                                                                     <ul>
-                                                                        <li>Contributed as a member of the backend development team for the Dongfeng Pilot Autopilot project, using Django to implement interfaces and connect to the databases.</li> 
-                                                                        <li>Deploying endpoints to the company's online server with the use of Gunicorn and Nginx.</li>
-                                                                        <li>Experienced in data analysis, manipulation, database documentation writing and maintenance.</li>   
+                                                                        <li>Wrote backend code that handled external HTTP requests from third party endpoints.</li> 
+                                                                        <li>Commended for clear communication and strong willingness to learn.</li>
+                                                                        <li>Gained experience in Gunicorn, Nginx, SQLite and Django REST framework.</li>   
                                                                     </ul>    
                                                                     </div>,
                 },
@@ -76,15 +76,16 @@ function Experience() {
                     position: 'right',
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
-                    children: <div className="timeline-item-content"><h1>Full Stack Student Developer</h1>
+                    children: <div className="timeline-item-content"><h1>Student Developer</h1>
                                                                     <p>Jan - Apr 2023</p>
-                                                                    <p>Alberta Language Technology Lab (ALT Lab)</p>
+                                                                    <p>University of Alberta ALT Lab</p>
                                                                     
                                                                     <ul>
-                                                                        <li>Participated as a Scrum team member in the development of a web-based visual dictionary application, utilizing advanced technical skills in Django, React, D3, and Docker to provide English and Cree word definitions with the ability to expand and collapse semantic categories for improved clarity.</li> 
-                                                                        <li>Implemented advanced React and D3 architecture to create an interactive, visually appealing front-end display of all the words in the dictionary.</li>
-                                                                        <li>Adopted Docker for streamlined continuous deployment.</li>   
-                                                                        <li>Used MKDocs to edit online documentation, providing stakeholders with easy access and understanding of the project.</li>  
+                                                                        <li>Developed a website that generates interactive word graphs based on Cree words and their domains using React, D3.js and Docker.</li> 
+                                                                        <li>Optimize graph load times from 10 to 0.5 seconds by implementing the lazy loading time design pattern.</li>
+                                                                        <li>Reviewed 50+ PR and contributed 4K+ lines of code to the codebase via Git.</li>   
+                                                                        <li>Maintained web application documentation using MkDocs.</li> 
+                                                                        <li>Used Jest for unit testing and Cypress for functional testing.</li>  
                                                                     </ul>    
                                                                     </div>,
                 },
@@ -98,7 +99,7 @@ function Experience() {
                                                                     
                                                                     <ul>
                                                                         <li>Major Area of Focus: Computing Engineering & Identity, Privacy and Security (IPS)</li> 
-                                                                        <li>Coursework: Computer Security, Cloud Computing</li>   
+                                                                        <li>Coursework: Computer Security, Cloud Computing, Deep Learning & Neural Network</li>   
                                                                     </ul>    
                                                                     </div>,
                 },
