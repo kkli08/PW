@@ -1,0 +1,45 @@
+/* CodeBlock.css */
+.container {
+    display: flex;
+    border: 1px solid rgb(203, 213, 225);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    /* font-size: 2vw; */
+  }
+  
+  .container__textarea {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    width: 100%;
+    resize: none; /* Prevent resizing */
+    overflow: auto;
+    font-size: 1.2vw;
+  }
+  
+  .container__lines {
+    border-right: 1px solid rgb(203, 213, 225);
+    padding: 0.5rem;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    font-size: 1.2vw;
+  }
+
+  @media (max-width: 780px){
+    .container__textarea {
+      font-size: 3.7vw;
+    }
+    .container__lines {
+      font-size: 3.7vw;
+    }
+  }
+  @media (min-width: 1500px){
+    .container__textarea {
+      font-size: 1vw;
+    }
+    .container__lines {
+      font-size: 1vw;
+    }
+  }

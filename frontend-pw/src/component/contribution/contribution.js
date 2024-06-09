@@ -8,8 +8,8 @@ function Contribution() {
     return(
         <div id="contribution">
             <div className="contributiontitle">
-                <p>Inspired by many <FontAwesomeIcon icon={faHeart} /> Powered by React, AWS</p>
-                <p>Coded by Damian Li</p>
+                <p><FontAwesomeIcon icon={faHeart} /> Inspired by many, coded by Ke Li</p>
+                <p>© damianli.com All rights reserved.</p>
             </div>
         </div>
     );

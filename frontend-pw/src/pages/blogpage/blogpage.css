@@ -10,7 +10,7 @@ body {
   
 
 .lottie-animation {
-  position: fixed; /* 固定定位 */
+  position: absolute; /* 固定定位 */
   top: 0vw;          /* 屏幕顶部对齐 */
   right: 0;        /* 屏幕右侧对齐 */
   width: 20vw;     /* 视口宽度的百分比作为宽度，根据需要调整 */
@@ -18,7 +18,7 @@ body {
   z-index: 9;     /* 确保在其他元素之上 */
 }
 .lottie-animation-flipped {
-  position: fixed; 
+  position: absolute; 
   top: 0;          
   left: 0;         
   width: 20vw;     
