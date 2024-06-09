@@ -1,9 +1,10 @@
 /* CodeBlock.css */
 .container {
     display: flex;
-    border: 1px solid rgb(203, 213, 225);
+    border: 1.3px solid rgb(203, 213, 225);
     border-radius: 0.5rem;
     overflow: hidden;
+    background-color: whitesmoke;
     /* font-size: 2vw; */
   }
   
@@ -15,6 +16,8 @@
     resize: none; /* Prevent resizing */
     overflow: auto;
     font-size: 1.2vw;
+    background-color: whitesmoke;
+
   }
   
   .container__lines {
