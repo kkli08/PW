@@ -74,8 +74,7 @@ function About () {
                 <div className="text">
                     <h1>What I hope to do</h1>
                     
-                    <p className="about-text">I aspire to become a  
-                    Compiler Engineer / Software Engineer. 
+                    <p className="about-text">$_0
                     
                     </p>
 
@@ -101,7 +100,7 @@ function About () {
             <div className="boxcol">
                 <Card
                     title={"Toolbox"}
-                    description={"Programming Languages: C++, C, Python, Java, JavaScript\nWeb Framework: Django, React, React Flow, D3.js\nDeployment/Cloud Tools: Docker, K8s, AWS, Nginx, Gunicorn, Git\nOther: Experienced with SDN, TCP, Ethernet Protocol"}
+                    description={"Programming Languages: C/C++, Python, Java, SQL (Postgres), JavaScript, HTML/CSS\nFrameworks: React, Django, Cypress, Jest, Material-UI, Ant-Design\nDeveloper Tools: Git, Docker, Kubernetes, Google Cloud Platform, AWS\nLibraries: pandas, NumPy, Matplotlib, D3.js, ReactFlow, Mininet"}
                     
                 />
                 <Card
