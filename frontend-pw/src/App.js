@@ -10,6 +10,8 @@ import {
 import Blogpage from './pages/blogpage/blogpage';
 import Gallerypage from './pages/gallerypage/gallerypage';
 import ReactGA from 'react-ga4';
+// import detail blog
+import Bufferoverflow from './pages/blogpage/cybersecurity/bufferoverflow';
 
 function GoogleAnalytics() {
   const location = useLocation();
@@ -33,6 +35,9 @@ function App() {
         <Route path="/" Component={Home}/>
         <Route path="/blog" Component={Blogpage}/>
         <Route path="/gallery" Component={Gallerypage}/>
+
+        <Route path="/blog/cybersecurity/bufferoverflow" Component={Bufferoverflow}/>
+
         
       </Routes> 
         
