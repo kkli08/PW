@@ -10,6 +10,8 @@ import { Select } from 'antd';
 import { EnvironmentOutlined, TeamOutlined, TrophyOutlined, GoogleOutlined } from '@ant-design/icons';
 import { Timeline } from 'antd';
 import dragonImage from './dragon_pic.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faLandmark, faSchool} from '@fortawesome/free-solid-svg-icons'
 
 function Experience() {
     
@@ -45,7 +47,7 @@ function Experience() {
                 {
                     position: 'left',
                     color: 'green',
-                    dot: <EnvironmentOutlined className="timeline-item-content"/>,
+                    dot: <FontAwesomeIcon icon={faLandmark} className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>University Of Alberta</h1>
                                                                     <p>2019 - 2023</p>
                                                                     <p>Bachelor of Science </p>
@@ -92,9 +94,9 @@ function Experience() {
                 {
                     position: 'left',
                     color: 'blue',
-                    dot: <EnvironmentOutlined className="timeline-item-content"/>,
+                    dot: <FontAwesomeIcon icon={faLandmark} className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>University Of Toronto</h1>
-                                                                    <p>2023 - 2025</p>
+                                                                    <p>2024 - 2025</p>
                                                                     <p>Master of Engineering</p>
                                                                     
                                                                     <ul>

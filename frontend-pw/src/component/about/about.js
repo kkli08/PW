@@ -34,12 +34,15 @@ function About () {
         ScrollReveal().reveal('.title', { delay: 250, origin: 'left' });
         ScrollReveal().reveal('.photo', { delay: 350, origin: 'bottom' });
         ScrollReveal().reveal('.text ', { delay: 450, origin: 'right' });
+        // ScrollReveal().reveal('.mobile-menu ', { delay: 450, origin: 'right' });
         ScrollReveal().reveal('.boxcol', { delay: 450, origin: 'bottom' });
         ScrollReveal().reveal('.iframe-style', { delay: 450, origin: 'bottom' });
         ScrollReveal().reveal('.select-width', { delay: 250, origin: 'left' });
         ScrollReveal().reveal('.timeline-width', { delay: 250, origin: 'left' });
         ScrollReveal().reveal('.lottie-animation-right-year ', { delay: 250, origin: 'left' });
         ScrollReveal().reveal('.image-container', { delay: 250, origin: 'bottom' });
+        ScrollReveal().reveal('.ProListdetails', { delay: 250, origin: 'bottom' });
+
         
         // Add more ScrollReveal configurations here as needed
         // You can target elements across different components

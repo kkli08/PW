@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from "../navbar/navbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCompass, faList, faSnowflake} from '@fortawesome/free-solid-svg-icons'
+import {faCompass, faList, faSnowflake, faParachuteBox, faBowlFood, faVihara} from '@fortawesome/free-solid-svg-icons'
 import {
   BrowserRouter as Router,
   Link,
@@ -62,9 +62,14 @@ function Header () {
         )}
         <section className="mobile-navbar" onClick={toggleMenu}>
           {/* 菜单图标或者文字 */}
-          <FontAwesomeIcon icon={faSnowflake} />
+          {/* <FontAwesomeIcon icon={faParachuteBox} /> */}
+
+          {/* <FontAwesomeIcon icon={faSnowflake} /> */}
+          <FontAwesomeIcon icon={faVihara} />
+
           {/* <FontAwesomeIcon icon={faList} /> */}
           {/* <FontAwesomeIcon icon={faCompass} /> */}
+          
         </section>
 
     </section>
