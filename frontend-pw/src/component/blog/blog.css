@@ -13,6 +13,7 @@
     text-transform: uppercase;
     text-align: center; /* 中心对齐标题 */
     padding-top: 3vw; /* 用padding代替top来定位标题 */
+    padding-bottom: 3vw;
 }
 
 .select-width {
@@ -51,6 +52,24 @@
     height: 352px;
     margin-top: 2vw;
 }
+
+/* Specific styles for ProList items to apply the font */
+.ant-list-item {
+    font-family: 'EB Garamond', serif; 
+    font-size: 1.6vw;
+  }
+    
+  .ant-pro-list-row-title{
+    font-size: 2vw;
+  }
+  .ant-tag {
+    font-family: 'EB Garamond', serif; /* Apply font to tags */
+    /* font-size: 1.1vw; */
+  }
+    
+  .ant-tag {
+    font-size: 1vw; 
+  }
 
 @media (max-width: 780px){
     #blog .title {
@@ -91,4 +110,21 @@
     .iframe-style {
         width: 78%;
     }
+
+    .ant-list-item {
+        font-family: 'EB Garamond', serif; 
+        font-size: 4.5vw;
+      }
+        
+      .ant-pro-list-row-title{
+        font-size: 6vw;
+      }
+      .ant-tag {
+        font-family: 'EB Garamond', serif; /* Apply font to tags */
+        /* font-size: 1.1vw; */
+      }
+        
+      .ant-tag {
+        font-size: 3vw; 
+      }
 }

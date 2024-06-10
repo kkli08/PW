@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { ProList } from '@ant-design/pro-components';
 import { Button, Tag } from 'antd';
 import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
@@ -13,6 +13,8 @@ import guitarsoloImage from '../blog/blog_cover/electricguitarcover.jpg';
 import classicalmusicImage from '../blog/blog_cover/classicmusic.jpg';
 import cloudImage from '../blog/blog_cover/cloud.png';
 import sql from '../blog/blog_cover/sql.png';
+import ScrollReveal from 'scrollreveal';
+
 const IconText = ({ icon, text }) => (
   <span>
     {React.createElement(icon, { style: { marginInlineEnd: 8 } })}
@@ -62,7 +64,7 @@ const dataSource = [
         tags: ['Frédéric Chopin', 'Lang Lang', 'Bach'],
         icon: <IconText icon={StarOutlined} text="1 hr 38 mins" key="list-vertical-message" />,
         content: '"I am hitting my head against the walls, but the walls are giving way."\n -- Gustav Mahler ',
-        image: guitarsoloImage,
+        image: classicalmusicImage,
         link: 'https://open.spotify.com/playlist/4S2NresR0bc1D2YlNvlpeI?si=c11a76b33e9f4d44',
         isInternal: false,
     },
@@ -78,6 +80,23 @@ function Blogdetail() {
         window.open(link, '_blank'); // Open external links in a new tab
         }
     };
+
+    useEffect(() => {
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 200
+        });
+        ScrollReveal().reveal('.blogdetailtitle', { delay: 250, origin: 'left' });
+        ScrollReveal().reveal('.ProListdetails', { delay: 250, origin: 'bottom' });
+        
+        // Add more ScrollReveal configurations here as needed
+        // You can target elements across different components
+
+        return () => ScrollReveal().destroy(); // Clean up
+    }, []);
+
     return(
         <div id="blogdetail">
             <div className="blogdetailtitle">
