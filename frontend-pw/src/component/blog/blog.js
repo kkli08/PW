@@ -16,6 +16,8 @@ import hmacImage from './blog_cover/hmac.png';
 import guitarsoloImage from './blog_cover/electricguitarcover.jpg';
 import classicalmusicImage from './blog_cover/classicmusic.jpg';
 import cloudImage from './blog_cover/cloud.png';
+import logisticregression from '../blog/blog_cover/logistic_regression.png';
+
 import sql from './blog_cover/sql.png';
 
 import { ProList } from '@ant-design/pro-components';
@@ -33,9 +35,18 @@ const IconText = ({ icon, text }) => (
 
   const dataSource = [
     {
+        title: 'Logistic Regression',
+        tags: ['Deep Learning', 'Python', 'NumPy'],
+        icon: <IconText icon={MessageOutlined} text="10 mins read &nbsp; &nbsp; &nbsp; Jun 17th 2024" key="list-vertical-message" />,
+        content: 'Notes about logistic regression, cost function, optimization methods and implementation using Python NumPy.',
+        image: logisticregression,
+        link: 'https://damians-blog.gitbook.io/deep-learning-specialization',
+        isInternal: false,
+    },
+    {
         title: 'Buffer Overflow',
         tags: ['Cybersecurity', 'Binary exploit', 'C/C++'],
-        icon: <IconText icon={MessageOutlined} text="15 mins read" key="list-vertical-message" />,
+        icon: <IconText icon={MessageOutlined} text="15 mins read &nbsp; &nbsp; &nbsp; Jan 24th 2024" key="list-vertical-message" />,
         content: 'Buffer overflow is a vulnerability in low level programming languages such as C and C++. It is caused by writing data beyond the allocated memory. This can lead to a crash of the program or even worse, the attacker can execute arbitrary code.',
         image: bufferoverflowImage,
         link: '/blog/cybersecurity/bufferoverflow',
@@ -44,7 +55,7 @@ const IconText = ({ icon, text }) => (
     {
         title: 'HMAC Authentication',
         tags: ['HMAC-SHA1', 'TOTP', 'Cybersecurity'],
-        icon: <IconText icon={MessageOutlined} text="7 mins read" key="list-vertical-message" />,
+        icon: <IconText icon={MessageOutlined} text="7 mins read &nbsp; &nbsp; &nbsp; Feb 7th 2024" key="list-vertical-message" />,
         content: 'HMAC is a type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. It is used to verify the data integrity and the authentication of a message.',
         image: hmacImage,
         link: 'https://github.com/kkli08/HMAC/wiki#hmac',
@@ -53,7 +64,7 @@ const IconText = ({ icon, text }) => (
     {
         title: 'Network Attack',
         tags: ['CSRF', 'XSS', 'Cybersecurity'],
-        icon: <IconText icon={MessageOutlined} text="5 mins read" key="list-vertical-message" />,
+        icon: <IconText icon={MessageOutlined} text="5 mins read &nbsp; &nbsp; &nbsp; Mar 15th 2024" key="list-vertical-message" />,
         content: 'Cross-Site Scripting (XSS) | Cross-site request forgery (CSRF) | SQL Injection',
         image: sql,
         link: 'https://github.com/kkli08/OWASP-Network-Attack/wiki',
