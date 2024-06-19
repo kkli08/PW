@@ -17,6 +17,7 @@ import guitarsoloImage from './blog_cover/electricguitarcover.jpg';
 import classicalmusicImage from './blog_cover/classicmusic.jpg';
 import cloudImage from './blog_cover/cloud.png';
 import logisticregression from '../blog/blog_cover/logistic_regression.png';
+import shallowNeuralNetwork from '../blog/blog_cover/shallowNeuralNetwork.png';
 
 import sql from './blog_cover/sql.png';
 
@@ -34,6 +35,15 @@ const IconText = ({ icon, text }) => (
   
 
   const dataSource = [
+    {
+        title: 'Shallow Neural Network',
+        tags: ['Deep Learning', 'Python', 'NumPy'],
+        icon: <IconText icon={MessageOutlined} text="7 mins read &nbsp; &nbsp; &nbsp; Jun 19th 2024" key="list-vertical-message" />,
+        content: 'Notes about neural network with single hidden layer, activation functions and update weights and bias by using backpropagation.',
+        image: shallowNeuralNetwork,
+        link: 'https://damians-blog.gitbook.io/deep-learning-specialization/shallow-neural-networks',
+        isInternal: false,
+    },
     {
         title: 'Logistic Regression',
         tags: ['Deep Learning', 'Python', 'NumPy'],
