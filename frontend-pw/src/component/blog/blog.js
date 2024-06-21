@@ -1,4 +1,4 @@
-import React, { useState }  from "react";
+import React, { useState, useEffect }  from "react";
 import "./blog.css";
 import {
     BrowserRouter as Router,
@@ -23,22 +23,38 @@ import sql from './blog_cover/sql.png';
 
 import { ProList } from '@ant-design/pro-components';
 import { Button, Tag } from 'antd';
-import { LikeOutlined, MessageOutlined, StarOutlined } from '@ant-design/icons';
+import { LikeOutlined, MessageOutlined, StarOutlined, ClockCircleFilled} from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom'; 
-
+import { ref, get } from 'firebase/database';
+import { database } from '../../firebase'; 
+import {
+    BarChartOutlined,
+  } from '@ant-design/icons';
+  
+const handleClick = (link, isInternal) => {
+    if (isInternal) {
+        // Use react-router or a similar method to navigate internally
+        // For example, if using react-router-dom:
+        // history.push(link);
+        console.log(`Navigating to internal link: ${link}`);
+    } else {
+        // Open external links in a new tab
+        window.open(link, '_blank');
+    }
+    };
 const IconText = ({ icon, text }) => (
     <span>
       {React.createElement(icon, { style: { marginInlineEnd: 8 } })}
       {text}
     </span>
-  );
+    );
   
 
   const dataSource = [
     {
         title: 'Shallow Neural Network',
         tags: ['Deep Learning', 'Python', 'NumPy'],
-        icon: <IconText icon={MessageOutlined} text="7 mins read &nbsp; &nbsp; &nbsp; Jun 19th 2024" key="list-vertical-message" />,
+        icon: <IconText icon={ClockCircleFilled} text="7 mins read &nbsp; &nbsp; &nbsp; Jun 19th 2024" key="list-vertical-message" />,
         content: 'Notes about neural network with single hidden layer, activation functions and update weights and bias by using backpropagation.',
         image: shallowNeuralNetwork,
         link: 'https://damians-blog.gitbook.io/deep-learning-specialization/shallow-neural-networks',
@@ -47,7 +63,7 @@ const IconText = ({ icon, text }) => (
     {
         title: 'Logistic Regression',
         tags: ['Deep Learning', 'Python', 'NumPy'],
-        icon: <IconText icon={MessageOutlined} text="10 mins read &nbsp; &nbsp; &nbsp; Jun 17th 2024" key="list-vertical-message" />,
+        icon: <IconText icon={ClockCircleFilled} text="10 mins read &nbsp; &nbsp; &nbsp; Jun 17th 2024" key="list-vertical-message" />,
         content: 'Notes about logistic regression, cost function, optimization methods and implementation using Python NumPy.',
         image: logisticregression,
         link: 'https://damians-blog.gitbook.io/deep-learning-specialization',
@@ -56,7 +72,7 @@ const IconText = ({ icon, text }) => (
     {
         title: 'Buffer Overflow',
         tags: ['Cybersecurity', 'Binary exploit', 'C/C++'],
-        icon: <IconText icon={MessageOutlined} text="15 mins read &nbsp; &nbsp; &nbsp; Jan 24th 2024" key="list-vertical-message" />,
+        icon: <IconText icon={ClockCircleFilled} text="15 mins read &nbsp; &nbsp; &nbsp; Jan 24th 2024" key="list-vertical-message" />,
         content: 'Buffer overflow is a vulnerability in low level programming languages such as C and C++. It is caused by writing data beyond the allocated memory. This can lead to a crash of the program or even worse, the attacker can execute arbitrary code.',
         image: bufferoverflowImage,
         link: '/blog/cybersecurity/bufferoverflow',
@@ -65,7 +81,7 @@ const IconText = ({ icon, text }) => (
     {
         title: 'HMAC Authentication',
         tags: ['HMAC-SHA1', 'TOTP', 'Cybersecurity'],
-        icon: <IconText icon={MessageOutlined} text="7 mins read &nbsp; &nbsp; &nbsp; Feb 7th 2024" key="list-vertical-message" />,
+        icon: <IconText icon={ClockCircleFilled} text="7 mins read &nbsp; &nbsp; &nbsp; Feb 7th 2024" key="list-vertical-message" />,
         content: 'HMAC is a type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. It is used to verify the data integrity and the authentication of a message.',
         image: hmacImage,
         link: 'https://github.com/kkli08/HMAC/wiki#hmac',
@@ -74,7 +90,7 @@ const IconText = ({ icon, text }) => (
     {
         title: 'Network Attack',
         tags: ['CSRF', 'XSS', 'Cybersecurity'],
-        icon: <IconText icon={MessageOutlined} text="5 mins read &nbsp; &nbsp; &nbsp; Mar 15th 2024" key="list-vertical-message" />,
+        icon: <IconText icon={ClockCircleFilled} text="5 mins read &nbsp; &nbsp; &nbsp; Mar 15th 2024" key="list-vertical-message" />,
         content: 'Cross-Site Scripting (XSS) | Cross-site request forgery (CSRF) | SQL Injection',
         image: sql,
         link: 'https://github.com/kkli08/OWASP-Network-Attack/wiki',
@@ -104,6 +120,7 @@ const IconText = ({ icon, text }) => (
 
 function Blog() {
     const navigate = useNavigate();
+    const [viewCount, setViewCount] = useState(0);
 
     const handleClick = (link, isInternal) => {
         if (isInternal) {
@@ -112,6 +129,18 @@ function Blog() {
         window.open(link, '_blank'); // Open external links in a new tab
         }
     };
+
+    useEffect(() => {
+        const fetchViewCount = async () => {
+        const viewCountRef = ref(database, 'viewCount');
+        const snapshot = await get(viewCountRef);
+        if (snapshot.exists()) {
+            setViewCount(snapshot.val());
+        }
+        };
+
+        fetchViewCount();
+    }, []);
     
 
     return(
@@ -128,7 +157,15 @@ function Blog() {
                 rowKey="title" // Assuming titles are unique
                 dataSource={dataSource}
                 metas={{
-                title: {},
+                title: {
+                    render: (_, row) => (
+                        <div
+                          onClick={() => handleClick(row.link, row.isInternal)}
+                        >
+                          {row.title}
+                        </div>
+                      ),
+                },
                 description: {
                     render: (_, row) => (
                     <div>
@@ -164,6 +201,7 @@ function Blog() {
                 },
                 }}
             />
+            
             </div>
         </div>
     );

@@ -10,9 +10,18 @@ import Lottie from "lottie-react";
 import decorations from './decorations.json';
 import santa from './santa.json';
 import dragonImage from './images/dragon_pic.jpg';
+import { ref, get } from 'firebase/database';
+import { database } from '../../firebase'; 
+import {
+    BarChartOutlined,
+  } from '@ant-design/icons';
+import { Flex, Tag } from 'antd';
+
 function About () {
     // State to track the current image
     const [currentImage, setCurrentImage] = useState(aboutPhoto1);
+    const [viewCount, setViewCount] = useState(0);
+
 
     useEffect(() => {
         // Set up an interval to switch the image every hour (3600000 milliseconds)
@@ -50,6 +59,18 @@ function About () {
         return () => ScrollReveal().destroy(); // Clean up
     }, []);
     // 通过style属性动态设置背景图片
+
+    useEffect(() => {
+        const fetchViewCount = async () => {
+        const viewCountRef = ref(database, 'viewCount');
+        const snapshot = await get(viewCountRef);
+        if (snapshot.exists()) {
+            setViewCount(snapshot.val());
+        }
+        };
+
+        fetchViewCount();
+    }, []);
 
     return (
         <div id="about">
@@ -98,6 +119,11 @@ function About () {
                     <p className="about-text">
                     <FontAwesomeIcon icon={faPersonSwimming} /> Swimming | <FontAwesomeIcon icon={faCamera} /> Photographing | <FontAwesomeIcon icon={faPersonHiking} /> Hiking |
                     </p>
+                    <Flex wrap>
+                        <Tag icon={<BarChartOutlined />} color="#55acee">
+                         <span>{viewCount.toLocaleString()}</span> views
+                        </Tag>
+                    </Flex>
                 </div>
             </div>
             <div className="boxcol">
