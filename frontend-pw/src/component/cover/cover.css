@@ -29,6 +29,11 @@ video {
 .cover-text p {
     font-size: 3vw;
 }
+.viewCounterCover{
+    position: absolute;
+    top: 95%;
+    right: 2%;
+}
 /* .overlay {
     position: absolute;
     top: 0;
