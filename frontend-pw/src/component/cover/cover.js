@@ -10,10 +10,18 @@ import Bg7 from './bgvideo/bgvideo7.mp4';
 import Bg8 from './bgvideo/bgvideo8.mp4';
 import Christmas from './bgvideo/Christmas.mp4';
 import ScrollReveal from 'scrollreveal';
-
+import { ref, get } from 'firebase/database';
+import { database } from '../../firebase'; 
+import {
+    BarChartOutlined,
+  } from '@ant-design/icons';
+import CountUp from 'react-countup';
+import { Button, Tag } from 'antd';
 function Cover() {
     const videos = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6, Bg7, Bg8];
     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+    const [viewCount, setViewCount] = useState(0);
+
 
     useEffect(() => {
         // 计算当前时间段对应的视频索引
@@ -48,6 +56,18 @@ function Cover() {
         return () => ScrollReveal().destroy(); // Clean up
     }, []);
 
+    useEffect(() => {
+        const fetchViewCount = async () => {
+        const viewCountRef = ref(database, 'viewCount');
+        const snapshot = await get(viewCountRef);
+        if (snapshot.exists()) {
+            setViewCount(snapshot.val());
+        }
+        };
+
+        fetchViewCount();
+    }, []);
+
     return (
         <section>
             
@@ -66,6 +86,13 @@ function Cover() {
                 {/* <h1>"Don't pray for an easy path, But the strength to handle the difficulties."</h1>
                 <p>- Elon Musk</p> */}
             </div>
+            <div className='viewCounterCover'>
+                <Tag icon={<BarChartOutlined />} color="black">
+                    <CountUp end={viewCount} duration={2} separator="," />
+                    {' '}views
+                </Tag>
+                </div>
+
         </section>
     );
 }

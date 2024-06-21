@@ -23,7 +23,7 @@ import { database } from '../../firebase';
 import {
     BarChartOutlined,
   } from '@ant-design/icons';
-  import CountUp from 'react-countup';
+import CountUp from 'react-countup';
 
 const handleClick = (link, isInternal) => {
     if (isInternal) {
