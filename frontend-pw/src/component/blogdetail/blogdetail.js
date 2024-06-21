@@ -23,7 +23,8 @@ import { database } from '../../firebase';
 import {
     BarChartOutlined,
   } from '@ant-design/icons';
-  
+  import CountUp from 'react-countup';
+
 const handleClick = (link, isInternal) => {
     if (isInternal) {
         // Use react-router or a similar method to navigate internally
@@ -158,8 +159,9 @@ function Blogdetail() {
             
             <div className="ProListdetails">
                 <div className='viewCounter'>
-                <Tag icon={<BarChartOutlined />} color="#3b5999">
-                        <span>{viewCount.toLocaleString()}</span> views
+                    <Tag icon={<BarChartOutlined />} color="#3b5999">
+                        <CountUp end={viewCount} duration={2} separator="," />
+                        {' '}views
                     </Tag>
                 </div>
             <ProList

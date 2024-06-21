@@ -16,6 +16,8 @@ import {
     BarChartOutlined,
   } from '@ant-design/icons';
 import { Flex, Tag } from 'antd';
+import CountUp from 'react-countup';
+
 
 function About () {
     // State to track the current image
@@ -120,9 +122,10 @@ function About () {
                     <FontAwesomeIcon icon={faPersonSwimming} /> Swimming | <FontAwesomeIcon icon={faCamera} /> Photographing | <FontAwesomeIcon icon={faPersonHiking} /> Hiking |
                     </p>
                     <Flex wrap>
-                        <Tag icon={<BarChartOutlined />} color="#55acee">
-                         <span>{viewCount.toLocaleString()}</span> views
-                        </Tag>
+                    <Tag icon={<BarChartOutlined />} color="#55acee">
+                    <CountUp end={viewCount} duration={2} separator="," />
+                    {' '}views
+                    </Tag>
                     </Flex>
                 </div>
             </div>
