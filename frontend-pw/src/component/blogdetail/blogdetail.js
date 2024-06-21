@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ProList } from '@ant-design/pro-components';
 import { Button, Tag } from 'antd';
 import { LikeOutlined, MessageOutlined, StarOutlined, ClockCircleFilled } from '@ant-design/icons';
@@ -110,6 +110,8 @@ const dataSource = [
 
 function Blogdetail() {
     const navigate = useNavigate();
+    const [viewCount, setViewCount] = useState(0);
+
 
     const handleClick = (link, isInternal) => {
         if (isInternal) {
@@ -135,6 +137,17 @@ function Blogdetail() {
         return () => ScrollReveal().destroy(); // Clean up
     }, []);
 
+    useEffect(() => {
+        const fetchViewCount = async () => {
+        const viewCountRef = ref(database, 'viewBlogCount');
+        const snapshot = await get(viewCountRef);
+        if (snapshot.exists()) {
+            setViewCount(snapshot.val());
+        }
+        };
+
+        fetchViewCount();
+    }, []);
     return(
         <div id="blogdetail">
             <div className="blogdetailtitle">
@@ -142,7 +155,13 @@ function Blogdetail() {
                 Welcome to My Blog
                 </h1>
             </div>
+            
             <div className="ProListdetails">
+                <div className='viewCounter'>
+                <Tag icon={<BarChartOutlined />} color="#3b5999">
+                        <span>{viewCount.toLocaleString()}</span> views
+                    </Tag>
+                </div>
             <ProList
                 itemLayout="vertical"
                 rowKey="title" // Assuming titles are unique
