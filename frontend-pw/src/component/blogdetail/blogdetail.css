@@ -50,6 +50,10 @@ body {
     background-color: white;
 }
 
+.viewCounter{
+  text-align: center;
+  padding-bottom: 3vw;
+}
 /* Specific styles for ProList items to apply the font */
 .ant-list-item {
     font-family: 'EB Garamond', serif; 
