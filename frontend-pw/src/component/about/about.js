@@ -98,11 +98,11 @@ function About () {
                     <img src={currentImage} alt="aboutphoto" />
                 </div>
                 <div className="text">
-                    <h1>What I hope to do</h1>
+                    {/* <h1>What I hope to do</h1>
                     
                     <p className="about-text">$_0
                     
-                    </p>
+                    </p> */}
 
                     <h1>What I'm doing </h1>
 
