@@ -111,9 +111,10 @@
         width: 78%;
     }
 
-    .ant-list-item {
+    #blog .ant-list-item {
         font-family: 'EB Garamond', serif; 
         font-size: 4.5vw;
+        background-color: white;
       }
         
       .ant-pro-list-row-title{
