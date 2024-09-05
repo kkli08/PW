@@ -1,4 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+  } from "react-router-dom";
 import tree1 from "./tree.json";
 import Lottie from "lottie-react";
 import decorations from './decorations.json';
@@ -17,6 +23,17 @@ import wirelessNetworkImage from './project_cover/wirelessnetwork.png';
 import pokergameImage from './project_cover/pokergame.png';
 import riscv_arm from './project_cover/RISCV_ARM_Architecture.jpeg';
 import sdn from './project_cover/Traditional-networking-versus-SDN-networking.png';
+
+import { ProList } from '@ant-design/pro-components';
+import { Button, Tag } from 'antd';
+import { LikeOutlined, MessageOutlined, StarOutlined, ClockCircleFilled} from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom'; 
+import { ref, get } from 'firebase/database';
+import { database } from '../../firebase'; 
+import {
+    BarChartOutlined,
+  } from '@ant-design/icons';
+
 // Define the card data
 const webApplicationCards = [
     { 
@@ -105,6 +122,10 @@ const networkProtocols = [
     // ... more cards
 ];
 
+const DatabaseCard = [
+    
+];
+
 // const gameStrategy = [
 //     { 
 //         title: '2-Player Poker Games', 
@@ -125,8 +146,126 @@ const assembleLanguage = [
     },
 ];
 
+
+
+const handleClick = (link, isInternal) => {
+    if (isInternal) {
+        // Use react-router or a similar method to navigate internally
+        // For example, if using react-router-dom:
+        // history.push(link);
+        console.log(`Navigating to internal link: ${link}`);
+    } else {
+        // Open external links in a new tab
+        window.open(link, '_blank');
+    }
+    };
+const IconText = ({ icon, text }) => (
+    <span>
+      {React.createElement(icon, { style: { marginInlineEnd: 8 } })}
+      {text}
+    </span>
+    );
+
+
+    const dataSource = [
+        {
+            title: 'Software Defined Network Performance Analysis',
+            tags: ['Web Application', 'Mininet', 'React', 'AWS EC2', 'Ant Design', 'Python'],
+            // icon: <IconText icon={ClockCircleFilled} text="8 mins read &nbsp; &nbsp; &nbsp; Sep 5th 2024" key="list-vertical-message" />,
+            content: 'Visualize and simulate the performance of SDN networks by allowing users to build their own SDN network topology.',
+            image: sdn,
+            link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
+            isInternal: false,
+        },
+        {
+            title: 'Vocabulary Explorer',
+            tags: ['Web Application', 'React', 'D3.js', 'JavaScript', 'AWS', 'Docker', 'MKDoc', 'Figma'],
+            // icon: <IconText icon={ClockCircleFilled} text="5 mins read &nbsp; &nbsp; &nbsp; Sep 5th 2024" key="list-vertical-message" />,
+            content: 'An online visualization dictionary that allows users to explore and collapse different semantic classes through a tree structure, showing word relationships and category hierarchies.',
+            image: veImage,
+            link: 'https://www.youtube.com/watch?v=0xyK7al-No4',
+            isInternal: false,
+        },
+        {
+            title: 'Social Distribution',
+            tags: ['Web Application', 'Django', 'React', 'PostgreSQL', 'Django REST Framework'],
+            // icon: <IconText icon={ClockCircleFilled} text="6 mins read &nbsp; &nbsp; &nbsp; Sep 5th 2024" key="list-vertical-message" />,
+            content: 'A web application enabling user engagement and social sharing, including features like posting, commenting, liking, and following users.',
+            image: sdImage,
+            link: 'https://github.com/CMPUT404F22ProjectTeam/WebApplicationProject/wiki',
+            isInternal: false,
+        },
+        {
+            title: 'Habot',
+            tags: ['Mobile Application', 'Java', 'Android Studio', 'Firebase', 'Figma'],
+            // icon: <IconText icon={ClockCircleFilled} text="4 mins read &nbsp; &nbsp; &nbsp; Sep 5th 2024" key="list-vertical-message" />,
+            content: 'An Android application that helps users track their daily habits by adding, deleting, and viewing habits.',
+            image: habotImage,
+            link: 'https://github.com/CMPUT301F21T24/Habot/wiki/Part4-StoryBoard',
+            isInternal: false,
+        },
+        {
+            title: 'CLI Shell',
+            tags: ['Linux System', 'C', 'Bash'],
+            // icon: <IconText icon={ClockCircleFilled} text="5 mins read &nbsp; &nbsp; &nbsp; Sep 5th 2024" key="list-vertical-message" />,
+            content: 'A custom command-line interface designed to enhance user interaction with process management functionalities.',
+            image: cliImage,
+            link: 'https://github.com/kkli08/CLI-Shell',
+            isInternal: false,
+        },
+        {
+            title: 'Socket_Server',
+            tags: ['Linux System', 'C', 'Bash', 'Socket API'],
+            // icon: <IconText icon={ClockCircleFilled} text="6 mins read &nbsp; &nbsp; &nbsp; Sep 5th 2024" key="list-vertical-message" />,
+            content: 'A client-server simulation that supports multiple client requests using multi-threading and efficient server responses.',
+            image: ssImage,
+            link: 'https://github.com/kkli08/Socket_Server',
+            isInternal: false,
+        },
+        {
+            title: 'Wireless Network Communication',
+            tags: ['Network Protocols', 'C', 'Makefile', 'Cnet'],
+            // icon: <IconText icon={ClockCircleFilled} text="7 mins read &nbsp; &nbsp; &nbsp; Sep 5th 2024" key="list-vertical-message" />,
+            content: 'Simulates a TCP-like protocol in a wireless network using CNET, handling mobile nodes and access points for reliable message transmission.',
+            image: wirelessNetworkImage,
+            link: 'https://github.com/kkli08/Wireless-Network-Communication-Simulation-using-CNET',
+            isInternal: false,
+        },
+        {
+            title: 'Enhanced Stop and Wait Protocol',
+            tags: ['Network Protocols', 'C', 'Makefile', 'Cnet'],
+            // icon: <IconText icon={ClockCircleFilled} text="7 mins read &nbsp; &nbsp; &nbsp; Sep 5th 2024" key="list-vertical-message" />,
+            content: 'An enhanced stop-and-wait protocol for reliable data transmission between two nodes in a simulated network environment.',
+            image: stopandwaitImage,
+            link: 'https://github.com/kkli08/Enhanced-Stop-and-Wait-Protocol-for-Reliable-Data-Transmission-in-Network-Simulation',
+            isInternal: false,
+        },
+    ];
+    
 function Project() {
     const [cards, setCards] = useState(networkProtocols);
+    const navigate = useNavigate();
+    const [viewCount, setViewCount] = useState(0);
+
+    const handleClick = (link, isInternal) => {
+        if (isInternal) {
+        navigate(link); // Use navigate for internal links
+        } else {
+        window.open(link, '_blank'); // Open external links in a new tab
+        }
+    };
+
+    useEffect(() => {
+        const fetchViewCount = async () => {
+        const viewCountRef = ref(database, 'viewCount');
+        const snapshot = await get(viewCountRef);
+        if (snapshot.exists()) {
+            setViewCount(snapshot.val());
+        }
+        };
+
+        fetchViewCount();
+    }, []);
 
     const handleChange = (value) => {
         console.log(`selected ${value}`);
@@ -146,8 +285,8 @@ function Project() {
             // case 'Game_Strategy':
             //     setCards(gameStrategy);
             //     break;
-            case 'Assemble_Language':
-                setCards(assembleLanguage);
+            case 'Database':
+                setCards(DatabaseCard);
                 break;
             // ... handle other cases
             default:
@@ -179,46 +318,37 @@ function Project() {
                     label: 'Team Projects',
                     options: [
                     {
-                        label: 'Web Application',
+                        label: 'Web',
                         value: 'Web_Application',
                     },
                     {
-                        label: 'Mobile Application',
+                        label: 'Mobile',
                         value: 'Mobile_Application',
                     },
-                    // {
-                    //     label: 'CyberSecurity',
-                    //     value: 'CyberSecurity',
-                    // },
-                    // {
-                    //     label: 'Game Strategy',
-                    //     value: 'Game_Strategy',
-                    // },
+                    
                     ],
                 },
                 {
                     label: 'Individual Projects',
                     options: [
                     {
+                        label: 'Database',
+                        value: 'Database',
+                    },
+                    {
                         label: 'Compiler',
                         value: 'Compiler',
                     },
                     {
-                        label: 'Linux System',
+                        label: 'OS',
                         value: 'Linux_System',
                     },
                     {
                         label: 'Network',
                         value: 'Network_Protocols',
                     },
-                    {
-                        label: 'Assembly Language',
-                        value: 'Assemble_Language',
-                    },
-                    // {
-                    //     label: 'Distributed System',
-                    //     value: 'Distributed_System',
-                    // },
+                    
+                    
                     ],
                 },
                 ]}
@@ -239,6 +369,58 @@ function Project() {
             </div>
 
             {/* <Lottie animationData={tree1} /> */}
+            {/* <div className="ProListdetails">
+            <ProList
+                itemLayout="vertical"
+                rowKey="title" // Assuming titles are unique
+                dataSource={dataSource}
+                metas={{
+                title: {
+                    render: (_, row) => (
+                        <div
+                          onClick={() => handleClick(row.link, row.isInternal)}
+                        >
+                          {row.title}
+                        </div>
+                      ),
+                },
+                description: {
+                    render: (_, row) => (
+                    <div>
+                        {row.tags.map((tag) => (
+                        <Tag key={tag}>{tag}</Tag>
+                        ))}
+                    </div>
+                    ),
+                },
+                actions: {
+                    render: (_, row) => [row.icon],
+                },
+                extra: {
+                    render: (_, row) => (
+                    <img
+                        width={272}
+                        alt={row.title}
+                        src={row.image}
+                        onClick={() => handleClick(row.link, row.isInternal)}
+                        style={{ cursor: 'pointer' }}
+                    />
+                    ),
+                },
+                content: {
+                    render: (_, row) => (
+                    <div
+                        onClick={() => handleClick(row.link, row.isInternal)}
+                        style={{ cursor: 'pointer' }}
+                    >
+                        {row.content}
+                    </div>
+                    ),
+                },
+                }}
+            />
+            
+            </div> */}
         </div>
     );
 }

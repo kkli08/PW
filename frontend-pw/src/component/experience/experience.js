@@ -101,7 +101,7 @@ function Experience() {
                                                                     
                                                                     <ul>
                                                                         <li>Major Area of Focus: Computing Engineering & Identity, Privacy and Security (IPS)</li> 
-                                                                        <li>Coursework: Computer Security, Cloud Computing, Deep Learning & Neural Network</li>   
+                                                                        <li>Coursework: Parallel Programming, System Programming in Rust , Computer Security, Cloud Computing, Deep Learning & Neural Network</li>   
                                                                     </ul>    
                                                                     </div>,
                 },

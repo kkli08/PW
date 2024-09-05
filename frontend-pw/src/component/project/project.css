@@ -66,6 +66,30 @@
 #projects .card-description {
     font-size: 1.1em; /* 或者使用像素值，如 '16px' */
 }
+
+/* Specific styles for ProList items to apply the font */
+#project .ant-pro-card-body {
+    background-color: #f5f5f5;
+    
+}
+#project .ant-list-item  {
+    font-family: 'EB Garamond', serif; 
+    font-size: 1.6vw;
+    background-color: #f5f5f5;
+  }
+    
+  .ant-pro-list-row-title{
+    font-size: 2vw;
+  }
+  .ant-tag {
+    font-family: 'EB Garamond', serif; /* Apply font to tags */
+    /* font-size: 1.1vw; */
+  }
+    
+  .ant-tag {
+    font-size: 1vw; 
+  }
+
 @media (max-width: 780px){
     #projects .title {
         /* font-family: 'Dancing Script', cursive; */
@@ -107,4 +131,21 @@
     #projects .card-description {
         font-size: 1em; /* 或者使用像素值，如 '16px' */
     }
+
+    .ant-list-item {
+        font-family: 'EB Garamond', serif; 
+        font-size: 4.5vw;
+      }
+        
+      .ant-pro-list-row-title{
+        font-size: 6vw;
+      }
+      .ant-tag {
+        font-family: 'EB Garamond', serif; /* Apply font to tags */
+        /* font-size: 1.1vw; */
+      }
+        
+      .ant-tag {
+        font-size: 3vw; 
+      }
 }

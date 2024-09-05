@@ -132,16 +132,16 @@ function About () {
             <div className="boxcol">
                 <Card
                     title={"Toolbox"}
-                    description={"Programming Languages: C/C++, Python, Java, SQL (Postgres), JavaScript, HTML/CSS\nFrameworks: React, Django, Cypress, Jest, Material-UI, Ant-Design\nDeveloper Tools: Git, Docker, Kubernetes, Google Cloud Platform, AWS\nLibraries: pandas, NumPy, Matplotlib, D3.js, ReactFlow, Mininet"}
+                    description={"Programming Languages: C/C++, Rust, Python, JavaScript\nDeveloper Tools: CMake, Git, Docker, Kubernetes\nFrameworks: GTest, React, Django, Cypress, Jest, Material-UI, Ant-Design\nLibraries: pandas, NumPy, Matplotlib, D3.js, ReactFlow, Mininet"}
                     
                 />
                 <Card
                     title={"Learning"}
-                    description={"WINTER 2024:\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security\nSUMMER 2024:\nAPS1052H Y (Full Session) Neural Network & Deep Learning\n"}                
+                    description={"FALL 2024 :\nCSC2234H Database System Technology\nECE1747H Parallel Programming\nECE1724H Performant Software Systems with Rust\nSUMMER 2024 :\nAPS1052H Neural Network & Deep Learning\nWINTER 2024 :\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security"}                
                 />
                 <Card
                     title={"Interests"}
-                    description={"1) Compiler Optimization\n2) System Engineering\n3) Cybersecurity \n4) Making this homepage more accessible"}                
+                    description={"1) Database Design\n2) Compiler Optimization\n3) Cybersecurity \n4) Making this homepage more accessible"}                
                 />
             </div>
             
