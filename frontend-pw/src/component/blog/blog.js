@@ -18,7 +18,7 @@ import classicalmusicImage from './blog_cover/classicmusic.jpg';
 import cloudImage from './blog_cover/cloud.png';
 import logisticregression from '../blog/blog_cover/logistic_regression.png';
 import shallowNeuralNetwork from '../blog/blog_cover/shallowNeuralNetwork.png';
-
+import callback from '../blog/blog_cover/callback.jpg';
 import sql from './blog_cover/sql.png';
 
 import { ProList } from '@ant-design/pro-components';
@@ -49,8 +49,17 @@ const IconText = ({ icon, text }) => (
     </span>
     );
   
-
+    
   const dataSource = [
+    {
+        title: 'Callback Keyword and Pass a function as an argument in C++',
+        tags: ['C++11', 'Callback', 'Function Pointer'],
+        icon: <IconText icon={ClockCircleFilled} text="3 mins read &nbsp; &nbsp; &nbsp; Sep 10th 2024" key="list-vertical-message" />,
+        content: 'Notes about callback function, function pointer and how to pass a function as an argument in C++.',
+        image: callback,
+        link: 'https://damians-blog.gitbook.io/blog-with-key-value-storage-database',
+        isInternal: false,
+    },
     {
         title: 'Shallow Neural Network',
         tags: ['Deep Learning', 'Python', 'NumPy'],
