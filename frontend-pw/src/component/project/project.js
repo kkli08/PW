@@ -23,6 +23,7 @@ import wirelessNetworkImage from './project_cover/wirelessnetwork.png';
 import pokergameImage from './project_cover/pokergame.png';
 import riscv_arm from './project_cover/RISCV_ARM_Architecture.jpeg';
 import sdn from './project_cover/Traditional-networking-versus-SDN-networking.png';
+import veloxdb from './project_cover/veloxdb.jpeg'
 
 import { ProList } from '@ant-design/pro-components';
 import { Button, Tag } from 'antd';
@@ -123,7 +124,30 @@ const networkProtocols = [
 ];
 
 const DatabaseCard = [
-    
+    { 
+        title: 'VeloxDB', 
+        description: 'VeloxDB is a persistent key-value store database library. It designed to store key-value pairs and allow efficient retrieval based on the key. This system is inspired by modern databases like LevelDB and RocksDB, and supports multiple data types using C++ Templates and Protocol Buffers. \n\nTool Use: C++, CMake, Google Test, Protocol Buffer', 
+        imgSrc: veloxdb, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/VeloxDB',
+    },
+];
+
+const mostRecent = [
+    { 
+        title: 'VeloxDB', 
+        description: 'VeloxDB is a persistent key-value store database library. It designed to store key-value pairs and allow efficient retrieval based on the key. This system is inspired by modern databases like LevelDB and RocksDB, and supports multiple data types using C++ Templates and Protocol Buffers. \n\nTool Use: C++, CMake, Google Test, Protocol Buffer', 
+        imgSrc: veloxdb, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/VeloxDB',
+    },
+    { 
+        title: 'Software Defined Network Performance Analysis', 
+        description: 'This application visualize the SDN network, let user build their own sdn network topology and see the simulation performance of their own defined network.\n\nTool Use: Mininet, React, ReactFlow, JavaScript, AWS EC2, Django, Python, Ant Design', 
+        imgSrc: sdn, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://production-aws.d3du2w0lk3c8e3.amplifyapp.com/',
+    },
 ];
 
 // const gameStrategy = [
@@ -243,7 +267,7 @@ const IconText = ({ icon, text }) => (
     ];
     
 function Project() {
-    const [cards, setCards] = useState(networkProtocols);
+    const [cards, setCards] = useState(mostRecent);
     const navigate = useNavigate();
     const [viewCount, setViewCount] = useState(0);
 
@@ -282,9 +306,9 @@ function Project() {
             case 'Network_Protocols':
                 setCards(networkProtocols);
                 break;
-            // case 'Game_Strategy':
-            //     setCards(gameStrategy);
-            //     break;
+            case 'Most_Recent':
+                setCards(mostRecent);
+                break;
             case 'Database':
                 setCards(DatabaseCard);
                 break;
@@ -310,7 +334,7 @@ function Project() {
 
             <div style={{ display: 'flex', justifyContent: 'center' }}>
             <Select
-                defaultValue="Network"
+                defaultValue="Most_Recent"
                 className="select-width"
                 onChange={handleChange}
                 options={[
@@ -331,6 +355,10 @@ function Project() {
                 {
                     label: 'Individual Projects',
                     options: [
+                    {
+                        label: 'Most Recent',
+                        value: 'Most_Recent',
+                    },
                     {
                         label: 'Database',
                         value: 'Database',
