@@ -64,8 +64,8 @@ function Header () {
           {/* 菜单图标或者文字 */}
           {/* <FontAwesomeIcon icon={faParachuteBox} /> */}
 
-          {/* <FontAwesomeIcon icon={faSnowflake} /> */}
-          <FontAwesomeIcon icon={faVihara} />
+          <FontAwesomeIcon icon={faSnowflake} />
+          {/* <FontAwesomeIcon icon={faVihara} /> */}
 
           {/* <FontAwesomeIcon icon={faList} /> */}
           {/* <FontAwesomeIcon icon={faCompass} /> */}
