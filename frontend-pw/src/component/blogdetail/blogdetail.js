@@ -15,6 +15,7 @@ import cloudImage from '../blog/blog_cover/cloud.png';
 import logisticregression from '../blog/blog_cover/logistic_regression.png';
 import shallowNeuralNetwork from '../blog/blog_cover/shallowNeuralNetwork.png';
 import callback from '../blog/blog_cover/callback.jpg';
+import rust from '../blog/blog_cover/rust.png'
 
 
 import sql from '../blog/blog_cover/sql.png';
@@ -45,6 +46,15 @@ const IconText = ({ icon, text }) => (
 );
 
 const dataSource = [
+    {
+        title: 'Rust Blog',
+        tags: ['Rust', 'System', 'Programming Language'],
+        icon: <IconText icon={ClockCircleFilled} text="Oct 14th 2024" key="list-vertical-message" />,
+        content: 'Blog for Rust.',
+        image: rust,
+        link: 'https://rustblog.damianli.com/',
+        isInternal: false,
+    },
     {
         title: 'Callback Keyword and Pass a function as an argument in C++',
         tags: ['C++11', 'Callback', 'Function Pointer'],
