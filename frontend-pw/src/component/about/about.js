@@ -115,7 +115,7 @@ function About () {
                     <h1>When I'm not coding, you can find me</h1>
 
                     <p className="about-text">
-                    <FontAwesomeIcon icon={faPassport} /> Travelling | <FontAwesomeIcon icon={faBasketball} /> Basketball | <FontAwesomeIcon icon={faDumbbell} /> Lifting | <FontAwesomeIcon icon={faHeadphonesSimple} /> Sportifying |
+                    <FontAwesomeIcon icon={faPassport} /> Travelling | <FontAwesomeIcon icon={faBasketball} /> Basketball | <FontAwesomeIcon icon={faDumbbell} /> Lifting | <FontAwesomeIcon icon={faHeadphonesSimple} /> Spotifying |
 
                     </p>
                     <p className="about-text">
