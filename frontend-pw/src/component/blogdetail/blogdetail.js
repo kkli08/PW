@@ -61,7 +61,7 @@ const dataSource = [
         icon: <IconText icon={ClockCircleFilled} text="3 mins read &nbsp; &nbsp; &nbsp; Sep 10th 2024" key="list-vertical-message" />,
         content: 'Notes about callback function, function pointer and how to pass a function as an argument in C++.',
         image: callback,
-        link: 'https://damians-blog.gitbook.io/blog-with-key-value-storage-database',
+        link: 'https://kvdb.damianli.com/',
         isInternal: false,
     },
     {
@@ -70,7 +70,7 @@ const dataSource = [
         icon: <IconText icon={ClockCircleFilled} text="7 mins read &nbsp; &nbsp; &nbsp; Jun 19th 2024" key="list-vertical-message" />,
         content: 'Notes about neural network with single hidden layer, activation functions and update weights and bias by using backpropagation.',
         image: shallowNeuralNetwork,
-        link: 'https://damians-blog.gitbook.io/deep-learning-specialization/shallow-neural-networks',
+        link: 'https://deeplearningblog.damianli.com/shallow-neural-networks',
         isInternal: false,
     },
     {
@@ -79,7 +79,7 @@ const dataSource = [
         icon: <IconText icon={ClockCircleFilled} text="10 mins read &nbsp; &nbsp; &nbsp; Jun 17th 2024" key="list-vertical-message" />,
         content: 'Notes about logistic regression, cost function, optimization methods and implementation using Python NumPy.',
         image: logisticregression,
-        link: 'https://damians-blog.gitbook.io/deep-learning-specialization',
+        link: 'https://deeplearningblog.damianli.com/',
         isInternal: false,
     },
     {
