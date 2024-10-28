@@ -24,6 +24,7 @@ import pokergameImage from './project_cover/pokergame.png';
 import riscv_arm from './project_cover/RISCV_ARM_Architecture.jpeg';
 import sdn from './project_cover/Traditional-networking-versus-SDN-networking.png';
 import veloxdb from './project_cover/veloxdb.jpeg'
+import particleSim from './project_cover/ParticleSim.png'
 
 import { ProList } from '@ant-design/pro-components';
 import { Button, Tag } from 'antd';
@@ -140,6 +141,13 @@ const mostRecent = [
         imgSrc: veloxdb, // 图片的路径
         imgAlt: 'Image',// 图片的替代文本
         link: 'https://github.com/kkli08/VeloxDB',
+    },
+    { 
+        title: 'Electrostatic Particle Simulation', 
+        description: 'Calculating the electrostatic force between every pair of particles and summing these forces to determine the net force on each particle. Parallize the computing process using std::thread and Open MPI. \n\nTool Use: C++, Open MPI, Python, Matplotlib', 
+        imgSrc: particleSim, // 图片的路径
+        imgAlt: 'Image',// 图片的替代文本
+        link: 'https://github.com/kkli08/Electrostatic_Particle_Simulation',
     },
     { 
         title: 'Software Defined Network Performance Analysis', 
