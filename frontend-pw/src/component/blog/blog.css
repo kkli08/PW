@@ -14,6 +14,8 @@
     text-align: center; /* 中心对齐标题 */
     padding-top: 3vw; /* 用padding代替top来定位标题 */
     padding-bottom: 3vw;
+    align-items: center;
+    display: flex;
 }
 
 .select-width {
