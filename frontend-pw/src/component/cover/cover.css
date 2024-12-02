@@ -24,10 +24,17 @@ video {
     font-size: 3vw;
     text-align: center;
     color: white;
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction: column; /* 元素按列排列 */
+    
 }
 
 .cover-text p {
     font-size: 3vw;
+    text-align: right;
+    display: flex;
+    text-align: right; /* 让段落内的文字向右对齐 */
+    align-self: flex-end; /* 段落本身向右对齐 */
 }
 .viewCounterCover{
     position: absolute;

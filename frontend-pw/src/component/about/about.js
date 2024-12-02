@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import aboutPhoto2 from "./images/aboutphoto2.jpg";
 import aboutPhoto1 from "./images/aboutphoto1.jpg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPassport, faDumbbell, faHeadphonesSimple, faBasketball, faPersonSwimming, faCamera, faFilePdf, faPersonHiking } from '@fortawesome/free-solid-svg-icons'
+import { faPassport, faDumbbell, faHeadphonesSimple, faBasketball, faPersonSwimming, faCamera, faFilePdf, faPersonHiking, faPersonSnowboarding } from '@fortawesome/free-solid-svg-icons'
 import { Card } from "../card/card";
 import "./about.css";
 import ScrollReveal from 'scrollreveal';
@@ -98,18 +98,19 @@ function About () {
                     <img src={currentImage} alt="aboutphoto" />
                 </div>
                 <div className="text">
-                    {/* <h1>What I hope to do</h1>
+                    <h1>What I hope to do</h1>
                     
-                    <p className="about-text">$_0
+                    <p className="about-text">In the next 15 years, I hope to achieve two ambitious goals: 
+                        to sail around the world solo and to summit K2.
                     
-                    </p> */}
+                    </p>
 
                     <h1>What I'm doing </h1>
 
                     <p className="about-text">
                     I'm currently pursuing my Master degree at University of Toronto, 
                     my major study areas are Computing Engineering and Cybersecurity.
-                    I'm seeking 4 months internships starting from Winter 2025 & Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
+                    I'm seeking 8 months internships in Winter 2025 & Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
                     </p>
 
                     <h1>When I'm not coding, you can find me</h1>
@@ -119,7 +120,7 @@ function About () {
 
                     </p>
                     <p className="about-text">
-                    <FontAwesomeIcon icon={faPersonSwimming} /> Swimming | <FontAwesomeIcon icon={faCamera} /> Photographing | <FontAwesomeIcon icon={faPersonHiking} /> Hiking |
+                    <FontAwesomeIcon icon={faPersonSnowboarding} /> Snowboarding | <FontAwesomeIcon icon={faPersonSwimming} /> Swimming | <FontAwesomeIcon icon={faCamera} /> Photographing | <FontAwesomeIcon icon={faPersonHiking} /> Hiking |
                     </p>
                     <Flex wrap>
                     <Tag icon={<BarChartOutlined />} color="#55acee">
