@@ -13,6 +13,9 @@
     text-transform: uppercase;
     text-align: center; /* 中心对齐标题 */
     padding-top: 9vw; /* 用padding代替top来定位标题 */
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* 元素按列排列 */
 }
 
 

@@ -8,11 +8,14 @@
     font-family: 'EB Garamond', serif;
 }
 
-#blogdetail .blogdetailtitle {
+#blogdetail .blogdetailtitle{
     font-size: 2vw;
     text-transform: uppercase;
-    text-align: center; /* 中心对齐标题 */
-    padding-top: 9vw; /* 用padding代替top来定位标题 */
+    text-align: center; 
+    padding-top: 9vw; 
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .select-width {
