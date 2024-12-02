@@ -14,6 +14,10 @@
 .title {
     font-size: 2vw;
     text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 /* 新的about-description样式 */
