@@ -108,9 +108,14 @@ function About () {
                     <h1>What I'm doing </h1>
 
                     <p className="about-text">
-                    I'm currently pursuing my Master degree at University of Toronto, 
+                    I'll join Ant Group, Oceanbase Department as a Database Kernel Engineer in December 2024.
+                    </p>
+                    <p className="about-text">
+                    In the meantime, I'm also pursuing my Master degree at University of Toronto, 
                     my major study areas are Computing Engineering and Cybersecurity.
-                    I'm seeking 8 months internships in Winter 2025 & Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
+                    </p>
+                    <p className="about-text">
+                    I'm actively seeking 4 months internships in Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
                     </p>
 
                     <h1>When I'm not coding, you can find me</h1>

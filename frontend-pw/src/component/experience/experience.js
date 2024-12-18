@@ -63,13 +63,12 @@ function Experience() {
                     position: 'right',
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
-                    children: <div className="timeline-item-content"><h1>Back-End Engineer Intern</h1>
-                                                                    <p>May - Aug 2021</p>
+                    children: <div className="timeline-item-content"><h1>Backend Engineer</h1>
+                                                                    <p>May - Aug 2021 | Internship</p>
                                                                     <p>Nandou Six Star System integration Co., LTD </p>
                                                                     
                                                                     <ul>
                                                                         <li>Wrote backend code that handled external HTTP requests from third party endpoints.</li> 
-                                                                        <li>Commended for clear communication and strong willingness to learn.</li>
                                                                         <li>Gained experience in Gunicorn, Nginx, SQLite and Django REST framework.</li>   
                                                                     </ul>    
                                                                     </div>,
@@ -79,7 +78,7 @@ function Experience() {
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>Student Developer</h1>
-                                                                    <p>Jan - Apr 2023</p>
+                                                                    <p>Jan - Apr 2023 | Internship</p>
                                                                     <p>University of Alberta ALT Lab</p>
                                                                     
                                                                     <ul>
@@ -114,6 +113,19 @@ function Experience() {
                                                                     
                 //                                                     </div>,
                 // },
+                {
+                    position: 'right',
+                    color: 'black',
+                    dot: <TeamOutlined className="timeline-item-content"/>,
+                    children: <div className="timeline-item-content"><h1>Database Kernel Engineer </h1>
+                                                                    <p>Dec 2024 - Present | Internship</p>
+                                                                    <p>Ant Group </p>
+                                                                    
+                                                                    {/* <ul>
+                                                                        <li>Wrote backend code that handled external HTTP requests from third party endpoints.</li> 
+                                                                    </ul>     */}
+                                                                    </div>,
+                },
                 {
                     position: 'left',
                     color: 'gold',
