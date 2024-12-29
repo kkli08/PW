@@ -108,7 +108,7 @@ function About () {
                     <h1>What I'm doing </h1>
 
                     <p className="about-text">
-                    I'll join Ant Group, Oceanbase Department as a Database Kernel Engineer in December 2024.
+                    I'm currently working at Ant Group, Oceanbase Department as a Database Kernel Engineer Intern.
                     </p>
                     <p className="about-text">
                     In the meantime, I'm also pursuing my Master degree at University of Toronto, 
