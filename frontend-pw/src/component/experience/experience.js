@@ -78,7 +78,7 @@ function Experience() {
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>Student Developer</h1>
-                                                                    <p>Jan - Apr 2023 | Internship</p>
+                                                                    <p>Jan - Apr 2023 | Internship | Edmonton, Canada</p>
                                                                     <p>University of Alberta ALT Lab</p>
                                                                     
                                                                     <ul>
@@ -118,12 +118,12 @@ function Experience() {
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>Database Kernel Engineer </h1>
-                                                                    <p>Dec 2024 - Present | Internship</p>
+                                                                    <p>Dec 2024 - Present | Internship | Shenzhen, China</p>
                                                                     <p>Ant Group </p>
                                                                     
-                                                                    {/* <ul>
-                                                                        <li>Wrote backend code that handled external HTTP requests from third party endpoints.</li> 
-                                                                    </ul>     */}
+                                                                    <ul>
+                                                                        <li>Oceanbase Department, KV Team.</li> 
+                                                                    </ul>    
                                                                     </div>,
                 },
                 {

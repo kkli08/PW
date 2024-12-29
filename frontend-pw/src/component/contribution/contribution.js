@@ -9,7 +9,7 @@ function Contribution() {
         <div id="contribution">
             <div className="contributiontitle">
                 <p><FontAwesomeIcon icon={faHeart} /> Inspired by many, coded by Ke Li</p>
-                <p>© damianli.com All rights reserved.</p>
+                <p>damianli.com All rights reserved. © 2025</p>
             </div>
         </div>
     );
