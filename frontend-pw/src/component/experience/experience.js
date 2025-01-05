@@ -122,7 +122,10 @@ function Experience() {
                                                                     <p>Ant Group </p>
                                                                     
                                                                     <ul>
-                                                                        <li>Oceanbase Department, KV Team.</li> 
+                                                                        <li>Oceanbase Department, KV & Multi-Model Team.</li> 
+                                                                        <li>Developed array expressions for MySQL in the OceanBase observer project to enable array type support
+                                                                        for diverse use cases.</li> 
+                                                                        <li>Wrote and executed SQL tests to validate the functionality and performance of the array expressions.</li> 
                                                                     </ul>    
                                                                     </div>,
                 },
