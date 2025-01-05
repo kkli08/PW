@@ -115,7 +115,7 @@ function About () {
                     my major study areas are Computing Engineering and Cybersecurity.
                     </p>
                     <p className="about-text">
-                    I'm actively seeking 4 months internships in Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
+                    I'm actively seeking 4 - 6 months internships in Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
                     </p>
 
                     <h1>When I'm not coding, you can find me</h1>
