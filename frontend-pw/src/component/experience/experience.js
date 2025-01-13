@@ -123,9 +123,9 @@ function Experience() {
                                                                     
                                                                     <ul>
                                                                         <li>Oceanbase Department, KV & Multi-Model Team.</li> 
-                                                                        <li>Developed array expressions for MySQL in the OceanBase observer project to enable array type support
-                                                                        for diverse use cases.</li> 
-                                                                        <li>Wrote and executed SQL tests to validate the functionality and performance of the array expressions.</li> 
+                                                                        <li>Developed SQL Native Expressions for Array and Vector types in OceanBase to enable native array
+                                                                        type support for diverse use cases.</li> 
+                                                                        <li>Wrote and executed SQL tests to validate the functionality and analyze performance of the expressions.</li> 
                                                                     </ul>    
                                                                     </div>,
                 },
