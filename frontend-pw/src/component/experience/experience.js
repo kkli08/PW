@@ -126,7 +126,6 @@ function Experience() {
                                                                         <li>Design and develop SQL native expressions and DML statements for array, vector, and roaring bitmap types in OceanBase, ensuring support for various analytical processing use cases.</li> 
                                                                         <li>Developed SQL and Unit Tests to validate the correctness of array and roaring bitmap DDL, DML statements, and SQL expressions while analyzing performance bottlenecks.</li> 
                                                                         <li>Collaborated with PM to refine use cases, prioritize features based on functionality and performance needs.</li> 
-                                                                        
                                                                     </ul>    
                                                                     </div>,
                 },
