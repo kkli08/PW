@@ -123,9 +123,9 @@ function Experience() {
                                                                     
                                                                     <ul>
                                                                         <li>Oceanbase Department, KV & Multi-Model Team.</li> 
-                                                                        <li>Developed SQL Native Expressions for Array and Vector types in OceanBase to enable native array
-                                                                        type support for diverse use cases.</li> 
-                                                                        <li>Wrote and executed SQL tests to validate the functionality and analyze performance of the expressions.</li> 
+                                                                        <li>Design and develop SQL native expressions and DML statements for array, vector, and roaring bitmap types in OceanBase, ensuring support for various analytical processing use cases.</li> 
+                                                                        <li>Developed SQL and Unit Tests to validate the correctness of array and roaring bitmap DDL, DML statements, and SQL expressions while analyzing performance bottlenecks.</li> 
+                                                                        <li>Collaborated with PM to refine use cases, prioritize features based on functionality and performance needs.</li> 
                                                                     </ul>    
                                                                     </div>,
                 },
