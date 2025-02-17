@@ -16,6 +16,7 @@ import logisticregression from '../blog/blog_cover/logistic_regression.png';
 import shallowNeuralNetwork from '../blog/blog_cover/shallowNeuralNetwork.png';
 import callback from '../blog/blog_cover/callback.jpg';
 import rust from '../blog/blog_cover/rust.png'
+import rb from '../blog/blog_cover/rb.jpg'
 
 
 import sql from '../blog/blog_cover/sql.png';
@@ -46,6 +47,15 @@ const IconText = ({ icon, text }) => (
 );
 
 const dataSource = [
+    {
+        title: 'Best Roaring Bitmap Blog for Beginners',
+        tags: ['Bitmap', 'SQL Engine', 'Data Structure'],
+        icon: <IconText icon={ClockCircleFilled} text="14 mins read &nbsp; &nbsp; &nbsp; Feb 17th 2025" key="list-vertical-message" />,
+        content: 'A primer on Roaring bitmaps: what they are and how they work.   Author: Vikram Oberoi',
+        image: rb,
+        link: 'https://vikramoberoi.com/posts/a-primer-on-roaring-bitmaps-what-they-are-and-how-they-work/',
+        isInternal: false,
+    },
     {
         title: 'Rust Blog',
         tags: ['Rust', 'System', 'Programming Language'],
