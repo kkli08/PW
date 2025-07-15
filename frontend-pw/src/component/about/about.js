@@ -94,7 +94,6 @@ function About () {
             </div>
             <div className="about-description">
                 
-                
                 <div className="photo">
                     <img src={currentImage} alt="aboutphoto" />
                 </div>
