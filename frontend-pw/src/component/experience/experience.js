@@ -118,14 +118,15 @@ function Experience() {
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>Database Kernel Engineer </h1>
-                                                                    <p>Dec 2024 - Present | Internship | Shenzhen, China</p>
+                                                                    <p>Dec 2024 - Jul 2025 | Internship | Shenzhen, China</p>
                                                                     <p>Ant Group </p>
                                                                     
                                                                     <ul>
-                                                                        <li>Oceanbase Department, SQL Engine Team.</li> 
-                                                                        <li>Design and develop SQL native expressions and DML statements for array, vector, and roaring bitmap types in OceanBase, ensuring support for various OLAP use cases.</li> 
-                                                                        <li>Developed SQL and Unit Tests to validate the correctness of array and roaring bitmap DDL, DML statements, and SQL expressions while analyzing performance bottlenecks.</li> 
-                                                                        <li>Collaborated with PM to refine use cases, prioritize features based on functionality and performance needs.</li> 
+                                                                        <li>Oceanbase Department, Vector/SQL Engine Team.</li> 
+                                                                        <li>Developed SQL native expressions and DML statements for Array, Vector, Map and Roaring Bitmap types in OceanBase (MySQL Tenant Mode), supporting for various OLAP use cases.</li> 
+                                                                        <li>Developed PL/SQL member procedures for the JSON data type in OceanBase (Oracle Tenant Mode), achieving functional parity with Oracle 23c for JSON manipulation</li> 
+                                                                        <li>Refactored Vector Index configuration parameter logic to reduce code changes in the optimizer and DAS layer when adding configuration parameters for new index algorithms</li> 
+                                                                        <li>Analyzed performance bottlenecks using Flame Graphs and conducted benchmarking with Sysbench to evaluate and optimize SQL query execution efficiency and memory usage compared to competitors.</li>
                                                                     </ul>    
                                                                     </div>,
                 },

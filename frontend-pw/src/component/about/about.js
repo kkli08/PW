@@ -100,22 +100,21 @@ function About () {
                 <div className="text">
                     <h1>What I hope to do</h1>
                     
-                    <p className="about-text">In the next 15 years, I hope to achieve two ambitious goals: 
-                        to sail around the world solo and to summit K2.
-                    
+                    <p className="about-text">In the next 20 years, I hope to achieve three ambitious goals: 
+                        sailing around the world, climbing K2 and spending rest of my life with Olivia.         
                     </p>
 
                     <h1>What I'm doing </h1>
 
                     <p className="about-text">
-                    I'm currently working at Ant Group, Oceanbase Department as a Database Kernel Engineer Intern.
+                    My most recent job was at Ant Financial, working as a database kernel engineer intern for Oceanbase Database (8 months).
                     </p>
                     <p className="about-text">
-                    In the meantime, I'm also pursuing my Master degree at University of Toronto, 
-                    my major study areas are Computing Engineering and Cybersecurity.
+                    I'm pursuing my Master degree at University of Toronto, 
+                    my major study areas are Computing Engineering and Cybersecurity. 
                     </p>
                     <p className="about-text">
-                    I'm actively seeking 4 - 6 months internships in Summer 2025. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
+                    I will graduate in May 2026 and I'm actively seeking full-time new graduate position. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
                     </p>
 
                     <h1>When I'm not coding, you can find me</h1>
