@@ -107,11 +107,10 @@ function About () {
                     <h1>What I'm doing </h1>
 
                     <p className="about-text">
-                    My most recent job was at Ant Financial, working as a database kernel engineer intern for Oceanbase Database (8 months).
+                    My most recent job was at Ant Group, working as a Database Kernel Engineer Intern for Oceanbase Database (8 months).
                     </p>
                     <p className="about-text">
-                    I'm pursuing my Master degree at University of Toronto, 
-                    my major study areas are Computing Engineering and Cybersecurity. 
+                    I'm pursuing my Master degree at University of Toronto, ECE Department. 
                     </p>
                     <p className="about-text">
                     I will graduate in May 2026 and I'm actively seeking full-time new graduate position. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
@@ -142,11 +141,11 @@ function About () {
                 />
                 <Card
                     title={"Learning"}
-                    description={"FALL 2024 :\nCSC2234H Database System Technology\nECE1747H Parallel Programming\nECE1724H Performant Software Systems with Rust\nSUMMER 2024 :\nAPS1052H Neural Network & Deep Learning\nWINTER 2024 :\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security"}                
+                    description={"FALL 2025 :\nECE 1508 Applied Deep Learning\nFALL 2024 :\nCSC2234H Database System Technology\nECE1747H Parallel Programming\nECE1724H Performant Software Systems with Rust\nSUMMER 2024 :\nAPS1052H Neural Network & Deep Learning\nWINTER 2024 :\nECE1779H S (Winter) Introduction to Cloud Computing\nECE568H1 S (Winter) Computer Security"}                
                 />
                 <Card
                     title={"Interests"}
-                    description={"1) Database Design\n2) Compiler Optimization\n3) Cybersecurity \n4) Making this homepage more accessible"}                
+                    description={"1) AI Infrastructure\n2) Database Kernel Development\n3) High-frequency Trading System \n4) Making this homepage more accessible"}                
                 />
             </div>
             
