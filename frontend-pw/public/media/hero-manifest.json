@@ -1,0 +1,22 @@
+{
+  "rotationHours": 6,
+  "videos": [
+    {
+      "id": "local-fallback",
+      "poster": "/media/hero-poster.jpg",
+      "hls": null,
+      "mp4": [
+        {
+          "src": "/media/hero-mobile.mp4",
+          "width": 480,
+          "label": "compact"
+        },
+        {
+          "src": "/media/hero-desktop.mp4",
+          "width": 640,
+          "label": "standard"
+        }
+      ]
+    }
+  ]
+}
