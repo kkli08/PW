@@ -36,8 +36,10 @@ function Experience() {
                 className="timeline-width"
                 
                 items={[
+                // Keep entries chronological in source, but present the newest experience first.
+                ...[
                 {
-                    position: 'left',
+                    position: 'right',
                     color: 'green',
                     dot: <FontAwesomeIcon icon={faLandmark} className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>University Of Alberta</h1>
@@ -52,7 +54,7 @@ function Experience() {
                                                                     </div>,
                 },
                 {
-                    position: 'right',
+                    position: 'left',
                     color: 'black',
                     dot: <TeamOutlined className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>Backend Engineer</h1>
@@ -123,11 +125,11 @@ function Experience() {
                                                                     </div>,
                 },
                 {
-                    position: 'right',
+                    position: 'left',
                     color: 'blue',
                     dot: <TeamOutlined className="timeline-item-content"/>,
                     children: <div className="timeline-item-content"><h1>RL Post-Training Infrastructure Engineer</h1>
-                                                                    <p>Jul 2026 - Present | XPENG</p>
+                                                                    <p>Jul 2026 - Present | XPENG ROBOTICS</p>
 
                                                                     <ul>
                                                                         <li>Building infrastructure for reinforcement learning post-training workflows.</li>
@@ -136,6 +138,7 @@ function Experience() {
                                                                     </ul>
                                                                     </div>,
                 },
+                ].reverse(),
                 {
                     position: 'left',
                     color: 'gold',

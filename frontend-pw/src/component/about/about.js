@@ -85,7 +85,7 @@ function About () {
                     <h1>What I'm doing </h1>
 
                     <p className="about-text">
-                    I'm currently working at XPENG on reinforcement learning post-training infrastructure, with a focus on scalable training, rollout, evaluation, and the systems that make experiments reliable.
+                    I'm currently working at XPENG ROBOTICS on reinforcement learning post-training infrastructure, with a focus on scalable training, rollout, evaluation, and the systems that make experiments reliable.
                     </p>
                     <p className="about-text">
                     Previously, I worked on the OceanBase Vector/SQL Engine team at Ant Group and studied Computer Engineering at the University of Toronto.
