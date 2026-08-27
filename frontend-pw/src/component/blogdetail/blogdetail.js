@@ -226,6 +226,8 @@ function Blogdetail() {
                         width={272}
                         alt={row.title}
                         src={row.image}
+                        loading="lazy"
+                        decoding="async"
                         onClick={() => handleClick(row.link, row.isInternal)}
                         style={{ cursor: 'pointer' }}
                     />

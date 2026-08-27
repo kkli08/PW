@@ -327,7 +327,7 @@ function Project() {
         };
 
     return(
-        <div id="projects">
+        <div className="projects-content">
             <div className="lottie-animation-left">
                 <Lottie animationData={decorations} />
             </div>
@@ -438,6 +438,8 @@ function Project() {
                         width={272}
                         alt={row.title}
                         src={row.image}
+                        loading="lazy"
+                        decoding="async"
                         onClick={() => handleClick(row.link, row.isInternal)}
                         style={{ cursor: 'pointer' }}
                     />

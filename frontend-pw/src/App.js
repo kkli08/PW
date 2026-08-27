@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import './App.css';
-import Home from './pages/home/home';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useLocation
 } from "react-router-dom";
-import Blogpage from './pages/blogpage/blogpage';
-import Gallerypage from './pages/gallerypage/gallerypage';
 import ReactGA from 'react-ga4';
-// import detail blog
-import Bufferoverflow from './pages/blogpage/cybersecurity/bufferoverflow';
+
+const Home = lazy(() => import('./pages/home/home'));
+const Blogpage = lazy(() => import('./pages/blogpage/blogpage'));
+const Gallerypage = lazy(() => import('./pages/gallerypage/gallerypage'));
+const Bufferoverflow = lazy(() => import('./pages/blogpage/cybersecurity/bufferoverflow'));
 
 function GoogleAnalytics() {
   const location = useLocation();
@@ -31,15 +31,14 @@ function App() {
   return (
     <Router>
       <GoogleAnalytics />
-      <Routes>
-        <Route path="/" Component={Home}/>
-        <Route path="/blog" Component={Blogpage}/>
-        <Route path="/gallery" Component={Gallerypage}/>
-
-        <Route path="/blog/cybersecurity/bufferoverflow" Component={Bufferoverflow}/>
-
-        
-      </Routes> 
+      <Suspense fallback={<div className="route-loading" aria-label="Loading page" />}>
+        <Routes>
+          <Route path="/" Component={Home}/>
+          <Route path="/blog" Component={Blogpage}/>
+          <Route path="/gallery" Component={Gallerypage}/>
+          <Route path="/blog/cybersecurity/bufferoverflow" Component={Bufferoverflow}/>
+        </Routes>
+      </Suspense>
         
     </Router>
   );

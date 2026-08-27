@@ -37,7 +37,7 @@ function Pagemavbar () {
         <Link to="/" className="pagenavbar-item">Home</Link>
         <a onClick={scrollToAbout} className="pagenavbar-item">About Me</a>
         <a onClick={scrollToProject} className="pagenavbar-item">Projects</a>
-        <a href="/resume.pdf" className="pagenavbar-item" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="/Resume.pdf" className="pagenavbar-item" target="_blank" rel="noopener noreferrer">Resume</a>
         <Link to="/blog" className="pagenavbar-item">Blog</Link>
         <a href="#contact" className="pagenavbar-item">Contact</a>
         <a href="/gallery" className="pagenavbar-item">Gallery</a>
@@ -47,4 +47,3 @@ function Pagemavbar () {
 
 
 export default Pagemavbar;
-

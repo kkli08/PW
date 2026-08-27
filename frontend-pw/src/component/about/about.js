@@ -8,21 +8,11 @@ import "./about.css";
 import ScrollReveal from 'scrollreveal';
 import Lottie from "lottie-react";
 import decorations from './decorations.json';
-import santa from './santa.json';
-import dragonImage from './images/dragon_pic.jpg';
-import { ref, get } from 'firebase/database';
-import { database } from '../../firebase'; 
-import {
-    BarChartOutlined,
-  } from '@ant-design/icons';
-import { Flex, Tag } from 'antd';
-import CountUp from 'react-countup';
 
 
 function About () {
     // State to track the current image
     const [currentImage, setCurrentImage] = useState(aboutPhoto1);
-    const [viewCount, setViewCount] = useState(0);
 
 
     useEffect(() => {
@@ -62,20 +52,8 @@ function About () {
     }, []);
     // 通过style属性动态设置背景图片
 
-    useEffect(() => {
-        const fetchViewCount = async () => {
-        const viewCountRef = ref(database, 'viewCount');
-        const snapshot = await get(viewCountRef);
-        if (snapshot.exists()) {
-            setViewCount(snapshot.val());
-        }
-        };
-
-        fetchViewCount();
-    }, []);
-
     return (
-        <div id="about">
+        <div className="about-content">
 
             <div className="lottie-animation-left">
                 <Lottie animationData={decorations} />
@@ -95,7 +73,7 @@ function About () {
             <div className="about-description">
                 
                 <div className="photo">
-                    <img src={currentImage} alt="aboutphoto" />
+                    <img src={currentImage} alt="Ke Li" loading="lazy" decoding="async" />
                 </div>
                 <div className="text">
                     <h1>What I hope to do</h1>
@@ -107,13 +85,13 @@ function About () {
                     <h1>What I'm doing </h1>
 
                     <p className="about-text">
-                    My most recent job was at Ant Group, working as a Database Kernel Engineer Intern for Oceanbase Database (8 months).
+                    I'm currently working at XPENG on reinforcement learning post-training infrastructure, with a focus on scalable training, rollout, evaluation, and the systems that make experiments reliable.
                     </p>
                     <p className="about-text">
-                    I'm pursuing my Master degree at University of Toronto, ECE Department. 
+                    Previously, I worked on the OceanBase Vector/SQL Engine team at Ant Group and studied Computer Engineering at the University of Toronto.
                     </p>
                     <p className="about-text">
-                    I will graduate in May 2026 and I'm actively seeking full-time new graduate position. <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFilePdf} /></a>
+                    You can find a concise overview of my background in my <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">resume <FontAwesomeIcon icon={faFilePdf} /></a>.
                     </p>
 
                     <h1>When I'm not coding, you can find me</h1>
@@ -125,12 +103,6 @@ function About () {
                     <p className="about-text">
                     <FontAwesomeIcon icon={faPersonSnowboarding} /> Snowboarding | <FontAwesomeIcon icon={faPersonSwimming} /> Swimming | <FontAwesomeIcon icon={faCamera} /> Photographing | <FontAwesomeIcon icon={faPersonHiking} /> Hiking |
                     </p>
-                    <Flex wrap>
-                    <Tag icon={<BarChartOutlined />} color="#55acee">
-                    <CountUp end={viewCount} duration={2} separator="," />
-                    {' '}views
-                    </Tag>
-                    </Flex>
                 </div>
             </div>
             <div className="boxcol">
@@ -154,4 +126,3 @@ function About () {
 }
 
 export default About;
-

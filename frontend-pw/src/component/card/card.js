@@ -13,7 +13,7 @@ export const Card = ({
       <div className="card-container">
         {imgSrc && imgAlt && link && (
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                    <img src={imgSrc} alt={imgAlt} className="card-img" />
+                    <img src={imgSrc} alt={imgAlt} className="card-img" loading="lazy" decoding="async" />
                 </a>
             )}
         {title && <h1 className="card-title">{title}</h1>}
