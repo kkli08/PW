@@ -1,34 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 #experience{
     width: 100%;        /* Full width */
     background-color: white; /* Light grey background */
     color: black; 
-    padding-bottom: 10vw;
+    padding: clamp(2rem, 5vw, 5rem) 0 clamp(4rem, 10vw, 8rem);
     font-family: 'EB Garamond', serif;
 }
 
 
 .timeline{
-    padding-top: 3vw;
+    padding-top: 0;
 }
 .timeline-width{
     font-family: 'EB Garamond', serif;
-    width: 80%;
+    width: min(86%, 1180px);
     margin: 0 auto;
     
 }
 .timeline-item-content {
-    font-size: 1.6vw; /* 设置你希望的字体大小 */
+    font-size: clamp(1rem, 1.25vw, 1.25rem);
 }
 .timeline-item-content h1{
-    font-size: 1.8vw;
-    margin-bottom: 0.3vw;
+    margin: 0 0 0.2rem;
+    font-size: clamp(1.3rem, 1.65vw, 1.75rem);
+    line-height: 1.15;
 }
 .timeline-item-content p{
-    margin-top: 0vw;
-    margin-bottom: 0vw;
-    font-size: 1.6vw;
+    margin: 0;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    line-height: 1.35;
 }
 
 .timeline-item-content h1,
@@ -38,8 +38,9 @@
   text-align: left;   /* 文本左对齐 */
 }
 .timeline-item-content li{
-    list-style-position: inside;
-    font-size: 1.3vw;
+    margin-bottom: 0.3rem;
+    font-size: clamp(0.95rem, 1.05vw, 1.08rem);
+    line-height: 1.42;
 }
   
 #experience .image-container {
@@ -57,21 +58,21 @@
 
 @media (max-width: 780px){
     .timeline-width{
-        width: 90%;
+        width: 92%;
         margin: 0 auto;
         
     }
     .timeline-item-content {
-        font-size: 5vw; /* 设置你希望的字体大小 */
+        font-size: 1rem;
     }
     .timeline-item-content h1{
-        font-size: 4vw;
+        font-size: clamp(1.2rem, 5vw, 1.55rem);
     }
     .timeline-item-content p{
-        font-size: 3.5vw;
+        font-size: 1rem;
     }
     .timeline-item-content li{
-        font-size: 3vw;
+        font-size: 0.95rem;
     }
 
     

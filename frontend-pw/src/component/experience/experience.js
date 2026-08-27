@@ -1,17 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./experience.css";
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link,
-  } from "react-router-dom";
-import { Select } from 'antd';
-import { EnvironmentOutlined, TeamOutlined, TrophyOutlined, GoogleOutlined } from '@ant-design/icons';
+import { TeamOutlined, TrophyOutlined } from '@ant-design/icons';
 import { Timeline } from 'antd';
-import dragonImage from './dragon_pic.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLandmark, faSchool} from '@fortawesome/free-solid-svg-icons'
+import { faLandmark } from '@fortawesome/free-solid-svg-icons'
 
 function Experience() {
     
@@ -36,7 +28,7 @@ function Experience() {
     }, []);
 
     return(
-        <div id="experience">
+        <div className="experience-content">
             
             <div className="timeline">
             <Timeline
@@ -128,6 +120,20 @@ function Experience() {
                                                                         <li>Refactored Vector Index configuration parameter logic to reduce code changes in the optimizer and DAS layer when adding configuration parameters for new index algorithms</li> 
                                                                         <li>Analyzed performance bottlenecks using Flame Graphs and conducted benchmarking with Sysbench to evaluate and optimize SQL query execution efficiency and memory usage compared to competitors.</li>
                                                                     </ul>    
+                                                                    </div>,
+                },
+                {
+                    position: 'right',
+                    color: 'blue',
+                    dot: <TeamOutlined className="timeline-item-content"/>,
+                    children: <div className="timeline-item-content"><h1>RL Post-Training Infrastructure Engineer</h1>
+                                                                    <p>Jul 2026 - Present | XPENG</p>
+
+                                                                    <ul>
+                                                                        <li>Building infrastructure for reinforcement learning post-training workflows.</li>
+                                                                        <li>Working across distributed training, rollout, and evaluation systems for reliable, scalable experimentation.</li>
+                                                                        <li>Improving efficiency, observability, and reproducibility across the post-training stack.</li>
+                                                                    </ul>
                                                                     </div>,
                 },
                 {

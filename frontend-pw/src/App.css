@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -7,4 +6,9 @@ html {
 body {
   font-family: 'EB Garamond', serif;
 }
-  
+
+.route-loading {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #172332;
+}

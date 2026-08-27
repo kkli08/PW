@@ -1,138 +1,103 @@
-import React, { useState, useEffect } from 'react';
-import "./cover.css";
-import Bg1 from "./bgvideo/bgvideo1.mp4";
-import Bg2 from './bgvideo/bgvideo2.mp4';
-import Bg3 from './bgvideo/bgvideo3.mp4';
-import Bg4 from './bgvideo/bgvideo4.mp4';
-import Bg5 from './bgvideo/bgvideo5.mp4';
-import Bg6 from './bgvideo/bgvideo6.mp4';
-import Bg7 from './bgvideo/bgvideo7.mp4';
-import Bg8 from './bgvideo/bgvideo8.mp4';
-import Christmas from './bgvideo/Christmas.mp4';
-import ScrollReveal from 'scrollreveal';
-import { ref, get } from 'firebase/database';
-import { database } from '../../firebase'; 
-import {
-    BarChartOutlined,
-  } from '@ant-design/icons';
-import CountUp from 'react-countup';
-import { Button, Tag } from 'antd';
-function Cover() {
-    const videos = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6, Bg7, Bg8];
-    const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-    const [viewCount, setViewCount] = useState(0);
+import React, { useEffect, useState } from 'react';
+import { get, ref } from 'firebase/database';
+import { database } from '../../firebase';
+import './cover.css';
 
+const REDUCED_DATA_CONNECTIONS = new Set(['slow-2g', '2g']);
+
+function Cover() {
+    const [viewCount, setViewCount] = useState(0);
+    const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
+    const [videoReady, setVideoReady] = useState(false);
 
     useEffect(() => {
-        // 计算当前时间段对应的视频索引
-        const calculateCurrentVideoIndex = () => {
-            const date = new Date();
-            const currentHour = date.getHours();
-            const index = Math.floor(currentHour / 6) % videos.length;
-            setCurrentVideoIndex(index);
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+        const shouldSaveData = connection?.saveData || REDUCED_DATA_CONNECTIONS.has(connection?.effectiveType);
+
+        if (prefersReducedMotion || shouldSaveData) {
+            return undefined;
+        }
+
+        let idleCallback;
+        let fallbackTimer;
+
+        const beginLoading = () => {
+            if ('requestIdleCallback' in window) {
+                idleCallback = window.requestIdleCallback(() => setShouldLoadVideo(true), { timeout: 1200 });
+            } else {
+                fallbackTimer = window.setTimeout(() => setShouldLoadVideo(true), 250);
+            }
         };
 
-        // 设置定时器，每小时更新一次视频
-        const interval = setInterval(calculateCurrentVideoIndex, 3600000); // 3600000ms = 1小时
+        if (document.readyState === 'complete') {
+            beginLoading();
+        } else {
+            window.addEventListener('load', beginLoading, { once: true });
+        }
 
-        // 初始化
-        calculateCurrentVideoIndex();
-
-        // 清除定时器
-        return () => clearInterval(interval);
-    }, []);
-
-    useEffect(() => {
-        ScrollReveal({
-            reset: true,
-            distance: '60px',
-            duration: 2500,
-            delay: 200
-        });
-        ScrollReveal().reveal('.cover-text', { delay: 250, origin: 'bottom' });
-        // Add more ScrollReveal configurations here as needed
-        // You can target elements across different components
-
-        return () => ScrollReveal().destroy(); // Clean up
+        return () => {
+            window.removeEventListener('load', beginLoading);
+            if (idleCallback) {
+                window.cancelIdleCallback(idleCallback);
+            }
+            if (fallbackTimer) {
+                window.clearTimeout(fallbackTimer);
+            }
+        };
     }, []);
 
     useEffect(() => {
         const fetchViewCount = async () => {
-        const viewCountRef = ref(database, 'viewCount');
-        const snapshot = await get(viewCountRef);
-        if (snapshot.exists()) {
-            setViewCount(snapshot.val());
-        }
+            try {
+                const snapshot = await get(ref(database, 'viewCount'));
+                if (snapshot.exists()) {
+                    setViewCount(snapshot.val());
+                }
+            } catch (error) {
+                // The counter is decorative; the hero remains usable if Firebase is unavailable.
+                console.warn('Unable to load view count.', error);
+            }
         };
 
         fetchViewCount();
     }, []);
 
     return (
-        <section>
-            
-            <video 
-                src={videos[currentVideoIndex]} 
-                // src={Christmas}
-                autoPlay 
-                loop 
-                playsInline
-                muted 
-            />
-            <div className='overlay'></div>
-            <div className="cover-text">
-                <h1>"In matters of principle, stand like a rock."</h1>
-                <p>- Thomas Jefferson</p>
-                {/* <h1>"Don't pray for an easy path, But the strength to handle the difficulties."</h1>
-                <p>- Elon Musk</p> */}
-            </div>
-            <div className='viewCounterCover'>
-                <Tag icon={<BarChartOutlined />} color="black">
-                    <CountUp end={viewCount} duration={2} separator="," />
-                    {' '}views
-                </Tag>
-                </div>
+        <section
+            className="cover"
+            aria-labelledby="cover-quote"
+            style={{ '--hero-poster': 'url("/media/hero-poster.jpg")' }}
+        >
+            {shouldLoadVideo && (
+                <video
+                    className={`cover-video ${videoReady ? 'is-ready' : ''}`}
+                    autoPlay
+                    loop
+                    playsInline
+                    muted
+                    poster="/media/hero-poster.jpg"
+                    preload="metadata"
+                    onLoadedData={() => setVideoReady(true)}
+                    aria-hidden="true"
+                >
+                    <source src="/media/hero-mobile.mp4" media="(max-width: 780px)" type="video/mp4" />
+                    <source src="/media/hero-desktop.mp4" type="video/mp4" />
+                </video>
+            )}
 
+            <div className="cover-overlay" aria-hidden="true" />
+
+            <blockquote className="cover-text">
+                <h1 id="cover-quote">“In matters of principle, stand like a rock.”</h1>
+                <footer>— Thomas Jefferson</footer>
+            </blockquote>
+
+            <div className="viewCounterCover" aria-label={`${viewCount.toLocaleString()} views`}>
+                <span aria-hidden="true">◉</span> {viewCount.toLocaleString()} views
+            </div>
         </section>
     );
 }
 
 export default Cover;
-
-
-// 循环播放
-// function Cover () {
-//     // 视频数组
-//     const videos = [Bg1, Bg2, Bg3, Bg4, Bg5, Bg6, Bg7, Bg8, Bg9];
-
-
-//     // 按顺序播放
-//     // 当前视频的索引状态
-//     const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-
-//     const handleVideoEnd = () => {
-//         const nextVideoIndex = (currentVideoIndex + 1) % videos.length;
-//         setCurrentVideoIndex(nextVideoIndex);
-//     };
-
-//     return (
-//         <section>
-//             <video 
-//                 src={videos[currentVideoIndex]} 
-//                 autoPlay 
-//                 loop={false} 
-//                 muted 
-//                 onEnded={handleVideoEnd}
-//             />
-//             <div className='overlay'></div>
-//             <div className="cover-text">
-//                 <h1>"In matters of principle, stand like a rock."</h1>
-//                 <p>- Thomas Jefferson</p>
-//             </div>
-//         </section>
-//     );
-
-
-// }
-
-// export default Cover;

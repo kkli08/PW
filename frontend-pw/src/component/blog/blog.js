@@ -173,7 +173,7 @@ function Blog() {
     
 
     return(
-        <div id="blog">
+        <div className="blog-content">
             <div className="title">
                 <h1>
                 <Link to="/blog">Blog</Link>
@@ -213,6 +213,8 @@ function Blog() {
                         width={272}
                         alt={row.title}
                         src={row.image}
+                        loading="lazy"
+                        decoding="async"
                         onClick={() => handleClick(row.link, row.isInternal)}
                         style={{ cursor: 'pointer' }}
                     />

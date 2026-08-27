@@ -1,24 +1,36 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #172332;
+}
+
 body {
   margin: 0;
-  font-family: 'RobotoRegular', 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  cursor: default;
+  color: #111;
+  background: #fff;
+  font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-
-@font-face {
-  font-family: 'RobotoRegular';
-  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-}
-
-@font-face {
-  font-family: 'RobotoThin';
-  src: url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
 }

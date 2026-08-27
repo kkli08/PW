@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from "../navbar/navbar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCompass, faList, faSnowflake, faParachuteBox, faBowlFood, faVihara} from '@fortawesome/free-solid-svg-icons'
-import {
-  BrowserRouter as Router,
-  Link,
-  useNavigate,
-} from "react-router-dom";
+import { faSnowflake } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 import "./header.css";
 
 function Header () {
@@ -19,7 +15,7 @@ function Header () {
         };
 
         // 添加滚动监听
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
 
         // 清除监听
         return () => {
@@ -37,7 +33,7 @@ function Header () {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
+        setIsMenuOpen((isOpen) => !isOpen);
     };
 
   return (
@@ -51,16 +47,23 @@ function Header () {
         </section>
         
         {isMenuOpen && (
-          <div className={`mobile-menu ${isMenuOpen ? 'mobile-menu-open' : ''}`}>
+          <div id="mobile-navigation" className={`mobile-menu ${isMenuOpen ? 'mobile-menu-open' : ''}`}>
             {/* 移动菜单内容 */}
             {/* <a href="#about" className="navbar-item">About Me</a> */}
             <a href="#projects" className="navbar-item">Projects</a>
             <Link to="/blog" className="navbar-item">Blog</Link>
-            <a href="/resume.pdf" className="navbar-item" target="_blank" rel="noopener noreferrer">Resume</a>
+            <a href="/Resume.pdf" className="navbar-item" target="_blank" rel="noopener noreferrer">Resume</a>
             {/* <a href="/blog" className="navbar-item">Blog</a> */}
           </div>
         )}
-        <section className="mobile-navbar" onClick={toggleMenu}>
+        <button
+          type="button"
+          className="mobile-navbar"
+          onClick={toggleMenu}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-navigation"
+          aria-label="Toggle navigation"
+        >
           {/* 菜单图标或者文字 */}
           {/* <FontAwesomeIcon icon={faParachuteBox} /> */}
 
@@ -70,7 +73,7 @@ function Header () {
           {/* <FontAwesomeIcon icon={faList} /> */}
           {/* <FontAwesomeIcon icon={faCompass} /> */}
           
-        </section>
+        </button>
 
     </section>
     </div>
